@@ -20,7 +20,31 @@ export function sumPairs(ints: number[], s: number): [number, number] | void {
 }
 
 
-
 let l1: number[] = [1, 4, 8, 7, 3, 15]
+let count: number[] = [1, 2, 3, 4, 5, 6, 7, 8]
 
 console.log(sumPairs(l1, 8));
+
+function forCountUpTo(x:number){
+  for(let i = 0; i <= x; i++){
+    console.log('for', i);
+  }
+}
+
+function foreachCountUpTo(arr:number[]){
+  arr.forEach((e)=>{
+    console.log('foreach', e);
+  })
+}
+
+function whileCountUpTo(x:number){
+  let i:number = 0;
+  while(i <= x){
+    console.log('while', i);
+    i++;
+  }
+}
+
+whileCountUpTo(10);
+forCountUpTo(10);
+foreachCountUpTo(count);
