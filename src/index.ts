@@ -118,3 +118,19 @@ function same(arr1: any, arr2: any){
 }
 
 same([1,2,3,2,5], [9,1,4,4,11])
+
+
+// Frequency counter pattern study
+function counterString(str: string){
+  let strArr = str.split('');
+  let objLetters: any = {};
+  for(let val of strArr){
+    objLetters[val] = (objLetters[val] || 0) + 1
+  }
+  console.log(objLetters);
+
+}
+
+
+
+counterString('Lucas')
