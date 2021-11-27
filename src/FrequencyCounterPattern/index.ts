@@ -38,7 +38,8 @@ export function counterString(str: string) {
   console.log(objLetters);
 }
 
-
+// Frequency counter pattern:
+// Valid Anagram Challenge
 export function validAnagram(str1: string, str2: string) {
   let arr1 = str1.split('');
   let arr2 = str2.split('');
