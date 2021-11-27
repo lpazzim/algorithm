@@ -1,5 +1,5 @@
 
-import { counterString, same} from './FrequencyCounterPattern'
+import { counterString, same, validAnagram} from './FrequencyCounterPattern'
 
 
 
@@ -95,3 +95,5 @@ jumpingNumber(23643);
 same([1,2,3,2,5], [9,1,4,4,11])
 
 counterString('Lucas')
+
+console.log(validAnagram('aaz', 'zaaa') ? 'true' : 'false') ;
