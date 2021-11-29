@@ -29,8 +29,8 @@ export function same(arr1: any, arr2: any) {
 
 
 // Frequency counter pattern study
-export function counterString(str: string) {
-  let strArr = str.split('');
+export function counterString(str: any) {
+  let strArr = str.toString().split('');
   let objLetters: any = {};
   for (let val of strArr) {
     objLetters[val] = (objLetters[val] || 0) + 1
@@ -102,3 +102,5 @@ export function validAnagramCourseExample(first: string, second: string) {
 
   return true;
 }
+
+

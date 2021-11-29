@@ -1,5 +1,6 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample} from './FrequencyCounterPattern'
+import { nbDig } from './Codewars'
 
 
 
@@ -92,14 +93,24 @@ function jumpingNumber(n: number) {
 
 jumpingNumber(23643);
 
+
+
+
 console.log('------------- FREQUENCY COUNTER PATTERN -------------')
 
 same([1,2,3,2,5], [9,1,4,4,11])
 
-counterString('Lucas')
+counterString(5000)
 
 console.log(validAnagram('aaz', 'zaaa') ? 'true' : 'false') ;
 
 console.log(validAnagramCourseExample('aaz', 'zaa') ? 'true' : 'false') ;
 
 console.log('------------- END FREQUENCY COUNTER PATTERN -------------')
+
+
+console.log('------------- CODEWARS -------------')
+
+console.log(nbDig(100, 0));
+
+console.log('------------- END CODEWARS -------------')
