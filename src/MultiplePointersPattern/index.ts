@@ -18,7 +18,6 @@ export function sumZero(arr: number[]) {
 
 // Multiple Pointers Pattern Challenge
 export function uniqueValues(arr: number[]) {
-  let left: number = 0;
   let right: number = arr.length - 1;
   const res: any = {};  
   while (right >= 0) {
