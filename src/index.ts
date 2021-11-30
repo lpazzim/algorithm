@@ -3,6 +3,7 @@ import { counterString, same, validAnagram, validAnagramCourseExample } from './
 import { nbDig } from './Codewars'
 import { countUniqueValues, sumZero, uniqueValues } from './MultiplePointersPattern';
 import { maxSubarraySum } from './SlidingWindowPattern';
+import { search } from './DivideAndConquerPattern';
 
 
 console.log('------------- FREQUENCY COUNTER PATTERN -------------')
@@ -28,15 +29,18 @@ console.log(countUniqueValues([-2,-1,0, 1]));
 console.log('------------- END MULTIPLE POINTERS PATTERN -------------')
 
 
-
-
-
 console.log('------------- SLINDING WINDOW PATTERN -------------')
 
 console.log(maxSubarraySum([2,6,9,2,1,8,5,6,27],3));
 
-
 console.log('------------- END SLINDING WINDOW PATTERN -------------')
+
+
+console.log('------------- DIVIDE AND CONQUER PATTERN -------------')
+
+console.log(search([1 , 2, 3, 5, 7, 10, 15, 18, 25 ,27],3));
+
+console.log('------------- END DIVIDE AND CONQUER PATTERN -------------')
 
 
 // console.log('------------- CODEWARS -------------')
