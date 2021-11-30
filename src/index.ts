@@ -1,6 +1,7 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample} from './FrequencyCounterPattern'
 import { nbDig } from './Codewars'
+import { sumZero } from './MultiplePointersPattern';
 
 
 
@@ -109,8 +110,16 @@ console.log(validAnagramCourseExample('aaz', 'zaa') ? 'true' : 'false') ;
 console.log('------------- END FREQUENCY COUNTER PATTERN -------------')
 
 
-console.log('------------- CODEWARS -------------')
+console.log('------------- MULTIPLE POINTERS PATTERN -------------')
 
-console.log(nbDig(100, 0));
+console.log(sumZero([-4,-3,-2,-1,0,1,2,3, 10]));
 
-console.log('------------- END CODEWARS -------------')
+console.log('------------- END MULTIPLE POINTERS PATTERN -------------')
+
+
+
+// console.log('------------- CODEWARS -------------')
+
+// console.log(nbDig(100, 0));
+
+// console.log('------------- END CODEWARS -------------')
