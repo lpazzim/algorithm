@@ -1,7 +1,7 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample } from './FrequencyCounterPattern'
 import { nbDig } from './Codewars'
-import { sumZero, uniqueValues } from './MultiplePointersPattern';
+import { countUniqueValues, sumZero, uniqueValues } from './MultiplePointersPattern';
 
 
 
@@ -115,6 +115,7 @@ console.log('------------- MULTIPLE POINTERS PATTERN -------------')
 console.log(sumZero([-4, -3, -2, -1, 0, 1, 2, 3, 10]));
 
 console.log(uniqueValues([-2,-1,0, 1]));
+console.log(countUniqueValues([-2,-1,0, 1]));
 
 console.log('------------- END MULTIPLE POINTERS PATTERN -------------')
 
