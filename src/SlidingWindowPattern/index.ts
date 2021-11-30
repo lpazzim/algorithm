@@ -1,3 +1,4 @@
+// Sliding Window Pattern
 export function maxSubarraySum(arr:number[], num: number){
   let maxSum = 0;
   let tempSum = 0;
