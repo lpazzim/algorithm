@@ -1,7 +1,7 @@
 
-import { counterString, same, validAnagram, validAnagramCourseExample} from './FrequencyCounterPattern'
+import { counterString, same, validAnagram, validAnagramCourseExample } from './FrequencyCounterPattern'
 import { nbDig } from './Codewars'
-import { sumZero } from './MultiplePointersPattern';
+import { sumZero, uniqueValues } from './MultiplePointersPattern';
 
 
 
@@ -71,8 +71,8 @@ function jumpingNumber(n: number) {
     console.log(x);
 
     x.reduce(function (accum, curr) {
-      if (accum - curr === 1 || curr - accum  === 1) {
-        if(res){
+      if (accum - curr === 1 || curr - accum === 1) {
+        if (res) {
           res = true;
         }
       } else {
@@ -99,20 +99,22 @@ jumpingNumber(23643);
 
 console.log('------------- FREQUENCY COUNTER PATTERN -------------')
 
-same([1,2,3,2,5], [9,1,4,4,11])
+same([1, 2, 3, 2, 5], [9, 1, 4, 4, 11])
 
 counterString(5000)
 
-console.log(validAnagram('aaz', 'zaaa') ? 'true' : 'false') ;
+console.log(validAnagram('aaz', 'zaaa') ? 'true' : 'false');
 
-console.log(validAnagramCourseExample('aaz', 'zaa') ? 'true' : 'false') ;
+console.log(validAnagramCourseExample('aaz', 'zaa') ? 'true' : 'false');
 
 console.log('------------- END FREQUENCY COUNTER PATTERN -------------')
 
 
 console.log('------------- MULTIPLE POINTERS PATTERN -------------')
 
-console.log(sumZero([-4,-3,-2,-1,0,1,2,3, 10]));
+console.log(sumZero([-4, -3, -2, -1, 0, 1, 2, 3, 10]));
+
+console.log(uniqueValues([-2,-1,0, 1]));
 
 console.log('------------- END MULTIPLE POINTERS PATTERN -------------')
 
