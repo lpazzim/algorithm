@@ -1,5 +1,4 @@
 // Recusion
-
 export function countDown(num: number) {
   if (num <= 0) {
     console.log("All done!");
@@ -17,3 +16,8 @@ export function sumRange(num: number):number {
   return num + sumRange(num - 1)
 }
 
+// Recusrive function example 2:
+export function factorial(num: number):number {
+  if (num === 1) return 1;
+  return num * factorial(num - 1)
+}
