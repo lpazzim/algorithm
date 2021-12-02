@@ -4,7 +4,7 @@ import { nbDig } from './Codewars'
 import { countUniqueValues, sumZero, uniqueValues } from './MultiplePointersPattern';
 import { maxSubarraySum } from './SlidingWindowPattern';
 import { search } from './DivideAndConquerPattern';
-import { countDown } from './Recursion';
+import { countDown, sumRange } from './Recursion';
 
 
 console.log('------------- FREQUENCY COUNTER PATTERN -------------')
@@ -48,6 +48,8 @@ console.log('******************************************** IMPORTANT ************
 console.log('------------- RECURSION -------------')
 
 countDown(10);
+
+console.log(sumRange(3));
 
 console.log('------------- END RECURSION -------------')
 

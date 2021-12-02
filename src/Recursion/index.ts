@@ -1,9 +1,9 @@
 // Recusion
 
-export function countDown(num: number){
-  if(num <= 0) {
-      console.log("All done!");
-      return;
+export function countDown(num: number) {
+  if (num <= 0) {
+    console.log("All done!");
+    return;
   }
   console.log(num);
   num--;
@@ -11,11 +11,9 @@ export function countDown(num: number){
 }
 countDown(3)
 
-// Iterative Version
-export function countDownIterative(num: number){
-  for(var i = num; i > 0; i--){
-      console.log(i);
-  }
-  console.log("All done!")
+// Recusrive function example:
+export function sumRange(num: number):number {
+  if (num === 1) return 1;
+  return num + sumRange(num - 1)
 }
 
