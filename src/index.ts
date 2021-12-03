@@ -5,7 +5,7 @@ import { countUniqueValues, sumZero, uniqueValues } from './MultiplePointersPatt
 import { maxSubarraySum } from './SlidingWindowPattern';
 import { search } from './DivideAndConquerPattern';
 import { collectOddValues, collectOddValuesPureRecursion, countDown, factorial, sumRange } from './Recursion';
-import { sameFrequencyChallenge } from './Challenges';
+import { areThereDuplicates, areThereDuplicatesSolution, areThereDuplicatesSolution2, sameFrequencyChallenge } from './Challenges';
 
 
 console.log('------------- FREQUENCY COUNTER PATTERN -------------')
@@ -69,6 +69,19 @@ console.log('------------- x Challenges x -------------')
 
 console.log(sameFrequencyChallenge(182, 821));
 console.log(sameFrequencyChallenge(13, 31));
+
+
+
+console.log('areThereDuplicates', areThereDuplicates([1,2,3]));
+console.log('areThereDuplicates', areThereDuplicates([1,2,2]));
+console.log('areThereDuplicates', areThereDuplicates([1,2,3,3]));
+console.log('areThereDuplicates', areThereDuplicates(['a','b','c','a']));
+
+
+console.log('areThereDuplicates', areThereDuplicatesSolution2(1,2,3));
+console.log('areThereDuplicates', areThereDuplicatesSolution2(1,2,2));
+console.log('areThereDuplicates', areThereDuplicatesSolution2(1,2,3,3));
+console.log('areThereDuplicates', areThereDuplicatesSolution2('a','b','c','a'));
 
 console.log('------------- x Challenges x -------------')
 
