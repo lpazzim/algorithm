@@ -28,18 +28,18 @@ export function sameFrequencyChallenge(num1: number, num2: number) {
 
 export function areThereDuplicates(arr: any) {
   let obj: any = {};
-  let val:any;
+  let val: any;
 
-  for(val of arr){
-    obj[val] = (obj[val] || 0) +1
+  for (val of arr) {
+    obj[val] = (obj[val] || 0) + 1
   }
 
-  let idx:any;
-  
-  for(idx in obj){
-    if(obj[idx] > 1){
+  let idx: any;
+
+  for (idx in obj) {
+    if (obj[idx] > 1) {
       return true
-    }  
+    }
   }
 
   return false;
@@ -48,29 +48,43 @@ export function areThereDuplicates(arr: any) {
 
 
 
-export function areThereDuplicatesSolution(...args:any) {
-  let collection:any = {}
-  for(let val in arguments){
+export function areThereDuplicatesSolution(...args: any) {
+  let collection: any = {}
+  for (let val in arguments) {
     collection[arguments[val]] = (collection[arguments[val]] || 0) + 1
   }
-  for(let key in collection){
-    if(collection[key] > 1) return true
+  for (let key in collection) {
+    if (collection[key] > 1) return true
   }
   return false;
 }
 
 
-export function areThereDuplicatesSolution2(...args:any) {
+export function areThereDuplicatesSolution2(...args: any) {
   // Two pointers
   args.sort((a: any, b: any) => a > b);
   let start = 0;
   let next = 1;
-  while(next < args.length){
-    if(args[start] === args[next]){
-        return true
+  while (next < args.length) {
+    if (args[start] === args[next]) {
+      return true
     }
     start++
     next++
   }
   return false
+}
+
+
+
+export function averagePair(arr: any, num: number) {
+  let start = 0
+  let end = arr.length-1;
+  while(start < end){
+    let avg = (arr[start]+arr[end]) / 2 
+    if(avg === num) return true;
+    else if(avg < num) start++
+    else end--
+  }
+  return false;
 }
