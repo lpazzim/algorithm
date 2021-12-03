@@ -5,6 +5,7 @@ import { countUniqueValues, sumZero, uniqueValues } from './MultiplePointersPatt
 import { maxSubarraySum } from './SlidingWindowPattern';
 import { search } from './DivideAndConquerPattern';
 import { collectOddValues, collectOddValuesPureRecursion, countDown, factorial, sumRange } from './Recursion';
+import { sameFrequencyChallenge } from './Challenges';
 
 
 console.log('------------- FREQUENCY COUNTER PATTERN -------------')
@@ -61,6 +62,17 @@ console.log(collectOddValuesPureRecursion([1,2,3,4,5,6,7,8,9]));
 console.log('------------- END RECURSION -------------')
 
 console.log('******************************************** IMPORTANT ********************************************')
+
+
+
+console.log('------------- x Challenges x -------------')
+
+console.log(sameFrequencyChallenge(182, 821));
+console.log(sameFrequencyChallenge(13, 31));
+
+console.log('------------- x Challenges x -------------')
+
+
 
 // console.log('------------- CODEWARS -------------')
 
