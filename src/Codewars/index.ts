@@ -79,35 +79,58 @@
 
 
 
-// Count the Digit Refactor 2
+// // Count the Digit Refactor 2
+// export function nbDig(n: number, d: number): number {
+//   //n = number and d digit 
+//   // create a obj to count
+//   let result: any = {};
+
+//   function countdig(count: number) {
+//     if (count < 0) return;
+//     let converCount: string;
+//     if (count <= n) {
+//       converCount = (count ** 2).toString();
+//     } else {
+//       converCount = d.toString();
+//     }
+
+//     let listValues: any = converCount.split('');
+
+//     const re = new RegExp(converCount, "g");
+//     if (!re.test(converCount) || listValues.length === 0) return;
+    
+//     if (converCount === listValues[0]) {
+//       result[converCount] = (result[converCount] || 0) + 1;
+//     }
+//     countdig(count - 1);
+//   }
+
+//   countdig(n);
+
+//   return result[d];
+// }
+
+
+// export function testeMatch(mainStr: string){
+//   console.log(mainStr.split("0").length - 1);
+
+// }
+
+
+
+// Count the Digit Refactor
 export function nbDig(n: number, d: number): number {
   //n = number and d digit 
   // create a obj to count
   let result: any = {};
+  let digit : string = d.toString();
 
-  function countdig(count: number) {
-    if (count < 0) return;
-    let converCount: string;
-    if (count <= n) {
-      converCount = (count ** 2).toString();
-    } else {
-      converCount = d.toString();
-    }
-
-    console.log(converCount);
-
-    let listValues: any = converCount.split('');
-
-    const re = new RegExp(converCount, "g");
-    if (!re.test(converCount) || listValues.length === 0) return;
-    
-    if (converCount === listValues[0]) {
-      result[converCount] = (result[converCount] || 0) + 1;
-    }
-    countdig(count - 1);
+  // square all number 0 <= k <= n and add in "obj"
+  for (let i = 0; i <= n; i++) {
+      const aux = (i ** 2).toString().split(digit);
+      console.log('aux', aux);
+      result[digit] = ( result[digit] || 0 ) + aux.length - 1;
   }
-
-  countdig(n);
 
   return result[d];
 }
