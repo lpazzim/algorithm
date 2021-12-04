@@ -1,36 +1,113 @@
 
 
-// Count the Digit
+// // Count the Digit
+// export function nbDig(n: number, d: number): number {
+//   //n = number and d digit 
+//   // create a obj to count
+//   let obj: any = {}
+
+//   // square all number 0 <= k <= n and add in "obj"
+//   for (let i = 0; i <= n; i++) {
+//     if (i <= n) {
+//       const aux = i ** 2;
+//       obj[aux] = (obj[aux] || 0) + 1;
+//     } else {
+//       obj[i] = (obj[i] || 0) + 1;
+//     }
+//   }
+
+//   let val: any;
+//   let result: any = {};
+
+//   for (val in obj) {
+//     let arr = val.split('');
+//     arr = arr.sort(function (a: any, b: any) { return a - b; });
+//     function countdig(list: any[]) {
+//       if (!list.find(e => e === d.toString()) || list.length === 0) return;
+//       if(d.toString() === list[0]){
+//         result[d.toString()] = (result[d.toString()] || 0) + 1;
+//       }
+//       countdig(list.slice(1));
+//     }
+
+//     countdig(arr);
+//   }
+//   return result
+// }
+
+
+
+
+
+
+// // Count the Digit Refactor
+// export function nbDig(n: number, d: number): number {
+//   //n = number and d digit 
+//   // create a obj to count
+//   let result: any = {};
+
+//   // square all number 0 <= k <= n and add in "obj"
+//   for (let i = 0; i <= n; i++) {
+//     if (i <= n) {
+//       const aux = (i ** 2).toString().split('');
+//       const re = new RegExp(d.toString(), "g");
+//       if(re.test(d.toString())){
+//         countdig(aux);
+//       }
+//     } else {
+//       const item = i.toString().split('');
+//       const re = new RegExp(d.toString(), "g");
+//       if(re.test(d.toString())){
+//         countdig(item);
+//       }
+//     }
+
+//     function countdig(list: any[]) {
+//       const re = new RegExp(d.toString(), "g");
+//       if(!re.test(d.toString()) || list.length === 0) return;
+//       if(d.toString() === list[0]){
+//         result[d.toString()] = (result[d.toString()] || 0) + 1;
+//       }
+//       countdig(list.slice(1));
+//     }
+//   }
+
+//   return result[d];
+// }
+
+
+
+
+
+// Count the Digit Refactor 2
 export function nbDig(n: number, d: number): number {
   //n = number and d digit 
   // create a obj to count
-  let obj: any = {}
-
-  // square all number 0 <= k <= n and add in "obj"
-  for (let i = 0; i <= n; i++) {
-    if (i <= n) {
-      const aux = i ** 2;
-      obj[aux] = (obj[aux] || 0) + 1;
-    } else {
-      obj[i] = (obj[i] || 0) + 1;
-    }
-  }
-
-  let val: any;
   let result: any = {};
 
-  for (val in obj) {
-    let arr = val.split('');
-    arr = arr.sort(function (a: any, b: any) { return a - b; });
-    function countdig(list: any[]) {
-      if (!list.find(e => e === d.toString()) || list.length === 0) return;
-      if(d.toString() === list[0]){
-        result[d.toString()] = (result[d.toString()] || 0) + 1;
-      }
-      countdig(list.slice(1));
+  function countdig(count: number) {
+    if (count < 0) return;
+    let converCount: string;
+    if (count <= n) {
+      converCount = (count ** 2).toString();
+    } else {
+      converCount = d.toString();
     }
-  
-    countdig(arr);
+
+    console.log(converCount);
+
+    let listValues: any = converCount.split('');
+
+    const re = new RegExp(converCount, "g");
+    if (!re.test(converCount) || listValues.length === 0) return;
+    
+    if (converCount === listValues[0]) {
+      result[converCount] = (result[converCount] || 0) + 1;
+    }
+    countdig(count - 1);
   }
-  return result
+
+  countdig(n);
+
+  return result[d];
 }

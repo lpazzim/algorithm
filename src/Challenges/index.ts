@@ -22,10 +22,6 @@ export function sameFrequencyChallenge(num1: number, num2: number) {
   return true;
 }
 
-
-
-
-
 export function areThereDuplicates(arr: any) {
   let obj: any = {};
   let val: any;
@@ -44,9 +40,6 @@ export function areThereDuplicates(arr: any) {
 
   return false;
 }
-
-
-
 
 export function areThereDuplicatesSolution(...args: any) {
   let collection: any = {}

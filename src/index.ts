@@ -94,6 +94,6 @@ console.log('------------- x Challenges x -------------')
 
 console.log('------------- CODEWARS -------------')
 
-console.log(nbDig(11011, 2));
+console.log(nbDig(10, 1));
 
 console.log('------------- END CODEWARS -------------')
