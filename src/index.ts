@@ -74,13 +74,11 @@ console.log(sameFrequencyChallenge(13, 31));
 
 console.log('areThereDuplicates', areThereDuplicates([1, 2, 3]));
 console.log('areThereDuplicates', areThereDuplicates([1, 2, 2]));
-console.log('areThereDuplicates', areThereDuplicates([1, 2, 3, 3]));
 console.log('areThereDuplicates', areThereDuplicates(['a', 'b', 'c', 'a']));
 
 
 console.log('areThereDuplicates', areThereDuplicatesSolution2(1, 2, 3));
 console.log('areThereDuplicates', areThereDuplicatesSolution2(1, 2, 2));
-console.log('areThereDuplicates', areThereDuplicatesSolution2(1, 2, 3, 3));
 console.log('areThereDuplicates', areThereDuplicatesSolution2('a', 'b', 'c', 'a'));
 
 console.log(averagePair([1, 2, 3], 2.5));
