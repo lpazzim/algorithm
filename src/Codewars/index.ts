@@ -1,5 +1,4 @@
 
-
 // // Count the Digit
 // export function nbDig(n: number, d: number): number {
 //   //n = number and d digit 
@@ -34,10 +33,6 @@
 //   }
 //   return result
 // }
-
-
-
-
 
 
 // // Count the Digit Refactor
@@ -98,7 +93,7 @@
 
 //     const re = new RegExp(converCount, "g");
 //     if (!re.test(converCount) || listValues.length === 0) return;
-    
+
 //     if (converCount === listValues[0]) {
 //       result[converCount] = (result[converCount] || 0) + 1;
 //     }
@@ -116,21 +111,41 @@
 
 // }
 
-
-
 // Count the Digit Refactor
 export function nbDig(n: number, d: number): number {
   //n = number and d digit 
   // create a obj to count
   let result: any = {};
-  let digit : string = d.toString();
+  let digit: string = d.toString();
 
   // square all number 0 <= k <= n and add in "obj"
   for (let i = 0; i <= n; i++) {
-      const aux = (i ** 2).toString().split(digit);
-      console.log('aux', aux);
-      result[digit] = ( result[digit] || 0 ) + aux.length - 1;
+    const aux = (i ** 2).toString().split(digit);
+    console.log('aux', aux);
+    result[digit] = (result[digit] || 0) + aux.length - 1;
   }
 
   return result[d];
+}
+
+
+
+
+// Convert number to binary
+export function singleDigit(n: number) {
+  let result: number = 0;
+
+
+  function sumBinary(n: number) {
+    if (n <= 9) {
+      result = n
+      return;
+    } else {
+      sumBinary(n.toString(2).split("1").length - 1);
+    }
+  }
+
+  sumBinary(n);
+
+  return result;
 }

@@ -1,6 +1,6 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample } from './FrequencyCounterPattern'
-import { nbDig } from './Codewars'
+import { nbDig, singleDigit } from './Codewars'
 import { countUniqueValues, sumZero, uniqueValues } from './MultiplePointersPattern';
 import { maxSubarraySum } from './SlidingWindowPattern';
 import { search } from './DivideAndConquerPattern';
@@ -94,5 +94,7 @@ console.log('------------- x Challenges x -------------')
 console.log('------------- CODEWARS -------------')
 
 console.log(nbDig(10, 1));
+
+console.log(singleDigit(1234444123));
 
 console.log('------------- END CODEWARS -------------')
