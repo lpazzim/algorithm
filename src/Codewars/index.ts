@@ -149,3 +149,25 @@ export function singleDigit(n: number) {
 
   return result;
 }
+
+//Solution of Drone Fly-By Codewars
+export function flyBy(lamps: string, drone: string): string {
+  // your code here
+  
+  let i: number = 0;
+  let result: any = [];
+  let droneLine: any = drone.split("");
+  let lampLine: any = lamps.split("");
+  
+  for (let j = 0; j < lampLine.length; j++){
+    if(droneLine.length > i){
+      result.push('o')  
+    } else {
+      result.push('x')
+    }
+    i++;
+  }
+  
+  return result.toString().replace(/,/g,"");
+  
+}
