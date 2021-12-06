@@ -1,9 +1,9 @@
 
-import { counterString, same, validAnagram, validAnagramCourseExample } from './FrequencyCounterPattern'
+import { counterString, same, validAnagram, validAnagramCourseExample } from './ProblemSolvingPatterns/FrequencyCounterPattern'
 import { nbDig, singleDigit } from './Codewars'
-import { countUniqueValues, sumZero, uniqueValues } from './MultiplePointersPattern';
-import { maxSubarraySum } from './SlidingWindowPattern';
-import { search } from './DivideAndConquerPattern';
+import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatterns/MultiplePointersPattern';
+import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
+import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
 import { collectOddValues, collectOddValuesPureRecursion, countDown, factorial, sumRange } from './Recursion';
 import { areThereDuplicates, areThereDuplicatesSolution, areThereDuplicatesSolution2, averagePair, sameFrequencyChallenge } from './Challenges';
 
