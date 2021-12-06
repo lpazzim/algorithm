@@ -6,6 +6,7 @@ import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
 import { collectOddValues, collectOddValuesPureRecursion, countDown, factorial, sumRange } from './Recursion';
 import { areThereDuplicates, areThereDuplicatesSolution, areThereDuplicatesSolution2, averagePair, sameFrequencyChallenge } from './Challenges';
+import { linearSearch } from './SearchingAlgorithms/LinearSearch';
 
 
 console.log('------------- FREQUENCY COUNTER PATTERN -------------')
@@ -98,3 +99,11 @@ console.log(nbDig(10, 1));
 console.log(singleDigit(1234444123));
 
 console.log('------------- END CODEWARS -------------')
+
+
+
+console.log('------------- Search -------------')
+
+console.log(linearSearch([10, 15, 20, 25, 30], 15));
+
+console.log('------------- END Search -------------')
