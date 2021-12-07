@@ -1,6 +1,6 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample } from './ProblemSolvingPatterns/FrequencyCounterPattern'
-import { add, F, M, nbDig, singleDigit } from './Codewars'
+import { add, digPow, F, M, nbDig, singleDigit } from './Codewars'
 import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatterns/MultiplePointersPattern';
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
@@ -109,6 +109,9 @@ console.log(M(1));
 console.log(F(2));
 console.log(M(2));
 
+
+
+console.log('digPow', digPow(695, 2));
 
 
 console.log('------------- END CODEWARS -------------')

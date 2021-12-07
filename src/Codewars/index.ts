@@ -181,9 +181,9 @@ export function add(num1: number, num2: number): number {
   const result: any = [];
   let size = Math.floor(converNum1.length - 1 + converNum2.length - 1);
 
-  if(size === 1) size++;
+  if (size === 1) size++;
 
-  if(converNum1.length === 1 && converNum2.length === 1){
+  if (converNum1.length === 1 && converNum2.length === 1) {
     return num1 + num2;
   }
 
@@ -202,19 +202,46 @@ export function add(num1: number, num2: number): number {
 
 
 
-export function F(n:number):number { 
-  if(n === 0){
+export function F(n: number): number {
+  if (n === 0) {
     return 1;
   }
-  
+
   return n - M(F(n - 1));
-  
+
 }
 
-export function M(n:number):number { 
- if(n === 0){
+export function M(n: number): number {
+  if (n === 0) {
     return 0;
   }
 
   return n - F(M(n - 1));
+}
+
+
+
+
+
+
+
+export function digPow(n: number, p: number) {
+  const arrDigits: any = n.toString().split("");
+  let arrResult: any = [];
+  let sum = 0;
+
+  let result: number;
+
+  for (let i = 0; i < arrDigits.length; i++) {
+    arrResult.push(Number(arrDigits[i]) ** (p + i));
+  }
+
+  arrResult.reduce((a: any, b: any) => {
+    sum = a + b;
+    return sum;
+  })
+
+  result = (Math.round(sum / n) * n) === sum ? (sum / n) : -1;
+
+  return result;
 }
