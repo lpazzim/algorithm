@@ -153,21 +153,68 @@ export function singleDigit(n: number) {
 //Solution of Drone Fly-By Codewars
 export function flyBy(lamps: string, drone: string): string {
   // your code here
-  
+
   let i: number = 0;
   let result: any = [];
   let droneLine: any = drone.split("");
   let lampLine: any = lamps.split("");
-  
-  for (let j = 0; j < lampLine.length; j++){
-    if(droneLine.length > i){
-      result.push('o')  
+
+  for (let j = 0; j < lampLine.length; j++) {
+    if (droneLine.length > i) {
+      result.push('o')
     } else {
       result.push('x')
     }
     i++;
   }
+
+  return result.toString().replace(/,/g, "");
+
+}
+
+
+
+
+export function add(num1: number, num2: number): number {
+  let converNum1: any = num1.toString().split('');
+  let converNum2: any = num2.toString().split('');
+  const result: any = [];
+  let size = Math.floor(converNum1.length - 1 + converNum2.length - 1);
+
+  if(size === 1) size++;
+
+  if(converNum1.length === 1 && converNum2.length === 1){
+    return num1 + num2;
+  }
+
+  let i: number = converNum1.length - 1;
+  for (let j = converNum2.length - 1; size >= 1; size--) {
+    let x: number = Number(converNum1[i]) ? Number(converNum1[i]) : 0;
+    let y: number = Number(converNum2[j]) ? Number(converNum2[j]) : 0;
+
+    result.unshift(x + y);
+    i--;
+    j--;
+  }
+
+  return Number(result.toString().replace(/,/g, ""));
+}
+
+
+
+export function F(n:number):number { 
+  if(n === 0){
+    return 1;
+  }
   
-  return result.toString().replace(/,/g,"");
+  return n - M(F(n - 1));
   
+}
+
+export function M(n:number):number { 
+ if(n === 0){
+    return 0;
+  }
+
+  return n - F(M(n - 1));
 }
