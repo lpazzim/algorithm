@@ -245,3 +245,37 @@ export function digPow(n: number, p: number) {
 
   return result;
 }
+
+
+export function isValidWalk(walk: string[]) {
+  let x:number = 0;
+  let y:number = 0;
+  
+  if(walk.length !== 10) return false;
+
+  for(let i = 0 ; i <= walk.length; i++){
+    switch(walk[i]){
+         case 'n':{
+           y++;
+         break 
+        }
+          case 's':{
+            y--;
+          break
+        }
+          case 'e':{
+            x++;
+          break
+        }
+          case 'w':{
+            x--;
+          break
+        }
+        default:{
+          break
+        }
+    }
+  }
+  
+  return ((x === 0) && (y === 0)) ? true : false;
+}
