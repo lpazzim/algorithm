@@ -7,6 +7,7 @@ import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
 import { collectOddValues, collectOddValuesPureRecursion, countDown, factorial, sumRange } from './Recursion';
 import { areThereDuplicates, areThereDuplicatesSolution, areThereDuplicatesSolution2, averagePair, sameFrequencyChallenge } from './Challenges';
 import { linearSearch } from './SearchingAlgorithms/LinearSearch';
+import { binarySearch } from './SearchingAlgorithms/BinarySearch';
 
 
 console.log('------------- FREQUENCY COUNTER PATTERN -------------')
@@ -123,5 +124,6 @@ console.log('------------- END CODEWARS -------------')
 console.log('------------- Search -------------')
 
 console.log(linearSearch([10, 15, 20, 25, 30], 15));
+console.log(binarySearch([1, 2, 3, 4, 5], 5));
 
 console.log('------------- END Search -------------')
