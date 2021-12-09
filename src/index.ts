@@ -8,6 +8,7 @@ import { collectOddValues, collectOddValuesPureRecursion, countDown, factorial, 
 import { areThereDuplicates, areThereDuplicatesSolution, areThereDuplicatesSolution2, averagePair, sameFrequencyChallenge } from './Challenges';
 import { linearSearch } from './SearchingAlgorithms/LinearSearch';
 import { binarySearch } from './SearchingAlgorithms/BinarySearch';
+import { bubbleSort, bubbleSortES2015Version, bubbleSortES2015VersionNoSwaps, bubbleSortNoSwaps } from './SortingAlgorithms/BubbleSort';
 
 
 console.log('------------- FREQUENCY COUNTER PATTERN -------------')
@@ -127,3 +128,19 @@ console.log(linearSearch([10, 15, 20, 25, 30], 15));
 console.log(binarySearch([1, 2, 3, 4, 5], 5));
 
 console.log('------------- END Search -------------')
+
+
+console.log('******************************************** IMPORTANT ********************************************')
+console.log('------------- SORT ALGORITHMS -------------')
+
+console.log(bubbleSort([8, 1, 2, 3, 4, 5, 6, 7]));
+
+console.log(bubbleSortES2015Version([8, 1, 2, 3, 4, 5, 6, 7]));
+
+console.log('Sorting with no swaps');
+
+console.log(bubbleSortNoSwaps([8, 1, 2, 3, 4, 5, 6, 7]));
+console.log(bubbleSortES2015VersionNoSwaps([8, 1, 2, 3, 4, 5, 6, 7]));
+
+console.log('------------- END SORT ALGORITHMS -------------')
+console.log('******************************************** IMPORTANT ********************************************')
