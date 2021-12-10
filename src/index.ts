@@ -9,6 +9,7 @@ import { areThereDuplicates, areThereDuplicatesSolution, areThereDuplicatesSolut
 import { linearSearch } from './SearchingAlgorithms/LinearSearch';
 import { binarySearch } from './SearchingAlgorithms/BinarySearch';
 import { bubbleSort, bubbleSortES2015Version, bubbleSortES2015VersionNoSwaps, bubbleSortNoSwaps } from './SortingAlgorithms/BubbleSort';
+import { selectionSort } from './SortingAlgorithms/SelectionSort';
 
 
 console.log('------------- FREQUENCY COUNTER PATTERN -------------')
@@ -133,14 +134,22 @@ console.log('------------- END Search -------------')
 console.log('******************************************** IMPORTANT ********************************************')
 console.log('------------- SORT ALGORITHMS -------------')
 
+console.log('BUBBLE SORT:');
+
 console.log(bubbleSort([8, 1, 2, 3, 4, 5, 6, 7]));
 
 console.log(bubbleSortES2015Version([8, 1, 2, 3, 4, 5, 6, 7]));
 
 console.log('Sorting with no swaps');
 
+
 console.log(bubbleSortNoSwaps([8, 1, 2, 3, 4, 5, 6, 7]));
 console.log(bubbleSortES2015VersionNoSwaps([8, 1, 2, 3, 4, 5, 6, 7]));
+
+console.log('SELECTION SORT:');
+
+console.log(selectionSort([8, 1, 2, 3, 4, 5, 6, 7]));
+
 
 console.log('------------- END SORT ALGORITHMS -------------')
 console.log('******************************************** IMPORTANT ********************************************')
