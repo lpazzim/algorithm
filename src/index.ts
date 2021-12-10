@@ -10,6 +10,7 @@ import { linearSearch } from './SearchingAlgorithms/LinearSearch';
 import { binarySearch } from './SearchingAlgorithms/BinarySearch';
 import { bubbleSort, bubbleSortES2015Version, bubbleSortES2015VersionNoSwaps, bubbleSortNoSwaps } from './SortingAlgorithms/BubbleSort';
 import { selectionSort } from './SortingAlgorithms/SelectionSort';
+import { insertionSort } from './SortingAlgorithms/InsertionSort';
 
 
 console.log('------------- FREQUENCY COUNTER PATTERN -------------')
@@ -116,7 +117,7 @@ console.log(M(2));
 
 console.log('digPow', digPow(695, 2));
 
-console.log('isValidWalk ?', isValidWalk(['w','e','w','e','w','e','w','e','w','e','w','e']));
+console.log('isValidWalk ?', isValidWalk(['w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e']));
 
 
 console.log('------------- END CODEWARS -------------')
@@ -149,6 +150,11 @@ console.log(bubbleSortES2015VersionNoSwaps([8, 1, 2, 3, 4, 5, 6, 7]));
 console.log('SELECTION SORT:');
 
 console.log(selectionSort([8, 1, 2, 3, 4, 5, 6, 7]));
+
+
+console.log('INSERTION SORT:');
+
+console.log(insertionSort([2, 1, 9, 76, 4]));
 
 
 console.log('------------- END SORT ALGORITHMS -------------')

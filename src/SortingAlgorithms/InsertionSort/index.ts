@@ -1,4 +1,4 @@
-function insertionSort(arr: any[]){
+export function insertionSort(arr: any[]){
 	var currentVal;
     for(var i = 1; i < arr.length; i++){
         currentVal = arr[i];
@@ -9,5 +9,3 @@ function insertionSort(arr: any[]){
     }
     return arr;
 }
-
-insertionSort([2,1,9,76,4])
