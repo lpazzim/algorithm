@@ -279,3 +279,32 @@ export function isValidWalk(walk: string[]) {
   
   return ((x === 0) && (y === 0)) ? true : false;
 }
+
+
+
+
+
+export function bouncingBall(h: number, bounce: number, window: number): number {
+  // your code
+  if(!h || bounce < 0 || bounce > 1 || window > h || h === window ) return -1;
+  
+  let result: number = 1;
+  
+  function bounceBall(x: number){
+    let ballPassInFrontWindow: number = (x * bounce);
+    
+    if(ballPassInFrontWindow < window) return result; 
+    
+    if(ballPassInFrontWindow === window){
+      return result;
+    } else if(ballPassInFrontWindow > window){
+      result +=2;
+    }
+    
+    bounceBall(ballPassInFrontWindow);
+  } 
+  
+  bounceBall(h);
+  
+  return result;
+}
