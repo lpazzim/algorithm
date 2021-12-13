@@ -11,7 +11,7 @@ import { binarySearch } from './SearchingAlgorithms/BinarySearch';
 import { bubbleSort, bubbleSortES2015Version, bubbleSortES2015VersionNoSwaps, bubbleSortNoSwaps } from './SortingAlgorithms/BubbleSort';
 import { selectionSort } from './SortingAlgorithms/SelectionSort';
 import { insertionSort } from './SortingAlgorithms/InsertionSort';
-import { merge } from './SortingAlgorithms/MergeSort';
+import { merge, mergeSort } from './SortingAlgorithms/MergeSort';
 
 
 console.log('------------- FREQUENCY COUNTER PATTERN -------------')
@@ -160,6 +160,10 @@ console.log(insertionSort([2, 1, 9, 76, 4]));
 console.log('MERGE SORT:');
 
 console.log(merge([1, 5, 7, 15], [2,3, 4, 6, 14]));
+
+console.log(mergeSort([10,24,76,73]));
+
+
 
 
 console.log('------------- END SORT ALGORITHMS -------------')

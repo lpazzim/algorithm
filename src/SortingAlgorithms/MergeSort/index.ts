@@ -23,5 +23,11 @@ export function merge(arr1: number[], arr2:number[]){
   return results;
 }
 
-
-                 
+// Recrusive Merge Sort
+export function mergeSort(arr: number[]){
+  if(arr.length <= 1) return arr;
+  let mid = Math.floor(arr.length/2);
+  let left: number[] = mergeSort(arr.slice(0,mid));
+  let right: number[] = mergeSort(arr.slice(mid));
+  return merge(left, right);
+}
