@@ -161,10 +161,7 @@ console.log('MERGE SORT:');
 
 console.log(merge([1, 5, 7, 15], [2,3, 4, 6, 14]));
 
-console.log(mergeSort([10,24,76,73]));
-
-
-
+console.log(mergeSort([-1, 50,10,24,76,73, 87, 1, 95, 2, 3, 3, 0]));
 
 console.log('------------- END SORT ALGORITHMS -------------')
 console.log('******************************************** IMPORTANT ********************************************')
