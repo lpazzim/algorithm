@@ -248,35 +248,35 @@ export function digPow(n: number, p: number) {
 
 
 export function isValidWalk(walk: string[]) {
-  let x:number = 0;
-  let y:number = 0;
-  
-  if(walk.length !== 10) return false;
+  let x: number = 0;
+  let y: number = 0;
 
-  for(let i = 0 ; i <= walk.length; i++){
-    switch(walk[i]){
-         case 'n':{
-           y++;
-         break 
-        }
-          case 's':{
-            y--;
-          break
-        }
-          case 'e':{
-            x++;
-          break
-        }
-          case 'w':{
-            x--;
-          break
-        }
-        default:{
-          break
-        }
+  if (walk.length !== 10) return false;
+
+  for (let i = 0; i <= walk.length; i++) {
+    switch (walk[i]) {
+      case 'n': {
+        y++;
+        break
+      }
+      case 's': {
+        y--;
+        break
+      }
+      case 'e': {
+        x++;
+        break
+      }
+      case 'w': {
+        x--;
+        break
+      }
+      default: {
+        break
+      }
     }
   }
-  
+
   return ((x === 0) && (y === 0)) ? true : false;
 }
 
@@ -286,25 +286,89 @@ export function isValidWalk(walk: string[]) {
 
 export function bouncingBall(h: number, bounce: number, window: number): number {
   // your code
-  if(!h || bounce < 0 || bounce > 1 || window > h || h === window ) return -1;
-  
+  if (!h || bounce < 0 || bounce > 1 || window > h || h === window) return -1;
+
   let result: number = 1;
-  
-  function bounceBall(x: number){
+
+  function bounceBall(x: number) {
     let ballPassInFrontWindow: number = (x * bounce);
-    
-    if(ballPassInFrontWindow < window) return result; 
-    
-    if(ballPassInFrontWindow === window){
+
+    if (ballPassInFrontWindow < window) return result;
+
+    if (ballPassInFrontWindow === window) {
       return result;
-    } else if(ballPassInFrontWindow > window){
-      result +=2;
+    } else if (ballPassInFrontWindow > window) {
+      result += 2;
     }
-    
+
     bounceBall(ballPassInFrontWindow);
-  } 
-  
+  }
+
   bounceBall(h);
-  
+
   return result;
 }
+
+
+
+
+
+export function smallest(n: number): number[] {
+  // your code
+  const result: any[] = [];
+  const arr: any[] = n.toString().split('');
+  let startIndex: any = null;
+  let swapIndex: any = null;
+  let swap: boolean = false;
+  let temp: number = parseInt(arr[0]);
+
+
+  for (let i = 0; i < arr.length; i++) {
+    startIndex = i;
+    for (let j = i + 1; j < arr.length; j++) {
+      if (temp > parseInt(arr[j])) {
+        temp = parseInt(arr[j]);
+        swapIndex = j;
+      }
+    }
+
+    if (temp < parseInt(arr[i])) {
+      swap = true;
+
+      arr.splice(swapIndex, 1);
+
+      arr.unshift(temp);
+
+      result.push(parseInt(arr.toString().replace(/,/g, "")));
+
+      console.log('parseInt(result[startIndex])', arr[startIndex]);
+      console.log('parseInt(result[0][startIndex])', arr[swapIndex]);
+
+      if(parseInt(arr[startIndex]) < parseInt(arr[swapIndex])){
+        result.push(parseInt(startIndex));  
+        result.push(parseInt(swapIndex));
+      } else {
+        result.push(parseInt(swapIndex));
+        result.push(parseInt(startIndex));
+      }
+      
+      
+    }
+    if (swap) break;
+  }
+
+
+  return result;
+}
+
+
+
+
+// for(let j = 0; j < arr.length; j++){    
+//   if (arr[j] > arr[j + 1]) {
+//     startIndex = j;
+//     var temp = arr[j];
+//   }
+  // arr[j] = arr[j + 1];
+  // arr[j + 1] = temp;
+  // swaps = true;

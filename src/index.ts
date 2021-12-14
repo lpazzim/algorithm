@@ -1,6 +1,6 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample } from './ProblemSolvingPatterns/FrequencyCounterPattern'
-import { add, bouncingBall, digPow, F, isValidWalk, M, nbDig, singleDigit } from './Codewars'
+import { add, bouncingBall, digPow, F, isValidWalk, M, nbDig, singleDigit, smallest } from './Codewars'
 import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatterns/MultiplePointersPattern';
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
@@ -126,6 +126,9 @@ console.log('bouncingBall', bouncingBall(3.0, 0.66, 1.5));
 console.log('bouncingBall', bouncingBall(30.0, 0.66, 1.5));
 console.log('bouncingBall', bouncingBall(30, 0.75, 1.5));
 console.log('bouncingBall', bouncingBall(30, 0.4, 10));
+
+
+console.log(smallest(285365));
 
 
 
