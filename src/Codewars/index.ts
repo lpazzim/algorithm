@@ -360,15 +360,3 @@ export function smallest(n: number): number[] {
 
   return result;
 }
-
-
-
-
-// for(let j = 0; j < arr.length; j++){    
-//   if (arr[j] > arr[j + 1]) {
-//     startIndex = j;
-//     var temp = arr[j];
-//   }
-  // arr[j] = arr[j + 1];
-  // arr[j + 1] = temp;
-  // swaps = true;
