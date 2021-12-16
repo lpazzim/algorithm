@@ -1,6 +1,6 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample } from './ProblemSolvingPatterns/FrequencyCounterPattern'
-import addNow, { add, bouncingBall, digPow, F, isValidWalk, M, nbDig, singleDigit, smallest } from './Codewars'
+import { add, bouncingBall, digPow, F, isValidWalk, laser, M, nbDig, oper, singleDigit, smallest } from './Codewars'
 import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatterns/MultiplePointersPattern';
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
@@ -11,7 +11,7 @@ import { binarySearch } from './SearchingAlgorithms/BinarySearch';
 import { bubbleSort, bubbleSortES2015Version, bubbleSortES2015VersionNoSwaps, bubbleSortNoSwaps } from './SortingAlgorithms/BubbleSort';
 import { selectionSort } from './SortingAlgorithms/SelectionSort';
 import { insertionSort } from './SortingAlgorithms/InsertionSort';
-import { merge, mergeSort } from './SortingAlgorithms/MergeSort';
+import { merge, mergeLetters, mergeSort, mergeSortLetters } from './SortingAlgorithms/MergeSort';
 
 
 console.log('------------- FREQUENCY COUNTER PATTERN -------------')
@@ -129,9 +129,12 @@ console.log('bouncingBall', bouncingBall(30, 0.4, 10));
 
 
 console.log(smallest(285365));
-console.log(addNow(1)(2));
+// console.log(addNow(1)(2));
 
 
+console.log(laser(() => ' volts!', 'Lucas' ))
+
+console.log(oper(() => ' volts!', 'Lucas' ));
 
 
 console.log('------------- END CODEWARS -------------')
@@ -175,6 +178,10 @@ console.log('MERGE SORT:');
 console.log(merge([1, 5, 7, 15], [2,3, 4, 6, 14]));
 
 console.log(mergeSort([-1, 50,10,24,76,73, 87, 1, 95, 2, 3, 3, 0]));
+
+console.log(mergeLetters(['b', 'e', 'f'], ['a', 'c', 'd']));
+
+console.log('mergeSortLetters', mergeSortLetters('dcab'));
 
 console.log('------------- END SORT ALGORITHMS -------------')
 console.log('******************************************** IMPORTANT ********************************************')

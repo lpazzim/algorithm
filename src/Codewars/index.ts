@@ -360,3 +360,17 @@ export function smallest(n: number): number[] {
 
   return result;
 }
+
+
+
+export function oper(fct: (s: string) => string, s: string): string {
+  return fct('Lucas') + s;
+}
+
+
+export const laser = (f: Function, str:string ):string => `${ str +  f()}`
+console.log(laser(() => ' volts!', 'Lucas' ))
+
+
+
+// Moves in squared strings (I)
