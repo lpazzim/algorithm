@@ -67,6 +67,7 @@ export function mergeLetters(arr1: any[], arr2: any[]) {
 export function mergeSortLetters(str: string){
     let arr: any[] = str.replace(/,/g, '').split("");
     
+    //Array sorted
     if (arr.length <= 1) return arr;
 
     let mid: number = Math.floor(arr.length / 2);
