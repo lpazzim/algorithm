@@ -5,6 +5,8 @@
 //   // create a obj to count
 //   let obj: any = {}
 
+import { mergeSortLetters } from "../SortingAlgorithms/MergeSort";
+
 //   // square all number 0 <= k <= n and add in "obj"
 //   for (let i = 0; i <= n; i++) {
 //     if (i <= n) {
@@ -374,3 +376,10 @@ console.log(laser(() => ' volts!', 'Lucas' ))
 
 
 // Moves in squared strings (I)
+
+export function splitAndMerge(str: string){
+  let convertString = str.replace(/(\r\n|\n|\r)/gm, ''); 
+
+  console.log(convertString);
+  mergeSortLetters(convertString);
+}

@@ -1,6 +1,6 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample } from './ProblemSolvingPatterns/FrequencyCounterPattern'
-import { add, bouncingBall, digPow, F, isValidWalk, laser, M, nbDig, oper, singleDigit, smallest } from './Codewars'
+import { add, bouncingBall, digPow, F, isValidWalk, laser, M, nbDig, oper, singleDigit, smallest, splitAndMerge } from './Codewars'
 import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatterns/MultiplePointersPattern';
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
@@ -135,6 +135,11 @@ console.log(smallest(285365));
 console.log(laser(() => ' volts!', 'Lucas' ))
 
 console.log(oper(() => ' volts!', 'Lucas' ));
+
+
+
+
+console.log(splitAndMerge("hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"));
 
 
 console.log('------------- END CODEWARS -------------')

@@ -35,6 +35,7 @@ export function mergeSort(arr: number[]) {
 }
 
 
+// MERGE SORT WITH STRING
 export function mergeLetters(arr1: any[], arr2: any[]) {
     let result: any = [];
     let i = 0;
@@ -71,6 +72,6 @@ export function mergeSortLetters(str: string){
     let mid: number = Math.floor(arr.length / 2);
     let left: any[] = mergeSortLetters(arr.slice(0, mid).toString());
     let right: any[] = mergeSortLetters(arr.slice(mid).toString());
-
+    console.log('mergeLetters', left, right)
     return mergeLetters(left, right);
 }
