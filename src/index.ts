@@ -12,6 +12,7 @@ import { bubbleSort, bubbleSortES2015Version, bubbleSortES2015VersionNoSwaps, bu
 import { selectionSort } from './SortingAlgorithms/SelectionSort';
 import { insertionSort } from './SortingAlgorithms/InsertionSort';
 import { merge, mergeLetters, mergeSort, mergeSortLetters } from './SortingAlgorithms/MergeSort';
+import { quickSort } from './SortingAlgorithms/QuickSort';
 
 
 console.log('------------- FREQUENCY COUNTER PATTERN -------------')
@@ -187,6 +188,9 @@ console.log(mergeSort([-1, 50,10,24,76,73, 87, 1, 95, 2, 3, 3, 0]));
 console.log(mergeLetters(['b', 'e', 'f'], ['a', 'c', 'd']));
 
 console.log('mergeSortLetters', mergeSortLetters('dcab'));
+
+
+console.log('Quick Sort', quickSort([100,-3,2,4,6,9,1,2,5,3,23]))
 
 console.log('------------- END SORT ALGORITHMS -------------')
 console.log('******************************************** IMPORTANT ********************************************')
