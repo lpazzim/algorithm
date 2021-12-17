@@ -81,3 +81,20 @@ export function averagePair(arr: any, num: number) {
   }
   return false;
 }
+
+
+export function neighborhood(arr: any[], num: number) {
+  let result: any[] = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if(!arr[i]){
+      result.push(i);
+      if(result.length === num) break
+    } else {
+      result = [];
+    }
+    console.log(i);
+  }
+
+  return result;
+}

@@ -5,7 +5,7 @@ import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatter
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
 import { collectOddValues, collectOddValuesPureRecursion, countDown, factorial, sumRange } from './Recursion';
-import { areThereDuplicates, areThereDuplicatesSolution, areThereDuplicatesSolution2, averagePair, sameFrequencyChallenge } from './Challenges';
+import { areThereDuplicates, areThereDuplicatesSolution, areThereDuplicatesSolution2, averagePair, neighborhood, sameFrequencyChallenge } from './Challenges';
 import { linearSearch } from './SearchingAlgorithms/LinearSearch';
 import { binarySearch } from './SearchingAlgorithms/BinarySearch';
 import { bubbleSort, bubbleSortES2015Version, bubbleSortES2015VersionNoSwaps, bubbleSortNoSwaps } from './SortingAlgorithms/BubbleSort';
@@ -92,6 +92,9 @@ console.log(averagePair([1, 2, 3], 2.5));
 console.log(averagePair([1, 3, 3, 5, 6, 7, 10, 12, 19], 8));
 console.log(averagePair([-1, 0, 3, 4, 5, 6], 4.1));
 console.log(averagePair([], 4));
+
+
+console.log('neighborhood', neighborhood([1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0], 2));
 
 
 console.log('------------- x Challenges x -------------')

@@ -15,9 +15,3 @@ export function maxSubarraySum(arr: number[], num: number) {
   }
   return maxSum;
 }
-
-
-
-
-
-
