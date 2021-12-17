@@ -52,3 +52,28 @@ function binarySearchRefactored(arr: any, elem: number) {
   }
   return arr[middle] === elem ? middle : -1;
 }
+
+
+
+
+
+
+export function binarySearchLetters(str: string, char: string) {
+  let arr: string[] = str.split("");
+  let start = 0;
+  let end = arr.length - 1;
+  let middle = Math.floor(arr.length / 2);
+
+  while (start <= end && arr[middle] !== char) {
+    console.log(arr[middle]);
+    console.log(char < arr[middle]);
+    if (char < arr[middle]) {
+      end = middle - 1;
+    }
+    else {
+      start = middle + 1;
+    }
+    middle = Math.floor((start + end) / 2);
+  }
+  return arr[middle] === char ? middle : -1;
+}

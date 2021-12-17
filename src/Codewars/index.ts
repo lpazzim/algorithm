@@ -401,7 +401,7 @@ export function adjacentElementsProduct(arr: number[]): number {
     if (list.length === 0) {
       return
     }
-    console.log('result', (list[i] * list[j]));
+
     if ((list[i] * list[j]) > result) result = list[i] * list[j];
     findNumber(list.slice(1));
   }
