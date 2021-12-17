@@ -346,15 +346,15 @@ export function smallest(n: number): number[] {
       console.log('parseInt(result[startIndex])', arr[startIndex]);
       console.log('parseInt(result[0][startIndex])', arr[swapIndex]);
 
-      if(parseInt(arr[startIndex]) < parseInt(arr[swapIndex])){
-        result.push(parseInt(startIndex));  
+      if (parseInt(arr[startIndex]) < parseInt(arr[swapIndex])) {
+        result.push(parseInt(startIndex));
         result.push(parseInt(swapIndex));
       } else {
         result.push(parseInt(swapIndex));
         result.push(parseInt(startIndex));
       }
-      
-      
+
+
     }
     if (swap) break;
   }
@@ -370,16 +370,43 @@ export function oper(fct: (s: string) => string, s: string): string {
 }
 
 
-export const laser = (f: Function, str:string ):string => `${ str +  f()}`
-console.log(laser(() => ' volts!', 'Lucas' ))
+export const laser = (f: Function, str: string): string => `${str + f()}`
+console.log(laser(() => ' volts!', 'Lucas'))
 
 
 
 // Moves in squared strings (I)
 
-export function splitAndMerge(str: string){
-  let convertString = str.replace(/(\r\n|\n|\r)/gm, ''); 
+export function splitAndMerge(str: string) {
+  let convertString = str.replace(/(\r\n|\n|\r)/gm, '');
 
   console.log(convertString);
   mergeSortLetters(convertString);
+}
+
+
+
+
+
+export function adjacentElementsProduct(arr: number[]): number {
+  let i: number = 0;
+  let j: number = i + 1;
+  let result: number = arr.length > 0 ? arr[i] * arr[j] : 0;
+
+  if (arr.length === 2) {
+    return result;
+  }
+
+  function findNumber(list: number[]) {
+    if (list.length === 0) {
+      return
+    }
+    console.log('result', (list[i] * list[j]));
+    if ((list[i] * list[j]) > result) result = list[i] * list[j];
+    findNumber(list.slice(1));
+  }
+
+  findNumber(arr);
+
+  return result;
 }
