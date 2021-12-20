@@ -7,7 +7,7 @@ import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
 import { collectOddValues, collectOddValuesPureRecursion, countDown, factorial, sumRange } from './Recursion';
 import { areThereDuplicates, areThereDuplicatesSolution, areThereDuplicatesSolution2, averagePair, neighborhood, sameFrequencyChallenge } from './Challenges';
 import { linearSearch } from './SearchingAlgorithms/LinearSearch';
-import { binarySearch, binarySearchLetters } from './SearchingAlgorithms/BinarySearch';
+import { binarySearch, binarySearchLetters, binarySearchNew } from './SearchingAlgorithms/BinarySearch';
 import { bubbleSort, bubbleSortES2015Version, bubbleSortES2015VersionNoSwaps, bubbleSortNoSwaps } from './SortingAlgorithms/BubbleSort';
 import { selectionSort } from './SortingAlgorithms/SelectionSort';
 import { insertionSort } from './SortingAlgorithms/InsertionSort';
@@ -166,6 +166,8 @@ console.log('------------- Search -------------')
 // console.log(linearSearch([10, 15, 20, 25, 30], 15));
 // console.log(binarySearch([1, 2, 3, 4, 5], 5));
 // console.log('binarySearchLetters', binarySearchLetters('abcdefghijklmnopqrstuvxz', 'l'));
+
+console.log(binarySearchNew([1,2,3,4,5], 7))
 
 
 console.log('------------- END Search -------------')

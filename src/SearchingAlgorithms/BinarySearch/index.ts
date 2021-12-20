@@ -77,3 +77,22 @@ export function binarySearchLetters(str: string, char: string) {
   }
   return arr[middle] === char ? middle : -1;
 }
+
+
+
+export function binarySearchNew(arr: number[], x: number) {
+  let start: any = 0;
+  let end: any = arr.length - 1;
+  let middle: any = Math.floor(arr.length / 2);
+
+  while(start <= end && arr[middle] !== x){
+    if(x < arr[middle]){
+      end = middle - 1;
+    } else {
+      start = middle + 1;
+    }   
+     middle = Math.floor((start + end) / 2);
+  }
+
+  return arr[middle] === x ? arr[middle] : -1 ;
+}
