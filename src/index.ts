@@ -148,7 +148,7 @@ console.log('------------- CODEWARS -------------')
 // console.log(meeting("Alexis:Wahl;John:Bell;Victoria:Schwarz;Abba:Dorny;Grace:Meta;Ann:Arno;Madison:STAN;Alex:Cornwell;Lewis:Kern;Megan:Stan;Alex:Korn"));
 
 
-console.log(partsSums([0, 1, 3, 6, 10]));
+// console.log(partsSums([0, 1, 3, 6, 10]));
 
 
 console.log('------------- END CODEWARS -------------')
