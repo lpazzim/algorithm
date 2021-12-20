@@ -426,7 +426,7 @@ export const findOdd = (xs: number[]): number => {
   }
 
   for (let j in frequencyCount) {
-    if(count < frequencyCount[j] && ((parseInt(frequencyCount[j]) % 2) !== 0)){
+    if (count < frequencyCount[j] && ((parseInt(frequencyCount[j]) % 2) !== 0)) {
       result = parseInt(j);
       count = parseInt(j);
     }
@@ -434,3 +434,91 @@ export const findOdd = (xs: number[]): number => {
 
   return result;
 };
+
+
+// export function meeting(s: string): string {
+//   let result: string[] = [];
+//   let arr: any[] = s.toUpperCase().split(";");
+//   let surName: string = arr[0].split(':').pop();
+//   let start: number = 0;
+//   let end: number = arr.length - 1;
+
+//   while (start <= end || arr.length > 0) {
+//     if (arr[start] && surName === arr[start].split(':').pop()) {
+//       result.push(arr[start]);
+//       arr.splice(start,1); 
+//     } else {
+//       start++;
+//     }
+//   }
+
+
+
+//   return '';
+// }
+
+export function mergeSort(arr1: any[], arr2: any[]) {
+  let result: any = [];
+  let i: number = 0;
+  let j: number = 0;
+
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i].split(":").pop() < arr2[j].split(':').pop()) {
+      result.push(arr1[i]);
+      i++;
+    } else {
+      result.push(arr2[j]);
+      j++;
+    }
+  }
+
+  while (i < arr1.length) {
+    result.push(arr1[i]);
+    i++;
+  }
+  while (j < arr2.length) {
+    result.push(arr2[j]);
+    j++;
+  }
+
+  return result;
+}
+
+
+
+export function sortSurname(s: string) {
+  let arr = s.toUpperCase().replace(/,/g, ';').split(';');
+
+  if (arr.length <= 1) return arr;
+
+  let middle = Math.floor(arr.length / 2);
+  let left: any[] = sortSurname(arr.slice(0, middle).toString());
+  let right: any[] = sortSurname(arr.slice(middle).toString());
+
+  return mergeSort(left, right);
+}
+
+
+
+
+export function meeting(s: string): string {
+  let arr = sortSurname(s);
+  let result: string = '';
+  var currentVal;
+
+  for (var i = 1; i < arr.length; i++) {
+    currentVal = arr[i];
+    for (var j = i - 1; (j >= 0) && (arr[j] > currentVal) && ((currentVal.split(":").pop() === arr[j].split(":").pop())); j--) {
+      arr[j + 1] = arr[j]
+    }
+    arr[j + 1] = currentVal;
+  }
+
+  for(var i = 0; i < arr.length; i++){
+    const idx = arr[i].indexOf(':')
+    const firstName = arr[i].slice(0, idx);
+    result += `(${arr[i].split(":").pop()}, ${firstName})`;
+  }
+
+  return result;
+}
