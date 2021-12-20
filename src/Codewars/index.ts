@@ -371,7 +371,7 @@ export function oper(fct: (s: string) => string, s: string): string {
 
 
 export const laser = (f: Function, str: string): string => `${str + f()}`
-console.log(laser(() => ' volts!', 'Lucas'))
+// console.log(laser(() => ' volts!', 'Lucas'))
 
 
 
@@ -514,11 +514,71 @@ export function meeting(s: string): string {
     arr[j + 1] = currentVal;
   }
 
-  for(var i = 0; i < arr.length; i++){
+  for (var i = 0; i < arr.length; i++) {
     const idx = arr[i].indexOf(':')
     const firstName = arr[i].slice(0, idx);
     result += `(${arr[i].split(":").pop()}, ${firstName})`;
   }
 
+  return result;
+}
+
+
+
+// export function partsSums(ls: number[]): number[] {
+//   let result: any = [];
+//   let sumResult: number = 0;
+
+//   function sumParts(list: number[]) {
+//     sumResult = 0;
+//     if (list.length === 0) {
+//       sumResult = 0;
+//       result.push(sumResult);
+//       return;
+//     }
+//     if (list.length === 1) {
+//       sumResult = list[0];
+//     }
+//     if (list.length > 1) {
+//       for (let i = 0; i < list.length; i++) {
+//         sumResult += list[i];
+//       }
+
+//     }
+//     result.push(sumResult);
+//     sumParts(list.slice(1));
+
+//     return result;
+//   }
+
+//   sumParts(ls);
+
+//   return result;
+// }
+
+
+export function partsSums(ls: number[]): number[] {
+  let result: any = [];
+  let sumResult: number = 0;
+  
+  if(ls.length <= 0){
+    result.push(sumResult);
+    return result;
+  }
+
+  for (let i = 0; i < ls.length; i++) {
+    sumResult = ls[i];
+    for (let j = i + 1; j < ls.length; j++) {
+      sumResult += ls[j];
+    }
+    result.push(sumResult);
+    break
+  }
+
+  for (let i = 0; i < ls.length; i++) {
+    sumResult -= ls[i]
+    result.push(sumResult);
+  }
+  
   return result;
 }

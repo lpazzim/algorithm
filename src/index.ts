@@ -1,6 +1,6 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample } from './ProblemSolvingPatterns/FrequencyCounterPattern'
-import { add, adjacentElementsProduct, bouncingBall, digPow, F, findOdd, isValidWalk, laser, M, meeting, nbDig, oper, singleDigit, smallest, sortSurname, splitAndMerge } from './Codewars'
+import { add, adjacentElementsProduct, bouncingBall, digPow, F, findOdd, isValidWalk, laser, M, meeting, nbDig, oper, partsSums, singleDigit, smallest, sortSurname, splitAndMerge } from './Codewars'
 import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatterns/MultiplePointersPattern';
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
@@ -145,7 +145,10 @@ console.log('------------- CODEWARS -------------')
 // console.log('adjacentElementsProduct', adjacentElementsProduct([5, 6, -4, 2, 3, 2, -23]));
 
 // console.log('findOdd', findOdd([1,1,1,1,1,1,10,1,1,1,1]));
-console.log(meeting("Alexis:Wahl;John:Bell;Victoria:Schwarz;Abba:Dorny;Grace:Meta;Ann:Arno;Madison:STAN;Alex:Cornwell;Lewis:Kern;Megan:Stan;Alex:Korn"));
+// console.log(meeting("Alexis:Wahl;John:Bell;Victoria:Schwarz;Abba:Dorny;Grace:Meta;Ann:Arno;Madison:STAN;Alex:Cornwell;Lewis:Kern;Megan:Stan;Alex:Korn"));
+
+
+console.log(partsSums([0, 1, 3, 6, 10]));
 
 
 console.log('------------- END CODEWARS -------------')
