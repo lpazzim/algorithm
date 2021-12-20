@@ -410,3 +410,27 @@ export function adjacentElementsProduct(arr: number[]): number {
 
   return result;
 }
+
+
+
+export const findOdd = (xs: number[]): number => {
+  // happy coding!
+  let frequencyCount: any = {};
+  let result: number = 0;
+  let count: number = 0;
+
+  if (xs.length === 0) return xs[0];
+
+  for (let i of xs) {
+    frequencyCount[i] = (frequencyCount[i] || 0) + 1
+  }
+
+  for (let j in frequencyCount) {
+    if(count < frequencyCount[j] && ((parseInt(frequencyCount[j]) % 2) !== 0)){
+      result = parseInt(j);
+      count = parseInt(j);
+    }
+  }
+
+  return result;
+};

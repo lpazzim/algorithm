@@ -1,6 +1,6 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample } from './ProblemSolvingPatterns/FrequencyCounterPattern'
-import { add, adjacentElementsProduct, bouncingBall, digPow, F, isValidWalk, laser, M, nbDig, oper, singleDigit, smallest, splitAndMerge } from './Codewars'
+import { add, adjacentElementsProduct, bouncingBall, digPow, F, findOdd, isValidWalk, laser, M, nbDig, oper, singleDigit, smallest, splitAndMerge } from './Codewars'
 import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatterns/MultiplePointersPattern';
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
@@ -124,37 +124,27 @@ console.log('------------- CODEWARS -------------')
 // console.log(F(2));
 // console.log(M(2));
 
-
-
 // console.log('digPow', digPow(695, 2));
 
 // console.log('isValidWalk ?', isValidWalk(['w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e']));
-
-
 
 // console.log('bouncingBall', bouncingBall(3.0, 0.66, 1.5));
 // console.log('bouncingBall', bouncingBall(30.0, 0.66, 1.5));
 // console.log('bouncingBall', bouncingBall(30, 0.75, 1.5));
 // console.log('bouncingBall', bouncingBall(30, 0.4, 10));
 
-
 // console.log(smallest(285365));
 // // console.log(addNow(1)(2));
-
 
 // console.log(laser(() => ' volts!', 'Lucas' ))
 
 // console.log(oper(() => ' volts!', 'Lucas' ));
 
-
-
-
 // console.log(splitAndMerge("hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"));
 
-
-
-
 // console.log('adjacentElementsProduct', adjacentElementsProduct([5, 6, -4, 2, 3, 2, -23]));
+
+console.log('findOdd', findOdd([1,1,1,1,1,1,10,1,1,1,1]));
 
 
 console.log('------------- END CODEWARS -------------')
@@ -166,8 +156,7 @@ console.log('------------- Search -------------')
 // console.log(linearSearch([10, 15, 20, 25, 30], 15));
 // console.log(binarySearch([1, 2, 3, 4, 5], 5));
 // console.log('binarySearchLetters', binarySearchLetters('abcdefghijklmnopqrstuvxz', 'l'));
-
-console.log(binarySearchNew([1,2,3,4,5], 7))
+// console.log(binarySearchNew([1,2,3,4,5], 7))
 
 
 console.log('------------- END Search -------------')
