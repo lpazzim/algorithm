@@ -560,8 +560,8 @@ export function meeting(s: string): string {
 export function partsSums(ls: number[]): number[] {
   let result: any = [];
   let sumResult: number = 0;
-  
-  if(ls.length <= 0){
+
+  if (ls.length <= 0) {
     result.push(sumResult);
     return result;
   }
@@ -579,6 +579,75 @@ export function partsSums(ls: number[]): number[] {
     sumResult -= ls[i]
     result.push(sumResult);
   }
-  
+
   return result;
+}
+
+
+
+
+
+function mergeSortNow(arr1: number[], arr2: number[]) {
+  let result: number[] = [];
+  let i: number = 0;
+  let j: number = 0;
+
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] < arr2[j]) {
+      result.push(arr1[i]);
+      i++;
+    } else {
+      result.push(arr2[j]);
+      j++;
+    }
+  }
+
+  while (i < arr1.length) {
+    result.push(arr1[i]);
+    i++;
+  }
+
+  while (j < arr2.length) {
+    result.push(arr2[j]);
+    j++;
+
+  }
+
+  return result;
+}
+
+
+function secondPartMergeSort(arr: number[]) {
+  if (arr.length <= 1) return arr;
+
+  let middle: number = Math.floor(arr.length / 2)
+  let left: number[] = secondPartMergeSort(arr.slice(0, middle))
+  let right: number[] = secondPartMergeSort(arr.slice(middle));
+
+  return mergeSortNow(left, right);
+}
+
+
+export function chooseBestSum(t: number, k: number, ls: number[]): any {
+  let biggestCount = 0
+  
+  function recursiveTowns(sumDistance: number, count: number, lastIndex: number) {
+    if (count === k) {      
+      if (sumDistance <= t && sumDistance > biggestCount) {
+        biggestCount = sumDistance
+      }
+      
+      return
+    }
+    
+    
+    for (let i = lastIndex; i < ls.length; i++) {
+      console.log(i, count + 1, i+1);
+      recursiveTowns(sumDistance + ls[i], count + 1, i + 1)
+    }
+  }
+  
+  recursiveTowns(0, 0, 0)
+  
+  return biggestCount || null
 }
