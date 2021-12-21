@@ -629,25 +629,20 @@ function secondPartMergeSort(arr: number[]) {
 
 
 export function chooseBestSum(t: number, k: number, ls: number[]): any {
-  let biggestCount = 0
+  let result = 0
   
-  function recursiveTowns(sumDistance: number, count: number, lastIndex: number) {
+  function calc(sum: number = 0, count: number = 0, idx: number = 0) {
     if (count === k) {      
-      if (sumDistance <= t && sumDistance > biggestCount) {
-        biggestCount = sumDistance
-      }
-      
+      if (sum <= t && sum > result) {
+        result = sum
+      }  
       return
     }
-    
-    
-    for (let i = lastIndex; i < ls.length; i++) {
-      console.log(i, count + 1, i+1);
-      recursiveTowns(sumDistance + ls[i], count + 1, i + 1)
+    for (let i = idx; i < ls.length; i++) {
+      console.log(sum + ls[i]);
+      calc(sum + ls[i], count + 1, i + 1)
     }
   }
-  
-  recursiveTowns(0, 0, 0)
-  
-  return biggestCount || null
+  calc()
+  return result || null
 }
