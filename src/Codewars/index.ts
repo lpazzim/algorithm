@@ -5,6 +5,7 @@
 //   // create a obj to count
 //   let obj: any = {}
 
+import { countDown } from "../Recursion";
 import { mergeSortLetters } from "../SortingAlgorithms/MergeSort";
 
 //   // square all number 0 <= k <= n and add in "obj"
@@ -630,12 +631,12 @@ function secondPartMergeSort(arr: number[]) {
 
 export function chooseBestSum(t: number, k: number, ls: number[]): any {
   let result = 0
-  
+
   function calc(sum: number = 0, count: number = 0, idx: number = 0) {
-    if (count === k) {      
+    if (count === k) {
       if (sum <= t && sum > result) {
         result = sum
-      }  
+      }
       return
     }
     for (let i = idx; i < ls.length; i++) {
@@ -645,4 +646,87 @@ export function chooseBestSum(t: number, k: number, ls: number[]): any {
   }
   calc()
   return result || null
+}
+
+
+
+export function sqInRect(l: number, w: number): number[] | null | undefined {
+  // your code
+  let result: any[] = [];
+  let x: number = 0;
+  let y: number = 0;
+  let countSquare: number = 0;
+  if (l === w) return null;
+
+  while (x < w && y < l) {
+    x++;
+    y++;
+
+    if (x === y && (x * y) !== 1 && (x === w || y === l)) {
+      countSquare += x;
+      result.push(countSquare);
+      countSquare = 0;
+    }
+  }
+
+  while (y < l) {
+    y++;
+    countSquare += 1;
+    if (countSquare <= w && countSquare !== 1) {
+      result.push(countSquare);
+      x = countSquare;
+      countSquare = 0;
+    }
+
+    if (x === w && countSquare === 1) {
+      result.push(1);
+    }
+  }
+
+  while (x < w) {
+    x++;
+    countSquare += 1;
+    if (countSquare <= l && countSquare !== 1) {
+      result.push(countSquare);
+      y = countSquare;
+      countSquare = 0;
+    }
+    if (y === l && countSquare === 1) {
+      result.push(1);
+    }
+  }
+  return result;
+}
+
+
+
+
+
+
+
+export function sqInRectRecu(l: number, w: number): number[] | null | undefined {
+  // your code
+  let result: any[] = [];
+  let arr: any[] = [];
+  let count: number = (l * w);
+  if (l === w) return null;
+
+  function calc(x: number) {
+    let res: any = Math.sqrt(x - 1);
+    if (x <= 0) return
+
+    if (Number.isInteger(res)) {
+      if (res === 0 ) {
+        result.push(1);
+      } else {
+        result.push(res);
+      }
+    }
+
+    calc(x - 1);
+    return
+  }
+
+  calc(count);
+  return result;
 }
