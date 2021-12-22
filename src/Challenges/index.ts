@@ -72,11 +72,11 @@ export function areThereDuplicatesSolution2(...args: any) {
 
 export function averagePair(arr: any, num: number) {
   let start = 0
-  let end = arr.length-1;
-  while(start < end){
-    let avg = (arr[start]+arr[end]) / 2 
-    if(avg === num) return true;
-    else if(avg < num) start++
+  let end = arr.length - 1;
+  while (start < end) {
+    let avg = (arr[start] + arr[end]) / 2
+    if (avg === num) return true;
+    else if (avg < num) start++
     else end--
   }
   return false;
@@ -87,9 +87,9 @@ export function neighborhood(arr: any[], num: number) {
   let result: any[] = [];
 
   for (let i = 0; i < arr.length; i++) {
-    if(!arr[i]){
+    if (!arr[i]) {
       result.push(i);
-      if(result.length === num) break
+      if (result.length === num) break
     } else {
       result = [];
     }
@@ -97,4 +97,25 @@ export function neighborhood(arr: any[], num: number) {
   }
 
   return result;
+}
+
+
+
+export function twoNumberSum(array: number[], targetSum: any) {
+  // Write your code here.
+   let result:any = [];
+	
+   for(let i = 0 ; i<= array.length; i++){
+     for(let j = 0 ; j <= array.length; j++){
+         if(j !== i) {
+          if(array[i] + array[j] === targetSum){
+            result =[array[i], array[j]]
+            break;
+          }
+         }
+     }
+   }
+   
+   
+   return result;
 }

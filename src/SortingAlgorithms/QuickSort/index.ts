@@ -54,5 +54,4 @@ export function quickSort(arr: any[], left = 0, right = arr.length -1){
       }
      return arr;
 } 
-           
-
+          

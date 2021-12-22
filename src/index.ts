@@ -5,7 +5,7 @@ import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatter
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
 import { collectOddValues, collectOddValuesPureRecursion, countDown, factorial, sumRange } from './Recursion';
-import { areThereDuplicates, areThereDuplicatesSolution, areThereDuplicatesSolution2, averagePair, neighborhood, sameFrequencyChallenge } from './Challenges';
+import { areThereDuplicates, areThereDuplicatesSolution, areThereDuplicatesSolution2, averagePair, neighborhood, sameFrequencyChallenge, twoNumberSum } from './Challenges';
 import { linearSearch } from './SearchingAlgorithms/LinearSearch';
 import { binarySearch, binarySearchLetters, binarySearchNew } from './SearchingAlgorithms/BinarySearch';
 import { bubbleSort, bubbleSortES2015Version, bubbleSortES2015VersionNoSwaps, bubbleSortNoSwaps } from './SortingAlgorithms/BubbleSort';
@@ -152,7 +152,9 @@ console.log('------------- CODEWARS -------------')
 
 // console.log(chooseBestSum(163, 3, [50, 55, 57, 58, 60]))
 
-console.log(sqInRectRecu(5,3));
+// console.log(sqInRectRecu(5, 3));
+
+console.log(twoNumberSum([3, 5, -4, 8, 11, 1, -1, 6], 10))
 
 
 console.log('------------- END CODEWARS -------------')
