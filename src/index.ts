@@ -13,7 +13,7 @@ import { selectionSort } from './SortingAlgorithms/SelectionSort';
 import { insertionSort } from './SortingAlgorithms/InsertionSort';
 import { merge, mergeLetters, mergeSort, mergeSortLetters } from './SortingAlgorithms/MergeSort';
 import { quickSort } from './SortingAlgorithms/QuickSort';
-import { getNthFib } from './AlgoExpert';
+import { binarySearchAlgo, getNthFib, mergeSortAlgo } from './AlgoExpert';
 
 
 //#region - FREQUENCY COUNTER PATTERN
@@ -223,3 +223,8 @@ console.log('******************************************** IMPORTANT ************
 
 
 console.log(getNthFib(2))
+
+console.log('retornou isso:', binarySearchAlgo([0, 1, 21, 33, 45, 45, 61, 71, 72, 73], 33));
+
+
+console.log(mergeSortAlgo([8, 5, 2, 9, 5, 6, 3]));
