@@ -5,7 +5,7 @@ import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatter
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
 import { collectOddValues, collectOddValuesPureRecursion, countDown, factorial, sumRange } from './Recursion';
-import { areThereDuplicates, areThereDuplicatesSolution, areThereDuplicatesSolution2, averagePair, neighborhood, sameFrequencyChallenge, twoNumberSum } from './Challenges';
+import { areThereDuplicates, areThereDuplicatesSolution, areThereDuplicatesSolution2, averagePair, isValidSubsequence, neighborhood, sameFrequencyChallenge, twoNumberSum } from './Challenges';
 import { linearSearch } from './SearchingAlgorithms/LinearSearch';
 import { binarySearch, binarySearchLetters, binarySearchNew } from './SearchingAlgorithms/BinarySearch';
 import { bubbleSort, bubbleSortES2015Version, bubbleSortES2015VersionNoSwaps, bubbleSortNoSwaps } from './SortingAlgorithms/BubbleSort';
@@ -13,6 +13,7 @@ import { selectionSort } from './SortingAlgorithms/SelectionSort';
 import { insertionSort } from './SortingAlgorithms/InsertionSort';
 import { merge, mergeLetters, mergeSort, mergeSortLetters } from './SortingAlgorithms/MergeSort';
 import { quickSort } from './SortingAlgorithms/QuickSort';
+import { getNthFib } from './AlgoExpert';
 
 
 //#region - FREQUENCY COUNTER PATTERN
@@ -154,7 +155,9 @@ console.log('------------- CODEWARS -------------')
 
 // console.log(sqInRectRecu(5, 3));
 
-console.log(twoNumberSum([3, 5, -4, 8, 11, 1, -1, 6], 10))
+// console.log(twoNumberSum([3, 5, -4, 8, 11, 1, -1, 6], 10))
+
+// console.log(isValidSubsequence( [5, 1, 22, 25, 6, -1, 8, 10], [5, 1, 22, 22, 25, 6, -1, 8, 10]));
 
 
 console.log('------------- END CODEWARS -------------')
@@ -215,3 +218,8 @@ console.log('------------- END SORT ALGORITHMS -------------')
 //#endregion
 
 console.log('******************************************** IMPORTANT ********************************************')
+
+
+
+
+console.log(getNthFib(2))

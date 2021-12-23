@@ -103,19 +103,37 @@ export function neighborhood(arr: any[], num: number) {
 
 export function twoNumberSum(array: number[], targetSum: any) {
   // Write your code here.
-   let result:any = [];
-	
-   for(let i = 0 ; i<= array.length; i++){
-     for(let j = 0 ; j <= array.length; j++){
-         if(j !== i) {
-          if(array[i] + array[j] === targetSum){
-            result =[array[i], array[j]]
-            break;
-          }
-         }
-     }
-   }
-   
-   
-   return result;
+  let result: any = [];
+
+  for (let i = 0; i <= array.length; i++) {
+    for (let j = 0; j <= array.length; j++) {
+      if (j !== i) {
+        if (array[i] + array[j] === targetSum) {
+          result = [array[i], array[j]]
+          break;
+        }
+      }
+    }
+  }
+
+
+  return result;
+}
+
+
+
+
+export function isValidSubsequence(array: any, sequence: any) {
+  // Write your code here.
+  let result: any = []
+  let res = true;
+  let lastIdx = 0;
+
+  for (let i = 0; i < sequence.length; i++) {
+    if(array.indexOf(sequence[i]) < lastIdx){
+      res = false;
+    }
+  }
+
+  return res;
 }
