@@ -14,6 +14,7 @@ import { insertionSort } from './SortingAlgorithms/InsertionSort';
 import { merge, mergeLetters, mergeSort, mergeSortLetters } from './SortingAlgorithms/MergeSort';
 import { quickSort } from './SortingAlgorithms/QuickSort';
 import { binarySearchAlgo, getNthFib, mergeSortAlgo } from './AlgoExpert';
+import { radixSort } from './SortingAlgorithms/RadixSort';
 
 
 //#region - FREQUENCY COUNTER PATTERN
@@ -211,8 +212,9 @@ console.log('------------- SORT ALGORITHMS -------------')
 
 // console.log('mergeSortLetters', mergeSortLetters('dcab'));
 
-
 // console.log('Quick Sort', quickSort([100,-3,2,4,6,9,1,2,5,3,23]))
+
+console.log('radixSort', radixSort([23,567,89,12234324,90]));
 
 console.log('------------- END SORT ALGORITHMS -------------')
 //#endregion
