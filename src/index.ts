@@ -221,10 +221,12 @@ console.log('******************************************** IMPORTANT ************
 
 
 
+console.log('------------- ALGOEXPERT -------------')
+// console.log(getNthFib(2))
 
-console.log(getNthFib(2))
-
-console.log('retornou isso:', binarySearchAlgo([0, 1, 21, 33, 45, 45, 61, 71, 72, 73], 33));
+// console.log('retornou isso:', binarySearchAlgo([0, 1, 21, 33, 45, 45, 61, 71, 72, 73], 33));
 
 
-console.log(mergeSortAlgo([8, 5, 2, 9, 5, 6, 3]));
+// console.log(mergeSortAlgo([8, 5, 2, 9, 5, 6, 3]));
+
+console.log('------------- END ALGOEXPERT -------------')
