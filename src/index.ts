@@ -223,7 +223,7 @@ console.log('------------- END SORT ALGORITHMS -------------')
 console.log('******************************************** IMPORTANT ********************************************')
 
 
-
+//#region - ALGOEXPERT
 console.log('------------- ALGOEXPERT -------------')
 // console.log(getNthFib(2))
 
@@ -233,7 +233,9 @@ console.log('------------- ALGOEXPERT -------------')
 // console.log(mergeSortAlgo([8, 5, 2, 9, 5, 6, 3]));
 
 console.log('------------- END ALGOEXPERT -------------')
+//#endregion
 
+//#region - DATA STRUCTURES INTRODUCTION
 
 console.log('------------- DATA STRUCTURES INTRODUCTION -------------')
 
@@ -251,10 +253,17 @@ console.log('------------- DATA STRUCTURES INTRODUCTION -------------')
 // console.log(Student.enrollStudents());
 
 
-const p1 = new Point(5,5);
-const p2 = new Point(10,10);
+// const p1 = new Point(5,5);
+// const p2 = new Point(10,10);
 
-console.log(Point.distance(p1, p2));
+// console.log(Point.distance(p1, p2));
 
 
 console.log('------------- END DATA STRUCTURES INTRODUCTION -------------')
+//#endregion
+
+//#region - DATA STRUCTURES
+console.log('------------- DATA STRUCTURES -------------')
+
+console.log('------------- END DATA STRUCTURES -------------')
+//#endregion
