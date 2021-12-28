@@ -235,7 +235,7 @@ console.log('------------- ALGOEXPERT -------------')
 console.log('------------- END ALGOEXPERT -------------')
 
 
-console.log('------------- DATA STRUCTURES -------------')
+console.log('------------- DATA STRUCTURES INTRODUCTION -------------')
 
 let student1 = new Student('Lucas','Pazzim');
 
@@ -249,4 +249,4 @@ console.log(student1);
 console.log(student1.calculateAverage());
 
 
-console.log('------------- END DATA STRUCTURES -------------')
+console.log('------------- END DATA STRUCTURES INTRODUCTION -------------')
