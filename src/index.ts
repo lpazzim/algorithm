@@ -15,7 +15,7 @@ import { merge, mergeLetters, mergeSort, mergeSortLetters } from './SortingAlgor
 import { quickSort } from './SortingAlgorithms/QuickSort';
 import { binarySearchAlgo, getNthFib, mergeSortAlgo } from './AlgoExpert';
 import { radixSort } from './SortingAlgorithms/RadixSort';
-import { Student } from './DataStructures/intro';
+import { Point, Student } from './DataStructures/intro';
 
 
 //#region - FREQUENCY COUNTER PATTERN
@@ -237,16 +237,24 @@ console.log('------------- END ALGOEXPERT -------------')
 
 console.log('------------- DATA STRUCTURES INTRODUCTION -------------')
 
-let student1 = new Student('Lucas','Pazzim');
+// let student1 = new Student('Lucas','Pazzim');
 
-console.log(student1.fullName());
-console.log(student1.markLate());
-console.log(student1.markLate());
-console.log(student1.markLate());
-student1.addScore(0);
-student1.addScore(100);
-console.log(student1);
-console.log(student1.calculateAverage());
+// console.log(student1.fullName());
+// console.log(student1.markLate());
+// console.log(student1.markLate());
+// console.log(student1.markLate());
+// student1.addScore(0);
+// student1.addScore(100);
+// console.log(student1);
+// console.log(student1.calculateAverage());
+
+// console.log(Student.enrollStudents());
+
+
+const p1 = new Point(5,5);
+const p2 = new Point(10,10);
+
+console.log(Point.distance(p1, p2));
 
 
 console.log('------------- END DATA STRUCTURES INTRODUCTION -------------')

@@ -29,6 +29,27 @@ export class Student {
     let sum = this.scores.reduce((a, b) => {return a + b })
     return sum/this.scores.length;
   }
+
+
+  static enrollStudents(){
+    return 'ENROLLING STUDENTS!'
+  }
 }
 
 
+export class Point{
+  x:number;
+  y:number;
+  constructor(x:number, y:number){
+    this.x = x;
+    this.y = y;
+  }
+
+
+  static distance(a:Point, b:Point){
+    const dx = a.x - b.x;
+    const dy = a.y - b.y;
+
+    return Math.hypot(dx, dy);
+  }
+}
