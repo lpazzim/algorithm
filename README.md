@@ -14,7 +14,7 @@ AngularJS-powered HTML5 Markdown editor.
 
 ## Features
 
-- Import a HTML file and watch it magically convert to Markdown
+- <a href="https://github.com/lpazzim/algorithm/tree/main/src/ProblemSolvingPatterns"> Problem Solving Patterns </a>
 - Drag and drop images (requires your Dropbox account be linked)
 - Import and save files from GitHub, Dropbox, Google Drive and One Drive
 - Drag and drop markdown and HTML files into Dillinger
