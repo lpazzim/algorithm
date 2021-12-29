@@ -16,6 +16,7 @@ import { quickSort } from './SortingAlgorithms/QuickSort';
 import { binarySearchAlgo, getNthFib, mergeSortAlgo } from './AlgoExpert';
 import { radixSort } from './SortingAlgorithms/RadixSort';
 import { Point, Student } from './DataStructures/intro';
+import { SinglyLinkedList } from './DataStructures/SinglyLinkedLists';
 
 
 //#region - FREQUENCY COUNTER PATTERN
@@ -264,6 +265,16 @@ console.log('------------- END DATA STRUCTURES INTRODUCTION -------------')
 
 //#region - DATA STRUCTURES
 console.log('------------- DATA STRUCTURES -------------')
+
+
+let linkedList = new SinglyLinkedList();
+
+linkedList.push(1);
+linkedList.push(85);
+
+console.log(linkedList);
+
+
 
 console.log('------------- END DATA STRUCTURES -------------')
 //#endregion

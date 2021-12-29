@@ -7,17 +7,23 @@ class NodeClass {
   }
 }
 
-class SinglyLinkedList{
+export class SinglyLinkedList {
   head: any
   tail: any
   length: any
-  constructor(){
+  constructor() {
     this.head = null;
     this.tail = null;
     this.length = 0;
   }
 
-  push(){
+  push(val: any) {
+    if (!this.head) {
+      this.head = new NodeClass(val);
+      this.tail = new NodeClass(val);
+    } else {
+      this.tail = new NodeClass(val);
+    }
 
   }
 }
