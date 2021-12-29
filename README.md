@@ -1,5 +1,5 @@
 # Algoritms and Data Structure
-## Project created to study and pratice JS and TS algorithms and Data Structure
+### Project created to study and pratice JS and TS algorithms and Data Structure
 
 [![N|JS](https://camo.githubusercontent.com/6f6990a311bb84dff8a426a5686eafc1986184c3b1066580fe36a9b0a0377d26/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4a6176615363726970742d3238324333343f6c6f676f3d6a617661736372697074266c6f676f436f6c6f723d463744463145)](https://nodesource.com/products/nsolid) [![N|TS](https://camo.githubusercontent.com/143b42838efad2c30d8e0d05eb3dea6996e52a03b99576d8318edffd9bdd6155/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f547970655363726970742d3238324333343f6c6f676f3d74797065736372697074266c6f676f436f6c6f723d333137384336)](https://nodesource.com/products/nsolid)
 
