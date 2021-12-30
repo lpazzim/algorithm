@@ -273,6 +273,8 @@ linkedList.push(1);
 linkedList.push(85);
 
 console.log(linkedList);
+console.log(linkedList.head.next);
+
 
 
 

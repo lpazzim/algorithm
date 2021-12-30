@@ -18,12 +18,17 @@ export class SinglyLinkedList {
   }
 
   push(val: any) {
-    if (!this.head) {
-      this.head = new NodeClass(val);
-      this.tail = new NodeClass(val);
-    } else {
-      this.tail = new NodeClass(val);
-    }
 
+    var newNode = new NodeClass(val);
+
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = this.head;
+    } else {
+      this.tail.next = newNode;
+      this.tail = newNode;
+    }
+    this.length++;
+    return this;
   }
 }
