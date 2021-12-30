@@ -282,6 +282,15 @@ linkedList.pop()
 
 console.log(linkedList);
 
+linkedList.shift()
+linkedList.shift()
+
+console.log(linkedList);
+
+linkedList.shift();
+
+console.log(linkedList);
+
 
 console.log('------------- END DATA STRUCTURES -------------')
 //#endregion
