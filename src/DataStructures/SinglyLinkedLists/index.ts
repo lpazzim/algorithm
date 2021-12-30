@@ -18,9 +18,7 @@ export class SinglyLinkedList {
   }
 
   push(val: any) {
-
     var newNode = new NodeClass(val);
-
     if (!this.head) {
       this.head = newNode;
       this.tail = this.head;
@@ -31,4 +29,11 @@ export class SinglyLinkedList {
     this.length++;
     return this;
   }
+   traverse(){
+     let current = this.head;
+     while(current){
+       console.log(current.val);
+       current = current.next;
+     }
+   }
 }
