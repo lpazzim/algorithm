@@ -4,9 +4,10 @@
 ### Project created to study and pratice JS and TS algorithms and Data Structure
  [![N|TS](https://camo.githubusercontent.com/143b42838efad2c30d8e0d05eb3dea6996e52a03b99576d8318edffd9bdd6155/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f547970655363726970742d3238324333343f6c6f676f3d74797065736372697074266c6f676f436f6c6f723d333137384336)](https://www.typescriptlang.org/)
 
+<div>
 <img  alt="Algorithms"  src="https://img.shields.io/badge/Algorithms%20--00C4F0.svg" />
 <img  alt="Data Structure"  src="https://img.shields.io/badge/Data Structure%20--DE0000.svg" />
-
+</div>
   
 This project contains some of the most important and usefull algorithms and data structures.
 
