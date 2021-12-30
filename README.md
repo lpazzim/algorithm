@@ -17,7 +17,7 @@ This project contains some of the most important and usefull algorithms and data
 ## Features
 
   
--  <a  href="https://github.com/lpazzim/algorithm/tree/main/src/ProblemSolvingPatterns"> Problem Solving Patterns </a> <div style="font-size:0.6em; vertical-align: 0.1em;">:green_circle:</div>
+-  <a  href="https://github.com/lpazzim/algorithm/tree/main/src/ProblemSolvingPatterns"> Problem Solving Patterns </a> :green_circle:
 
 - <a  href="https://github.com/lpazzim/algorithm/tree/main/src/Recursion"> Recursion </a> :green_circle:
 
