@@ -275,7 +275,12 @@ linkedList.push(85);
 console.log(linkedList);
 console.log(linkedList.head.next);
 
+linkedList.push(99);
+console.log(linkedList);
 
+linkedList.pop()
+
+console.log(linkedList);
 
 
 console.log('------------- END DATA STRUCTURES -------------')
