@@ -17,15 +17,15 @@ This project contains some of the most important and usefull algorithms and data
 ## Features
 
   
-- :large_blue_circle: <a  href="https://github.com/lpazzim/algorithm/tree/main/src/ProblemSolvingPatterns"> Problem Solving Patterns </a>
+-  <a  href="https://github.com/lpazzim/algorithm/tree/main/src/ProblemSolvingPatterns"> Problem Solving Patterns </a> :small_blue_diamond:
 
-- <a  href="https://github.com/lpazzim/algorithm/tree/main/src/Recursion"> Recursion </a>
+- <a  href="https://github.com/lpazzim/algorithm/tree/main/src/Recursion"> Recursion </a> :small_blue_diamond:
 
-- <a  href="https://github.com/lpazzim/algorithm/tree/main/src/SearchingAlgorithms"> Searching Algorithms </a>
+- <a  href="https://github.com/lpazzim/algorithm/tree/main/src/SearchingAlgorithms"> Searching Algorithms </a> :small_blue_diamond:
 
-- <a  href="https://github.com/lpazzim/algorithm/tree/main/src/SortingAlgorithms"> Sorting Algorithms </a>
+- <a  href="https://github.com/lpazzim/algorithm/tree/main/src/SortingAlgorithms"> Sorting Algorithms </a> :small_blue_diamond:
 
-- <a  href="https://github.com/lpazzim/algorithm/tree/main/src/DataStructures"> Data Structures </a>
+- <a  href="https://github.com/lpazzim/algorithm/tree/main/src/DataStructures"> Data Structures </a> :diamonds:
 
 
 ## Resources
