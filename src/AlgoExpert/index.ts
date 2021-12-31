@@ -58,42 +58,60 @@ export function binarySearchAlgo(array: number[], target: number): number {
 }
 
 
-function mergeAlgo(arr1: number[], arr2: number[]){
-	let result : number[] = [];
-	
-	let i:number = 0;
-	let j:number = 0;
-	while(i < arr1.length && j < arr2.length){
-		if(arr1[i] < arr2[j]){
+function mergeAlgo(arr1: number[], arr2: number[]) {
+	let result: number[] = [];
+
+	let i: number = 0;
+	let j: number = 0;
+	while (i < arr1.length && j < arr2.length) {
+		if (arr1[i] < arr2[j]) {
 			result.push(arr1[i]);
 			i++;
 		} else {
 			result.push(arr2[j]);
 			j++;
-		}	
+		}
 	}
-	
-	while(i < arr1.length){
+
+	while (i < arr1.length) {
 		result.push(arr1[i]);
-			i++;
+		i++;
 	}
-	
-	while(j < arr2.length){
-			result.push(arr2[j]);
-			j++;
+
+	while (j < arr2.length) {
+		result.push(arr2[j]);
+		j++;
 	}
-	
+
 	return result
 }
 
 export function mergeSortAlgo(array: number[]) {
-	if(array.length <= 1) return array;
-	
+	if (array.length <= 1) return array;
+
 	let middle: number = Math.floor(array.length / 2);
-	let left: number[] = mergeSortAlgo(array.slice(0,middle))
+	let left: number[] = mergeSortAlgo(array.slice(0, middle))
 	let right: number[] = mergeSortAlgo(array.slice(middle))
 
-	
-  return mergeAlgo(left, right);
+
+	return mergeAlgo(left, right);
 }
 
+export function minimumWaitingTime(queries: number[]) {
+	let result: number = 0;
+	let current: number = 0;
+	let arrSorted: number[] = queries.sort((a, b) => { return a - b })
+
+	if (queries.length <= 1) return 0
+
+	for (let i = 0; i < arrSorted.length; i++) {
+		if (i === 0) {
+			current = 0;
+		} else {
+			current += arrSorted[i - 1];
+		}
+		result = result + current;
+	}
+
+	return result;
+}

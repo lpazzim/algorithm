@@ -13,7 +13,7 @@ import { selectionSort } from './SortingAlgorithms/SelectionSort';
 import { insertionSort } from './SortingAlgorithms/InsertionSort';
 import { merge, mergeLetters, mergeSort, mergeSortLetters } from './SortingAlgorithms/MergeSort';
 import { quickSort } from './SortingAlgorithms/QuickSort';
-import { binarySearchAlgo, getNthFib, mergeSortAlgo } from './AlgoExpert';
+import { binarySearchAlgo, getNthFib, mergeSortAlgo, minimumWaitingTime } from './AlgoExpert';
 import { radixSort } from './SortingAlgorithms/RadixSort';
 import { Point, Student } from './DataStructures/intro';
 import { SinglyLinkedList } from './DataStructures/SinglyLinkedLists';
@@ -233,6 +233,8 @@ console.log('------------- ALGOEXPERT -------------')
 
 // console.log(mergeSortAlgo([8, 5, 2, 9, 5, 6, 3]));
 
+// console.log(minimumWaitingTime([3, 2, 1, 2, 6]));
+
 console.log('------------- END ALGOEXPERT -------------')
 //#endregion
 
@@ -267,29 +269,29 @@ console.log('------------- END DATA STRUCTURES INTRODUCTION -------------')
 console.log('------------- DATA STRUCTURES -------------')
 
 
-let linkedList = new SinglyLinkedList();
+// let linkedList = new SinglyLinkedList();
 
-linkedList.push(1);
-linkedList.push(85);
+// linkedList.push(1);
+// linkedList.push(85);
 
-console.log(linkedList);
-console.log(linkedList.head.next);
+// console.log(linkedList);
+// console.log(linkedList.head.next);
 
-linkedList.push(99);
-console.log(linkedList);
+// linkedList.push(99);
+// console.log(linkedList);
 
-linkedList.pop()
+// linkedList.pop()
 
-console.log(linkedList);
+// console.log(linkedList);
 
-linkedList.shift()
-linkedList.shift()
+// linkedList.shift()
+// linkedList.shift()
 
-console.log(linkedList);
+// console.log(linkedList);
 
-linkedList.shift();
+// linkedList.shift();
 
-console.log(linkedList);
+// console.log(linkedList);
 
 
 console.log('------------- END DATA STRUCTURES -------------')
