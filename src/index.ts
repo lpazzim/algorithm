@@ -17,6 +17,7 @@ import { binarySearchAlgo, getNthFib, mergeSortAlgo, minimumWaitingTime } from '
 import { radixSort } from './SortingAlgorithms/RadixSort';
 import { Point, Student } from './DataStructures/intro';
 import { SinglyLinkedList } from './DataStructures/SinglyLinkedLists';
+import { mergerNow, mergeSortNow } from './Random';
 
 
 //#region - FREQUENCY COUNTER PATTERN
@@ -105,6 +106,9 @@ console.log('------------- x Challenges x -------------')
 
 
 // console.log('neighborhood', neighborhood([1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0], 2));
+
+
+// console.log(mergeSortNow([3,2,1,7,100,3, 4, 2, 5, 9, 87]));
 
 
 console.log('------------- x Challenges x -------------')
@@ -216,7 +220,7 @@ console.log('------------- SORT ALGORITHMS -------------')
 
 // console.log('Quick Sort', quickSort([100,-3,2,4,6,9,1,2,5,3,23]))
 
-console.log('radixSort', radixSort([23,567,89,12234324,90]));
+// console.log('radixSort', radixSort([23,567,89,12234324,90]));
 
 console.log('------------- END SORT ALGORITHMS -------------')
 //#endregion

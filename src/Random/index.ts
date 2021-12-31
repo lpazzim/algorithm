@@ -84,3 +84,47 @@ function jumpingNumber(n: number) {
 
 
 jumpingNumber(23643);
+
+
+
+
+export function mergerNow(arr1: number[], arr2: number[]) {
+  let result: number[] = [];
+  let i: number = 0;
+  let j: number = 0;
+
+
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] < arr2[j]) {
+      result.push(arr1[i]);
+      i++;
+    } else {
+      result.push(arr2[j]);
+      j++;
+    }
+  }
+
+  while (i < arr1.length) {
+    result.push(arr1[i]);
+    i++;
+  }
+
+  while (j < arr2.length) {
+    result.push(arr2[j]);
+    j++;
+  }
+
+  return result;
+
+}
+
+export function mergeSortNow(arr: number[]) { 
+  
+  if(arr.length <= 1) return arr
+  
+  let middle = Math.floor(arr.length / 2);
+  let left: number[] = mergeSortNow(arr.slice(0, middle));
+  let right: number[] = mergeSortNow(arr.slice(middle));
+  
+  return mergerNow(left, right)
+}
