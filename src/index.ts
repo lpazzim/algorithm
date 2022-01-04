@@ -272,18 +272,18 @@ console.log('------------- END DATA STRUCTURES INTRODUCTION -------------')
 //#region - DATA STRUCTURES
 console.log('------------- DATA STRUCTURES -------------')
 
+//#region - SINGLY LINKED LIST
+// let linkedList = new SinglyLinkedList();
 
-let linkedList = new SinglyLinkedList();
+// linkedList.push('HEY');
+// linkedList.push('HOW');
+// linkedList.push('ARE');
+// linkedList.push('YOU!!!');
 
-linkedList.push('HEY');
-linkedList.push('HOW');
-linkedList.push('ARE');
-linkedList.push('YOU!!!');
+// linkedList.reverse();
 
-linkedList.insert(0, 'FIRST');
-
-console.log(linkedList);
-
+// console.log(linkedList);
+//#endregion
 
 
 console.log('------------- END DATA STRUCTURES -------------')

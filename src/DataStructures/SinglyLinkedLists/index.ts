@@ -121,5 +121,20 @@ export class SinglyLinkedList {
     this.length--;
     return removed;
   }
+//***** Important *****/
+  reverse() {
+    let node = this.head;
+    this.head = this.tail;
+    this.tail = node;
+    let next: any;
+    let prev: any = null;
+    for (let i = 0; i < this.length; i++) {
+      next = node.next;
+      node.next = prev;
+      prev = node;
+      node = next;
+    }
+    return this;
+  }
 
 }
