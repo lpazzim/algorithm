@@ -89,4 +89,14 @@ export class SinglyLinkedList {
     return current;
   }
 
+  set(index: number, val: any) {
+    let foundNode = this.get(index);
+    if(foundNode){
+      foundNode.next = val;
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 }
