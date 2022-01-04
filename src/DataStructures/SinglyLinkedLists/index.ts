@@ -78,4 +78,15 @@ export class SinglyLinkedList {
     return this;
   }
 
+  get(index: number) {
+    if (index < 0 || index >= this.length) return null;
+    let counter: number = 0;
+    let current: any = this.head;
+    while (counter !== index) {
+      current = current.next;
+      counter++;
+    }
+    return current;
+  }
+
 }

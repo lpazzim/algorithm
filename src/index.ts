@@ -273,29 +273,31 @@ console.log('------------- END DATA STRUCTURES INTRODUCTION -------------')
 console.log('------------- DATA STRUCTURES -------------')
 
 
-// let linkedList = new SinglyLinkedList();
+let linkedList = new SinglyLinkedList();
 
-// linkedList.push(1);
-// linkedList.push(85);
+linkedList.push(1);
+linkedList.push(85);
 
-// console.log(linkedList);
-// console.log(linkedList.head.next);
+console.log(linkedList);
+console.log(linkedList.head.next);
+console.log('GET', linkedList.get(1))
 
-// linkedList.push(99);
-// console.log(linkedList);
+linkedList.push(99);
+console.log(linkedList);
 
-// linkedList.pop()
+linkedList.pop()
 
-// console.log(linkedList);
+console.log(linkedList);
 
-// linkedList.shift()
-// linkedList.shift()
+linkedList.shift()
+linkedList.shift()
 
-// console.log(linkedList);
+console.log(linkedList);
 
-// linkedList.shift();
+linkedList.shift();
 
-// console.log(linkedList);
+console.log(linkedList);
+
 
 
 console.log('------------- END DATA STRUCTURES -------------')
