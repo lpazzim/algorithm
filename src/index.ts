@@ -275,26 +275,12 @@ console.log('------------- DATA STRUCTURES -------------')
 
 let linkedList = new SinglyLinkedList();
 
-linkedList.push(1);
-linkedList.push(85);
+linkedList.push('HEY');
+linkedList.push('HOW');
+linkedList.push('ARE');
+linkedList.push('YOU!!!');
 
-console.log(linkedList);
-console.log(linkedList.head.next);
-console.log('GET', linkedList.get(1))
-
-linkedList.push(99);
-console.log(linkedList);
-
-linkedList.pop()
-
-console.log(linkedList);
-
-linkedList.shift()
-linkedList.shift()
-
-console.log(linkedList);
-
-linkedList.shift();
+linkedList.insert(0, 'FIRST');
 
 console.log(linkedList);
 
