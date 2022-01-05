@@ -18,6 +18,7 @@ import { radixSort } from './SortingAlgorithms/RadixSort';
 import { Point, Student } from './DataStructures/intro';
 import { SinglyLinkedList } from './DataStructures/SinglyLinkedLists';
 import { mergerNow, mergeSortNow } from './Random';
+import { hash } from './DataStructures/HashTables';
 
 
 //#region - FREQUENCY COUNTER PATTERN
@@ -285,6 +286,12 @@ console.log('------------- DATA STRUCTURES -------------')
 // console.log(linkedList);
 //#endregion
 
+//#region - HASH TABLE
+
+console.log(hash('cyan', 10));
+
+
+//#endregion
 
 console.log('------------- END DATA STRUCTURES -------------')
 //#endregion
