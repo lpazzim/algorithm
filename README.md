@@ -13,16 +13,21 @@ This project contains some of the most important and usefull algorithms and data
 
 ## Features
 
+### Algorithms :green_circle:
   
--  <a  href="https://github.com/lpazzim/algorithm/tree/main/src/ProblemSolvingPatterns"> Problem Solving Patterns </a> :green_circle:
+-  <a  href="https://github.com/lpazzim/algorithm/tree/main/src/ProblemSolvingPatterns"> Problem Solving Patterns </a>
 
-- <a  href="https://github.com/lpazzim/algorithm/tree/main/src/Recursion"> Recursion </a> :green_circle:
+- <a  href="https://github.com/lpazzim/algorithm/tree/main/src/Recursion"> Recursion </a>
 
-- <a  href="https://github.com/lpazzim/algorithm/tree/main/src/SearchingAlgorithms"> Searching Algorithms </a> :green_circle:
+- <a  href="https://github.com/lpazzim/algorithm/tree/main/src/SearchingAlgorithms"> Searching Algorithms </a>
 
-- <a  href="https://github.com/lpazzim/algorithm/tree/main/src/SortingAlgorithms"> Sorting Algorithms </a> :green_circle:
+- <a  href="https://github.com/lpazzim/algorithm/tree/main/src/SortingAlgorithms"> Sorting Algorithms </a>
 
-- <a  href="https://github.com/lpazzim/algorithm/tree/main/src/DataStructures"> Data Structures </a> :red_circle:
+### Data Structures :red_circle:
+
+- <a  href="https://github.com/lpazzim/algorithm/tree/main/src/DataStructures/SinglyLinkedLists"> Singly Linked List </a>
+
+- <a  href="https://github.com/lpazzim/algorithm/tree/main/src/DataStructures/HashTables"> Hash Table </a>
 
 
 ## Resources
