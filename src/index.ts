@@ -18,7 +18,7 @@ import { radixSort } from './SortingAlgorithms/RadixSort';
 import { Point, Student } from './DataStructures/intro';
 import { SinglyLinkedList } from './DataStructures/SinglyLinkedLists';
 import { mergerNow, mergeSortNow } from './Random';
-import { hash } from './DataStructures/HashTables';
+import { HasTable } from './DataStructures/HashTables';
 
 
 //#region - FREQUENCY COUNTER PATTERN
@@ -288,7 +288,16 @@ console.log('------------- DATA STRUCTURES -------------')
 
 //#region - HASH TABLE
 
-console.log(hash("goodbye", 13));
+let ht = new HasTable();
+ht.set("maroon","#800000")
+ht.set("yellow","#FFFF00")
+ht.set("olive","#808000")
+ht.set("salmon","#FA8072")
+ht.set("lightcoral","#F08080")
+ht.set("mediumvioletred","#C71585")
+ht.set("plum","#DDA0DD")
+
+console.log(ht.keyMap[0])
 
 
 //#endregion
