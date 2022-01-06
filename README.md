@@ -25,9 +25,9 @@ This project contains some of the most important and usefull algorithms and data
 
 ### Data Structures :red_circle:
 
-- <a  href="https://github.com/lpazzim/algorithm/tree/main/src/DataStructures/SinglyLinkedLists"> Singly Linked List </a>
+- <a  href="https://github.com/lpazzim/algorithm/tree/main/src/DataStructures/SinglyLinkedLists/index.ts"> Singly Linked List </a>
 
-- <a  href="https://github.com/lpazzim/algorithm/tree/main/src/DataStructures/HashTables"> Hash Table </a>
+- <a  href="https://github.com/lpazzim/algorithm/blob/main/src/DataStructures/HashTables/index.ts"> Hash Table </a>
 
 
 ## Resources
