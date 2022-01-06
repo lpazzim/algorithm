@@ -288,7 +288,7 @@ console.log('------------- DATA STRUCTURES -------------')
 
 //#region - HASH TABLE
 
-console.log(hash('cyan', 10));
+console.log(hash("goodbye", 13));
 
 
 //#endregion
