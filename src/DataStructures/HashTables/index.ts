@@ -4,7 +4,7 @@ export class HasTable {
   constructor(size: number = 53) {
     this.keyMap = new Array(size);
   }
-  
+
   _hash(key: string) {
     let total: number = 0;
     let WEIRD_PRIME: number = 31;
@@ -25,13 +25,41 @@ export class HasTable {
   get(key: any) {
     let index: number = this._hash(key);
     if (this.keyMap[index]) {
-      for(let i = 0 ; i < this.keyMap[index].length; i++){
-        if(this.keyMap[index][i][0] === key){
+      for (let i = 0; i < this.keyMap[index].length; i++) {
+        if (this.keyMap[index][i][0] === key) {
           return this.keyMap[index][i][1]
         }
       }
       return this.keyMap[index];
     }
     return undefined
+  }
+
+  values() {
+    let valuesArr: any[] = [];
+    for (let i = 0; i < this.keyMap.length; i++) {
+      if (this.keyMap[i]) {
+        for (let j = 0; j < this.keyMap[i].length; j++) {
+          if (!valuesArr.includes(this.keyMap[i][j][1])) {
+            valuesArr.push(this.keyMap[i][j][1])
+          }
+        }
+      }
+    }
+    return valuesArr;
+  }
+
+  keys() {
+    let keysArr: any[] = [];
+    for (let i = 0; i < this.keyMap.length; i++) {
+      if (this.keyMap[i]) {
+        for (let j = 0; j < this.keyMap[i].length; j++) {
+          if (!keysArr.includes(this.keyMap[i][j][0])) {
+            keysArr.push(this.keyMap[i][j][0])
+          }
+        }
+      }
+    }
+    return keysArr;
   }
 }

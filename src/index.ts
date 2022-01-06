@@ -299,6 +299,8 @@ ht.set("plum","#DDA0DD")
 
 console.log(ht.get('maroon'));
 
+console.log(ht.keys())
+
 
 
 //#endregion
