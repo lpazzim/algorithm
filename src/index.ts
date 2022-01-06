@@ -288,7 +288,7 @@ console.log('------------- DATA STRUCTURES -------------')
 
 //#region - HASH TABLE
 
-let ht = new HasTable();
+let ht = new HasTable(17);
 ht.set("maroon","#800000")
 ht.set("yellow","#FFFF00")
 ht.set("olive","#808000")
@@ -297,7 +297,8 @@ ht.set("lightcoral","#F08080")
 ht.set("mediumvioletred","#C71585")
 ht.set("plum","#DDA0DD")
 
-console.log(ht.keyMap[0])
+console.log(ht.get('maroon'));
+
 
 
 //#endregion
