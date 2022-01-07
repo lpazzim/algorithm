@@ -832,7 +832,7 @@ export function nbMonths(startPriceOld: number, startPriceNew: number, savingper
     }
 
     numberMonths++;
-  
+
     total = (priceOldDecreased - priceNewDecreased + savingMoney);
 
     if (total >= 0) {
@@ -849,4 +849,74 @@ export function nbMonths(startPriceOld: number, startPriceNew: number, savingper
 
 
   return result;
+}
+
+
+
+
+// Are they the "same"?
+// https://www.codewars.com/kata/550498447451fbbd7600041c
+function merge(arr1: number[], arr2: number[]) {
+  let result: number[] = [];
+  let i: number = 0;
+  let j: number = 0;
+
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] < arr2[j]) {
+      result.push(arr1[i]);
+      i++;
+    } else {
+      result.push(arr2[j]);
+      j++;
+    }
+  }
+
+  while (i < arr1.length) {
+    result.push(arr1[i]);
+    i++;
+  }
+  while (j < arr2.length) {
+    result.push(arr2[j]);
+    j++;
+  }
+
+  return result;
+}
+
+
+function mergeSortnow(arr: number[]) {
+
+  if (arr.length <= 1) return arr;
+
+
+  let middle: number = Math.floor(arr.length / 2);
+  let left: number[] = mergeSortnow(arr.slice(0, middle));
+  let right: number[] = mergeSortnow(arr.slice(middle));;
+
+  return merge(left, right);
+
+}
+
+
+export function comp(a1: number[] | null, a2: number[] | null): boolean {
+  if (a1 === null || a2 === null) return false;
+  if (a1.length !== a2.length) return false;
+
+  let compArr: number[] = [];
+
+  for (let i = 0; i < a1.length; i++) {
+    compArr.push(a1[i] ** 2);
+  }
+
+  let sortedArr1: number[] = mergeSortnow(compArr);
+  let sortedArr2: number[] = mergeSortnow(a2);
+  let x: number = 0;
+  while (x < a1.length) {
+    if (sortedArr1[x] !== sortedArr2[x]) {
+      return false;
+    }
+    x++;
+  }
+
+  return true;
 }

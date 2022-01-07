@@ -1,6 +1,6 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample } from './ProblemSolvingPatterns/FrequencyCounterPattern'
-import { add, adjacentElementsProduct, bouncingBall, chooseBestSum, digPow, F, findOdd, isValidWalk, laser, M, meeting, nbDig, nbMonths, oper, partsSums, singleDigit, smallest, sortSurname, splitAndMerge, sqInRect, sqInRectRecu } from './Codewars'
+import { add, adjacentElementsProduct, bouncingBall, chooseBestSum, comp, digPow, F, findOdd, isValidWalk, laser, M, meeting, nbDig, nbMonths, oper, partsSums, singleDigit, smallest, sortSurname, splitAndMerge, sqInRect, sqInRectRecu } from './Codewars'
 import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatterns/MultiplePointersPattern';
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
@@ -143,7 +143,8 @@ console.log('------------- CODEWARS -------------')
 // console.log('bouncingBall', bouncingBall(30, 0.4, 10));
 
 // console.log(smallest(209917));
-console.log(nbMonths(2000, 8000, 1000, 1.5))
+// console.log(nbMonths(2000, 8000, 1000, 1.5))
+// console.log(comp([121, 144, 19, 161, 19, 144, 19, 11],[121, 14641, 20736, 361, 25921, 361, 20736, 361]));
 // // console.log(addNow(1)(2));
 
 // console.log(laser(() => ' volts!', 'Lucas' ))
