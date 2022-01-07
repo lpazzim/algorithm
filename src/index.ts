@@ -1,6 +1,6 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample } from './ProblemSolvingPatterns/FrequencyCounterPattern'
-import { add, adjacentElementsProduct, bouncingBall, chooseBestSum, digPow, F, findOdd, isValidWalk, laser, M, meeting, nbDig, oper, partsSums, singleDigit, smallest, sortSurname, splitAndMerge, sqInRect, sqInRectRecu } from './Codewars'
+import { add, adjacentElementsProduct, bouncingBall, chooseBestSum, digPow, F, findOdd, isValidWalk, laser, M, meeting, nbDig, nbMonths, oper, partsSums, singleDigit, smallest, sortSurname, splitAndMerge, sqInRect, sqInRectRecu } from './Codewars'
 import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatterns/MultiplePointersPattern';
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
@@ -142,7 +142,8 @@ console.log('------------- CODEWARS -------------')
 // console.log('bouncingBall', bouncingBall(30, 0.75, 1.5));
 // console.log('bouncingBall', bouncingBall(30, 0.4, 10));
 
-// console.log(smallest(285365));
+// console.log(smallest(209917));
+console.log(nbMonths(2000, 8000, 1000, 1.5))
 // // console.log(addNow(1)(2));
 
 // console.log(laser(() => ' volts!', 'Lucas' ))
@@ -288,18 +289,18 @@ console.log('------------- DATA STRUCTURES -------------')
 
 //#region - HASH TABLE
 
-let ht = new HasTable(17);
-ht.set("maroon","#800000")
-ht.set("yellow","#FFFF00")
-ht.set("olive","#808000")
-ht.set("salmon","#FA8072")
-ht.set("lightcoral","#F08080")
-ht.set("mediumvioletred","#C71585")
-ht.set("plum","#DDA0DD")
+// let ht = new HasTable(17);
+// ht.set("maroon","#800000")
+// ht.set("yellow","#FFFF00")
+// ht.set("olive","#808000")
+// ht.set("salmon","#FA8072")
+// ht.set("lightcoral","#F08080")
+// ht.set("mediumvioletred","#C71585")
+// ht.set("plum","#DDA0DD")
 
-console.log(ht.get('maroon'));
+// console.log(ht.get('maroon'));
 
-console.log(ht.keys())
+// console.log(ht.keys())
 
 
 

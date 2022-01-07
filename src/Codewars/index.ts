@@ -316,7 +316,7 @@ export function bouncingBall(h: number, bounce: number, window: number): number 
 
 
 
-export function smallest(n: number): number[] {
+export function smallestOld(n: number): number[] {
   // your code
   const result: any[] = [];
   const arr: any[] = n.toString().split('');
@@ -716,7 +716,7 @@ export function sqInRectRecu(l: number, w: number): number[] | null | undefined 
     if (x <= 0) return
 
     if (Number.isInteger(res)) {
-      if (res === 0 ) {
+      if (res === 0) {
         result.push(1);
       } else {
         result.push(res);
@@ -728,5 +728,125 @@ export function sqInRectRecu(l: number, w: number): number[] | null | undefined 
   }
 
   calc(count);
+  return result;
+}
+
+
+
+
+export function smallest(n: number): number[] {
+  // your code
+  const result: any[] = [];
+  const arr: any[] = n.toString().split('');
+  let startIndex: any = null;
+  let swapIndex: any = null;
+  let swap: boolean = false;
+
+  for (let i = 0; i < arr.length; i++) {
+    startIndex = i;
+    let temp: number = parseInt(arr[i]);
+    for (let j = i + 1; j < arr.length; j++) {
+      if (temp > parseInt(arr[j])) {
+        temp = parseInt(arr[j]);
+        swapIndex = j;
+      }
+    }
+
+    if (temp < parseInt(arr[i])) {
+      swap = true;
+      let auxArr: any[] = [];
+      let idx: number = 0;
+      let value1 = arr[swapIndex];
+      let current: any = null;
+
+      while (idx < arr.length) {
+        if (idx !== swapIndex) {
+          if (idx === startIndex) {
+            auxArr.push(value1);
+            current = arr[idx];
+          } else {
+            if (current) {
+              auxArr.push(current);
+              current = null;
+            }
+            auxArr.push(arr[idx]);
+          }
+        }
+        idx++;
+      }
+
+      let value2 = arr[startIndex];
+      result.push(parseInt(auxArr.toString().replace(/,/g, "")));
+      if (swapIndex === 0) {
+        if (auxArr[swapIndex] > auxArr[startIndex]) {
+          result.push(parseInt(startIndex));
+          result.push(parseInt(swapIndex));
+        } else {
+          result.push(parseInt(swapIndex));
+          result.push(parseInt(startIndex));
+        }
+      } else {
+        result.push(parseInt(swapIndex));
+        result.push(parseInt(startIndex));
+      }
+
+    }
+    if (swap) break;
+  }
+
+
+  return result;
+}
+
+
+
+export function nbMonths(startPriceOld: number, startPriceNew: number, savingperMonth: number, percentLossByMonth: number): number[] {
+  let result: number[] = [];
+  const percentCalc: number = percentLossByMonth / 100;
+  let numberMonths: number = 0;
+  let savingMoney: number = savingperMonth;
+  let controlLossCalc = 0;
+  let lossCalc: number = percentCalc;
+
+
+  function eachMonthCalc(priceOld: number, priceNew: number) {
+    let total: number = 0;
+    if (controlLossCalc >= 1) {
+      lossCalc += (0.5 / 100);
+      controlLossCalc = 0;
+    } else {
+      controlLossCalc++;
+    }
+    let priceOldDecreased: number = (priceOld - (priceOld * lossCalc));
+    let priceNewDecreased: number = (priceNew - (priceNew * lossCalc));
+
+    if (numberMonths !== 0) {
+      savingMoney = savingMoney + savingperMonth;
+    }
+
+    if (startPriceNew < startPriceOld) {
+      total = startPriceOld - startPriceNew;
+      result.push(numberMonths);
+      result.push(total);
+      return total;
+    }
+
+    numberMonths++;
+  
+    total = (priceOldDecreased - priceNewDecreased + savingMoney);
+
+    if (total >= 0) {
+      result.push(numberMonths);
+      result.push(Math.round(total));
+      return total;
+    }
+
+    eachMonthCalc(priceOldDecreased, priceNewDecreased);
+    return total;
+  }
+
+  eachMonthCalc(startPriceOld, startPriceNew);
+
+
   return result;
 }
