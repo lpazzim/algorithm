@@ -920,3 +920,39 @@ export function comp(a1: number[] | null, a2: number[] | null): boolean {
 
   return true;
 }
+
+
+
+// Make the Deadfish swim
+// https://www.codewars.com/kata/51e0007c1f9378fa810002a9/train/typescript
+/** return the output array and ignore all non-op characters */
+export function parse(data: string): number[] {
+  let result: number[] = [];
+  let arrData: string[] = data.split("");
+  let value: number = 0;
+
+  for (let i = 0; i < arrData.length; i++) {
+    switch (arrData[i]) {
+      case 'i': {
+        value++;
+        break;
+      }
+      case 'd': {
+        value--;
+        break;
+      }
+      case 's': {
+        value = value ** 2;
+        break;
+      }
+      case 'o': {
+        result.push(value);
+        break;
+      }
+      default: {
+        break;
+      }
+    }
+  }
+  return result
+}

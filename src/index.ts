@@ -1,6 +1,6 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample } from './ProblemSolvingPatterns/FrequencyCounterPattern'
-import { add, adjacentElementsProduct, bouncingBall, chooseBestSum, comp, digPow, F, findOdd, isValidWalk, laser, M, meeting, nbDig, nbMonths, oper, partsSums, singleDigit, smallest, sortSurname, splitAndMerge, sqInRect, sqInRectRecu } from './Codewars'
+import { add, adjacentElementsProduct, bouncingBall, chooseBestSum, comp, digPow, F, findOdd, isValidWalk, laser, M, meeting, nbDig, nbMonths, oper, parse, partsSums, singleDigit, smallest, sortSurname, splitAndMerge, sqInRect, sqInRectRecu } from './Codewars'
 import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatterns/MultiplePointersPattern';
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
@@ -168,6 +168,8 @@ console.log('------------- CODEWARS -------------')
 // console.log(twoNumberSum([3, 5, -4, 8, 11, 1, -1, 6], 10))
 
 // console.log(isValidSubsequence( [5, 1, 22, 25, 6, -1, 8, 10], [5, 1, 22, 22, 25, 6, -1, 8, 10]));
+
+// console.log(parse("iiisdoso"));
 
 
 console.log('------------- END CODEWARS -------------')
