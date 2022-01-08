@@ -956,3 +956,30 @@ export function parse(data: string): number[] {
   }
   return result
 }
+
+
+// Multiplication table
+// https://www.codewars.com/kata/534d2f5b5371ecf8d2000a08/train/typescript
+export function multiplicationTable(size: number): number[][] {
+  let result: number[][] = [];
+  let i:number = 0;
+  let j:number = 0;
+  let x:number = 1;
+
+  while(i < size){
+    result.push([]);
+    i++;
+  }
+
+  while(j < result.length){
+    result[j].push((j+1)*x);
+    if(result[j].length === size){
+      j++;
+      x = 1;
+    } else {
+      x++;
+    }
+  }
+
+  return result;
+}
