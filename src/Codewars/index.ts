@@ -962,18 +962,18 @@ export function parse(data: string): number[] {
 // https://www.codewars.com/kata/534d2f5b5371ecf8d2000a08/train/typescript
 export function multiplicationTable(size: number): number[][] {
   let result: number[][] = [];
-  let i:number = 0;
-  let j:number = 0;
-  let x:number = 1;
+  let i: number = 0;
+  let j: number = 0;
+  let x: number = 1;
 
-  while(i < size){
+  while (i < size) {
     result.push([]);
     i++;
   }
 
-  while(j < result.length){
-    result[j].push((j+1)*x);
-    if(result[j].length === size){
+  while (j < result.length) {
+    result[j].push((j + 1) * x);
+    if (result[j].length === size) {
       j++;
       x = 1;
     } else {
@@ -982,4 +982,24 @@ export function multiplicationTable(size: number): number[][] {
   }
 
   return result;
+}
+
+
+
+
+// Multiples of 3 or 5
+// https://www.codewars.com/kata/514b92a657cdc65150000006/train/typescript
+export class Challenge {
+  solution(num: number) {
+    let result: number = 0;
+    let j: number = 0;
+
+    for (let i = 0; i < num; i++) {
+      if ((i % 3) === 0 || (i % 5) === 0) {
+        result += i;
+      }
+    }
+
+    return result;
+  }
 }
