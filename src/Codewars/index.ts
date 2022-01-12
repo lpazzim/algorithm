@@ -993,13 +993,90 @@ export class Challenge {
   solution(num: number) {
     let result: number = 0;
     let j: number = 0;
-
     for (let i = 0; i < num; i++) {
       if ((i % 3) === 0 || (i % 5) === 0) {
         result += i;
       }
     }
-
     return result;
+  }
+}
+
+
+
+// Primes in numbers
+// https://www.codewars.com/kata/54d512e62a5e54c96200019e/train/typescript
+function primeNumbers(n: number) {
+  let primes:number[] = [];
+  for (let i = 2; i <= n; ++i) {
+    if(isPrime(i)) primes.push(i);
+  }
+  return primes;
+}
+
+function isPrime(num: number) {
+  if (num <= 3) return num > 1;
+  if ((num % 2 === 0) || (num % 3 === 0)) return false;
+  let count = 5;
+  while (Math.pow(count, 2) <= num) {
+    if (num % count === 0 || num % (count + 2) === 0) return false;
+    count += 6;
+  }
+  return true;
+}
+
+
+export class G964 {
+    primeFactors = (n: number) => {
+    let prime: number[] = primeNumbers(1000000);
+    let calcNumber: number = n;
+    let result: number[] = [];
+    let res: string = '';
+    let aux: number = 0;
+    let counter: number = 0;
+    let y: number = 0;
+
+    function decomp(x: number) {
+      for (let i = 0; i < prime.length; i++) {
+        if (calcNumber === 1) return;
+        if (Number.isInteger(calcNumber / prime[i])) {
+          calcNumber = calcNumber / prime[i];
+          result.push(prime[i]);
+          if(isPrime(calcNumber)){
+            if(result.indexOf(calcNumber)){
+             result.push(calcNumber); 
+            }
+           return;
+          }
+          decomp(calcNumber);
+        }
+        if(isPrime(calcNumber)){
+          if(result.indexOf(calcNumber) === -1){
+           result.push(calcNumber); 
+          }
+         return;
+        }
+      }
+      return calcNumber;
+    }
+
+    decomp(n);
+
+    for (let j = 0; j <= result.length; j++) {
+      if (aux !== result[j] && aux !== 0) {
+        if (counter > 1) {
+          res += `(${aux}**${counter})`
+        } else {
+          res += `(${aux})`
+        }
+        counter = 0;
+      }
+      aux = result[j];
+      if (result[j] === aux) {
+        counter++;
+      }
+    }
+
+    return res ? res : `(${n})`;
   }
 }

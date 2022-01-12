@@ -1,6 +1,6 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample } from './ProblemSolvingPatterns/FrequencyCounterPattern'
-import { add, adjacentElementsProduct, bouncingBall, Challenge, chooseBestSum, comp, digPow, F, findOdd, isValidWalk, laser, M, meeting, multiplicationTable, nbDig, nbMonths, oper, parse, partsSums, singleDigit, smallest, sortSurname, splitAndMerge, sqInRect, sqInRectRecu } from './Codewars'
+import { add, adjacentElementsProduct, bouncingBall, Challenge, chooseBestSum, comp, digPow, F, findOdd, G964, isValidWalk, laser, M, meeting, multiplicationTable, nbDig, nbMonths, oper, parse, partsSums, singleDigit, smallest, sortSurname, splitAndMerge, sqInRect, sqInRectRecu } from './Codewars'
 import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatterns/MultiplePointersPattern';
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
@@ -179,6 +179,12 @@ console.log('------------- CODEWARS -------------')
 // let x = new Challenge();
 
 // console.log(x.solution(10));
+
+// let prime = new G964;
+
+// prime.primeFactors(933555431);
+
+// console.log(prime.primeFactors(933555431));
 
 
 console.log('------------- END CODEWARS -------------')
