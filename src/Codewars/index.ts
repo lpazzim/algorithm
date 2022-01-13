@@ -1166,3 +1166,11 @@ export function orderWeight(strng: string): string {
 
   return result
 }
+
+
+// Molecule to atoms
+// https://www.codewars.com/kata/52f831fa9d332c6591000511
+
+export function parseMolecule(formula: string) {
+  // TODO: do your science here
+}
