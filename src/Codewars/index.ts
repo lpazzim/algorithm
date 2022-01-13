@@ -1007,9 +1007,9 @@ export class Challenge {
 // Primes in numbers
 // https://www.codewars.com/kata/54d512e62a5e54c96200019e/train/typescript
 function primeNumbers(n: number) {
-  let primes:number[] = [];
+  let primes: number[] = [];
   for (let i = 2; i <= n; ++i) {
-    if(isPrime(i)) primes.push(i);
+    if (isPrime(i)) primes.push(i);
   }
   return primes;
 }
@@ -1027,7 +1027,7 @@ function isPrime(num: number) {
 
 
 export class G964 {
-    primeFactors = (n: number) => {
+  primeFactors = (n: number) => {
     let prime: number[] = primeNumbers(1000000);
     let calcNumber: number = n;
     let result: number[] = [];
@@ -1042,19 +1042,19 @@ export class G964 {
         if (Number.isInteger(calcNumber / prime[i])) {
           calcNumber = calcNumber / prime[i];
           result.push(prime[i]);
-          if(isPrime(calcNumber)){
-            if(result.indexOf(calcNumber)){
-             result.push(calcNumber); 
+          if (isPrime(calcNumber)) {
+            if (result.indexOf(calcNumber)) {
+              result.push(calcNumber);
             }
-           return;
+            return;
           }
           decomp(calcNumber);
         }
-        if(isPrime(calcNumber)){
-          if(result.indexOf(calcNumber) === -1){
-           result.push(calcNumber); 
+        if (isPrime(calcNumber)) {
+          if (result.indexOf(calcNumber) === -1) {
+            result.push(calcNumber);
           }
-         return;
+          return;
         }
       }
       return calcNumber;
@@ -1079,4 +1079,90 @@ export class G964 {
 
     return res ? res : `(${n})`;
   }
+}
+
+
+// Weight for weight
+// https://www.codewars.com/kata/55c6126177c9441a570000cc/train/typescript
+
+function mergeII(arr1: any[], arr2: any[]) {
+  let result: any[] = [];
+  let i: number = 0;
+  let j: number = 0;
+
+  while (i < arr1.length && j < arr2.length) {
+    if ((arr1[i].sumDigits < arr2[j].sumDigits)) {
+      result.push(arr1[i]);
+      i++;
+    } else {
+      if ((arr1[i].sumDigits === arr2[j].sumDigits)) {
+        if ((arr1[i].original.toString() < arr2[j].original.toString())) {
+          result.push(arr1[i]);
+          i++;
+        } else {
+          result.push(arr2[j]);
+          j++;
+        }
+      } else {
+        result.push(arr2[j]);
+        j++;
+      }
+    }
+  }
+
+  while (i < arr1.length) {
+    result.push(arr1[i]);
+    i++;
+  }
+  while (j < arr2.length) {
+    result.push(arr2[j]);
+    j++;
+  }
+
+  return result;
+}
+
+
+function mergeSortnowII(arr: any[]) {
+  if (arr.length <= 1) return arr;
+
+  let middle: number = Math.floor(arr.length / 2);
+  let left: any[] = mergeSortnowII(arr.slice(0, middle));
+  let right: any[] = mergeSortnowII(arr.slice(middle));
+
+  return mergeII(left, right);
+
+}
+
+
+export function orderWeight(strng: string): string {
+  let arr: any[] = strng.split(' ');
+  let arrNum: any[] = [];
+  let arrResult: any[] = [];
+  let result: string = '';
+
+  for (let i = 0; i < arr.length; i++) {
+    const original: number = parseInt(arr[i]);
+    let sumDigits: number = 0;
+    let arrDigits: any[] = arr[i].split('');
+    let objAux: { original: number, sumDigits: number } = { original: original, sumDigits: 0 };
+
+    for (let j = 0; j < arrDigits.length; j++) {
+      sumDigits += parseInt(arrDigits[j]);
+    }
+
+    objAux.sumDigits = sumDigits;
+    arrNum.push(objAux);
+  }
+
+  arrResult = mergeSortnowII(arrNum);
+
+  for (let x = 0; x < arrResult.length; x++) {
+    console.log(arrResult[x]);
+    result += `${arrResult[x].original} `
+  }
+
+  result = result.substring(0, result.length - 1);
+
+  return result
 }
