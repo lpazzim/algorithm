@@ -17,7 +17,7 @@ import { binarySearchAlgo, getNthFib, mergeSortAlgo, minimumWaitingTime } from '
 import { radixSort } from './SortingAlgorithms/RadixSort';
 import { Point, Student } from './DataStructures/intro';
 import { SinglyLinkedList } from './DataStructures/SinglyLinkedLists';
-import { mergerNow, mergeSortNow } from './Random';
+import { praticeReduce } from './Random';
 import { HasTable } from './DataStructures/HashTables';
 
 
@@ -110,6 +110,10 @@ console.log('------------- x Challenges x -------------')
 
 
 // console.log(mergeSortNow([3,2,1,7,100,3, 4, 2, 5, 9, 87]));
+
+
+
+// console.log(praticeReduce())
 
 
 console.log('------------- x Challenges x -------------')
@@ -248,7 +252,6 @@ console.log('------------- END SORT ALGORITHMS -------------')
 //#endregion
 
 console.log('******************************************** IMPORTANT ********************************************')
-
 
 //#region - ALGOEXPERT
 console.log('------------- ALGOEXPERT -------------')
