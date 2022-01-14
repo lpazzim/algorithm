@@ -133,13 +133,41 @@
 
 export function praticeReduce() {
   const arr: number[] = [0, 5, 2, 8, 9, 12, 15, 3, 25, 82, 41, 54]
-  let result:number = 0;
+  let result: number = 0;
 
   arr.reduce((a, b) => {
-   
+
     result = a + b;
     return a + b
   })
+
+  return result;
+}
+
+
+/**
+ * Write a function to search for n when n is the number passing into the function to find the closest seats in an airplane;
+ */
+let airrplane: any[] = [
+  [0, 1, 0, 1, 0, 1],
+  [0, 0, 0, 1, 1, 1],
+  [0, 0, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1],
+  [0, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1],
+  [0, 1, 0, 0, 0, 0],
+];
+
+
+export function findSeats(arr: any[], numSeats: number) {
+  let result: { line: number, seats: any[] } = { line: 0, seats: [] };
+  let auxLine: number = 0;
+  let selectedSeats: any[] = [];
+
+  for (let i = 0; i < arr.length; i++) {
+
+  }
+
 
   return result;
 }
