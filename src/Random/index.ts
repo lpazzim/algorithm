@@ -190,7 +190,6 @@ export function binarySearch1701(arr: number[], n: number) {
     middle = Math.floor((left + right) / 2);
   }
 
-
   if (arr[middle] === n) return middle;
   return -1;
 }

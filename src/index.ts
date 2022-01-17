@@ -1,6 +1,6 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample } from './ProblemSolvingPatterns/FrequencyCounterPattern'
-import { add, adjacentElementsProduct, bouncingBall, Challenge, chooseBestSum, comp, digPow, F, findOdd, G964, isValidWalk, laser, M, meeting, multiplicationTable, nbDig, nbMonths, oper, orderWeight, parse, partsSums, singleDigit, smallest, sortSurname, splitAndMerge, sqInRect, sqInRectRecu } from './Codewars'
+import { add, adjacentElementsProduct, bouncingBall, Challenge, chooseBestSum, comp, digPow, F, findOdd, findShort, G964, isValidWalk, laser, M, meeting, multiplicationTable, nbDig, nbMonths, oper, orderWeight, parse, partsSums, singleDigit, smallest, sortSurname, splitAndMerge, sqInRect, sqInRectRecu } from './Codewars'
 import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatterns/MultiplePointersPattern';
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
@@ -192,6 +192,8 @@ console.log('------------- CODEWARS -------------')
 
 // console.log(orderWeight('103 123 4444 99 2000'));
 
+console.log(findShort('turns out random test cases are easier than writing out basic ones'));
+
 
 console.log('------------- END CODEWARS -------------')
 //#endregion
@@ -204,7 +206,7 @@ console.log('------------- Search -------------')
 // console.log('binarySearchLetters', binarySearchLetters('abcdefghijklmnopqrstuvxz', 'l'));
 // console.log(binarySearchNew([1,2,3,4,5], 7))
 
-console.log(binarySearch1701([1, 2, 5, 7, 9, 15, 17, 25, 28, 2000], 5));
+// console.log(binarySearch1701([1, 2, 5, 7, 9, 15, 17, 25, 28, 2000], 5));
 
 
 console.log('------------- END Search -------------')

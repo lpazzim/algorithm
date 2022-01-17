@@ -1174,3 +1174,24 @@ export function orderWeight(strng: string): string {
 export function parseMolecule(formula: string) {
   // TODO: do your science here
 }
+
+
+
+
+
+
+
+// Shortest Word
+// https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9/train/typescript
+export function findShort(s: string): number {
+  let arr: string[] = s.split(' ');
+  let resultCount: number = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (!resultCount || resultCount > arr[i].length) {
+      resultCount = arr[i].length;
+    }
+  }
+
+  return resultCount;
+}
