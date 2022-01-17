@@ -17,7 +17,7 @@ import { binarySearchAlgo, getNthFib, mergeSortAlgo, minimumWaitingTime, nonCons
 import { radixSort } from './SortingAlgorithms/RadixSort';
 import { Point, Student } from './DataStructures/intro';
 import { SinglyLinkedList } from './DataStructures/SinglyLinkedLists';
-import { praticeReduce } from './Random';
+import { binarySearch1701, praticeReduce } from './Random';
 import { HasTable } from './DataStructures/HashTables';
 
 
@@ -203,6 +203,8 @@ console.log('------------- Search -------------')
 // console.log(binarySearch([1, 2, 3, 4, 5], 5));
 // console.log('binarySearchLetters', binarySearchLetters('abcdefghijklmnopqrstuvxz', 'l'));
 // console.log(binarySearchNew([1,2,3,4,5], 7))
+
+console.log(binarySearch1701([1, 2, 5, 7, 9, 15, 17, 25, 28, 2000], 5));
 
 
 console.log('------------- END Search -------------')

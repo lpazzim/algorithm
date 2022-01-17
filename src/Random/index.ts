@@ -171,3 +171,26 @@ export function findSeats(arr: any[], numSeats: number) {
 
   return result;
 }
+
+
+
+
+
+export function binarySearch1701(arr: number[], n: number) {
+  let left: number = 0;
+  let right: number = arr.length - 1;
+  let middle: number = Math.floor((left + right) / 2);
+
+  while (arr[middle] !== n && left <= right) {
+    if (n < arr[middle]) {
+      right = middle - 1;
+    } else {
+      left = middle +1;
+    }
+    middle = Math.floor((left + right) / 2);
+  }
+
+
+  if (arr[middle] === n) return middle;
+  return -1;
+}
