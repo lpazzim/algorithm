@@ -1195,3 +1195,40 @@ export function findShort(s: string): number {
 
   return resultCount;
 }
+
+
+
+// Compare Strings by Sum of Chars
+// https://www.codewars.com/kata/576bb3c4b1abc497ec000065/train/typescript
+export function compare(s1: string | null, s2: string | null): boolean {
+  let res1: number = 0;
+  let res2: number = 0;
+
+  if (s1) {
+    let arr1: string[] = s1.split('');
+    for (let i = 0; i < arr1.length; i++) {
+      let code: number = arr1[i].toUpperCase().charCodeAt(0);
+      if (code < 65 || code > 90) {
+        res1 = 0;
+        break;
+      }
+      res1 += code;
+    }
+  }
+
+  if (s2) {
+    let arr2: string[] = s2.split('');
+    for (let i = 0; i < arr2.length; i++) {
+      let code2: number = arr2[i].toUpperCase().charCodeAt(0);
+      if (code2 < 65 || code2 > 90) {
+        res1 = 0;
+        break;
+      }
+      res2 += code2;
+    }
+  }
+
+  if (res1 === res2) return true
+
+  return false
+}

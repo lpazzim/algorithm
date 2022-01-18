@@ -1,6 +1,6 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample } from './ProblemSolvingPatterns/FrequencyCounterPattern'
-import { add, adjacentElementsProduct, bouncingBall, Challenge, chooseBestSum, comp, digPow, F, findOdd, findShort, G964, isValidWalk, laser, M, meeting, multiplicationTable, nbDig, nbMonths, oper, orderWeight, parse, partsSums, singleDigit, smallest, sortSurname, splitAndMerge, sqInRect, sqInRectRecu } from './Codewars'
+import { add, adjacentElementsProduct, bouncingBall, Challenge, chooseBestSum, comp, compare, digPow, F, findOdd, findShort, G964, isValidWalk, laser, M, meeting, multiplicationTable, nbDig, nbMonths, oper, orderWeight, parse, partsSums, singleDigit, smallest, sortSurname, splitAndMerge, sqInRect, sqInRectRecu } from './Codewars'
 import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatterns/MultiplePointersPattern';
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
@@ -192,7 +192,9 @@ console.log('------------- CODEWARS -------------')
 
 // console.log(orderWeight('103 123 4444 99 2000'));
 
-console.log(findShort('turns out random test cases are easier than writing out basic ones'));
+// console.log(findShort('turns out random test cases are easier than writing out basic ones'));
+
+console.log(compare("zz1", "" ));
 
 
 console.log('------------- END CODEWARS -------------')
