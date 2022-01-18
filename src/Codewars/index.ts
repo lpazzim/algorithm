@@ -1177,10 +1177,6 @@ export function parseMolecule(formula: string) {
 
 
 
-
-
-
-
 // Shortest Word
 // https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9/train/typescript
 export function findShort(s: string): number {
@@ -1195,7 +1191,6 @@ export function findShort(s: string): number {
 
   return resultCount;
 }
-
 
 
 // Compare Strings by Sum of Chars
