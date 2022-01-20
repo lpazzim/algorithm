@@ -1227,3 +1227,61 @@ export function compare(s1: string | null, s2: string | null): boolean {
 
   return false
 }
+
+
+
+
+function merge19(arr1: number[], arr2: number[]) {
+  let i: number = 0;
+  let j: number = 0;
+  let result: number[] = [];
+
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] < arr2[j]) {
+      result.push(arr1[i]);
+      i++;
+    } else {
+      result.push(arr2[j]);
+      j++;
+    }
+  }
+
+  while (i < arr1.length) {
+    result.push(arr1[i]);
+    i++;
+  }
+
+  while (j < arr2.length) {
+    result.push(arr2[j]);
+    j++;
+  }
+
+  return result;
+}
+
+export function mergeSort19(arr: number[]) {
+  let left: number[] = [];
+  let right: number[] = [];
+  let middle: number = Math.floor(arr.length / 2);
+
+  if (arr.length <= 1) return arr;
+
+  left = mergeSort19(arr.slice(0, middle));
+  right = mergeSort19(arr.slice(middle));
+
+  merge19(left, right);
+
+  return arr;
+}
+
+
+export function solution(nums: number[]): number[] {
+  let result: number[] = []
+
+  if (nums.length < 1) return [];
+
+  result = mergeSort19(nums);
+
+
+  return result; // your code here
+}
