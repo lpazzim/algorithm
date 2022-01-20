@@ -1319,7 +1319,7 @@ export function incrementer(nums: number[]) {
 
     if (count.toString().length > 1) {
       let digit: string[] = count.toString().split('');
-      result.push(parseInt(digit[digit.length-1]));
+      result.push(parseInt(digit[digit.length - 1]));
     } else {
       result.push(count);
     }
@@ -1328,3 +1328,92 @@ export function incrementer(nums: number[]) {
 
   return result;
 }
+
+// Rock Paper Scissors!
+// https://www.codewars.com/kata/5672a98bdbdd995fad00000f/train/typescript
+export function rps(p1: string, p2: string): string {
+
+  switch (p1) {
+    case 'scissors': {
+      if (p2 === 'rock') return 'Player 2 won!'
+      if (p2 === 'paper') return 'Player 1 won!'
+      break;
+    }
+    case 'paper': {
+      if (p2 === 'rock') return 'Player 1 won!'
+      if (p2 === 'scissors') return 'Player 2 won!'
+      break;
+    }
+    case 'rock': {
+      if (p2 === 'paper') return 'Player 2 won!'
+      if (p2 === 'scissors') return 'Player 1 won!'
+      break;
+    }
+    default: {
+
+      break;
+    }
+  }
+
+  return 'Draw'
+}
+
+
+
+// Two to One
+// https://www.codewars.com/kata/5656b6906de340bd1b0000ac/train/typescript
+function merge3(arr1: any[], arr2: any[]) {
+  let i: number = 0;
+  let j: number = 0;
+  let result: any[] = [];
+
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] < arr2[j]) {
+      result.push(arr1[i]);
+      i++;
+    } else {
+      result.push(arr2[j]);
+      j++;
+    }
+  }
+
+  while (i < arr1.length) {
+    result.push(arr1[i]);
+    i++;
+  }
+
+  while (j < arr2.length) {
+    result.push(arr2[j]);
+    j++;
+  }
+
+  return result;
+}
+
+export function mergeSort3(arr: any[]) {
+  let left: any[] = [];
+  let right: any[] = [];
+  let middle: number = Math.floor(arr.length / 2);
+
+  if (arr.length <= 1) return arr;
+
+  left = mergeSort3(arr.slice(0, middle));
+  right = mergeSort3(arr.slice(middle));
+
+  return merge19(left, right);
+}
+
+
+export function longest(s1: string, s2: string) {
+  let result: string = '';
+  let arr: string[] = mergeSort3((s1 + s2).split(''));
+
+  for (let i = 0; i < arr.length; i++) {
+    if (result.indexOf(arr[i]) === -1) {
+      result += arr[i];
+    }
+  }
+
+  return result
+}
+
