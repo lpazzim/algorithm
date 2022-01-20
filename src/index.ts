@@ -1,6 +1,6 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample } from './ProblemSolvingPatterns/FrequencyCounterPattern'
-import { add, adjacentElementsProduct, bouncingBall, Challenge, chooseBestSum, comp, compare, digPow, F, findOdd, findShort, G964, isValidWalk, laser, M, meeting, multiplicationTable, nbDig, nbMonths, oper, orderWeight, parse, partsSums, singleDigit, smallest, solution, solutionEndWith, sortSurname, splitAndMerge, sqInRect, sqInRectRecu } from './Codewars'
+import { add, adjacentElementsProduct, bouncingBall, Challenge, chooseBestSum, comp, compare, digPow, F, findOdd, findShort, G964, incrementer, isValidWalk, laser, M, meeting, multiplicationTable, nbDig, nbMonths, oper, orderWeight, parse, partsSums, singleDigit, smallest, solution, solutionEndWith, sortSurname, splitAndMerge, sqInRect, sqInRectRecu } from './Codewars'
 import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatterns/MultiplePointersPattern';
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
@@ -200,6 +200,8 @@ console.log('------------- CODEWARS -------------')
 
 
 // console.log(solutionEndWith('abc', ''));
+
+// console.log(incrementer([4, 6, 7, 1, 3]));
 
 
 console.log('------------- END CODEWARS -------------')

@@ -1305,3 +1305,26 @@ export function solutionEndWith(str: string, ending: string): boolean {
 
   return true;
 }
+
+// Incrementer
+// https://www.codewars.com/kata/590e03aef55cab099a0002e8/train/typescript
+export function incrementer(nums: number[]) {
+  let result: number[] = [];
+  let sum: number = 1;
+
+  if (nums.length < 1) return result;
+
+  for (let i = 0; i < nums.length; i++) {
+    let count: number = nums[i] + sum;
+
+    if (count.toString().length > 1) {
+      let digit: string[] = count.toString().split('');
+      result.push(parseInt(digit[digit.length-1]));
+    } else {
+      result.push(count);
+    }
+    sum++;
+  }
+
+  return result;
+}
