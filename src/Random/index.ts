@@ -173,9 +173,6 @@ export function findSeats(arr: any[], numSeats: number) {
 }
 
 
-
-
-
 export function binarySearch1701(arr: number[], n: number) {
   let left: number = 0;
   let right: number = arr.length - 1;
@@ -185,11 +182,28 @@ export function binarySearch1701(arr: number[], n: number) {
     if (n < arr[middle]) {
       right = middle - 1;
     } else {
-      left = middle +1;
+      left = middle + 1;
     }
     middle = Math.floor((left + right) / 2);
   }
 
   if (arr[middle] === n) return middle;
   return -1;
+}
+
+
+export function slidingPratice(arr: number[], n: number) {
+  let maxSum: number = 0;
+  let tempSum: number = 0;
+
+  for (let i = 0; i < n; i++) {
+    maxSum += arr[i];
+  }
+
+  tempSum = maxSum;
+  for (let j = n; j < arr.length; j++) {
+    tempSum = tempSum - arr[j - n] + arr[j];
+    maxSum = Math.max(maxSum, tempSum);
+  }
+  return maxSum;
 }

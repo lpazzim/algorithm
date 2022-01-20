@@ -17,7 +17,7 @@ import { binarySearchAlgo, getNthFib, mergeSortAlgo, minimumWaitingTime, nonCons
 import { radixSort } from './SortingAlgorithms/RadixSort';
 import { Point, Student } from './DataStructures/intro';
 import { SinglyLinkedList } from './DataStructures/SinglyLinkedLists';
-import { binarySearch1701, praticeReduce } from './Random';
+import { binarySearch1701, praticeReduce, slidingPratice } from './Random';
 import { HasTable } from './DataStructures/HashTables';
 
 
@@ -114,6 +114,8 @@ console.log('------------- x Challenges x -------------')
 
 
 // console.log(praticeReduce())
+
+// console.log(slidingPratice([0, 1, 2, 27, 3, 0, 2], 3));
 
 
 console.log('------------- x Challenges x -------------')
