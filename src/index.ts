@@ -1,6 +1,6 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample } from './ProblemSolvingPatterns/FrequencyCounterPattern'
-import { add, adjacentElementsProduct, bouncingBall, Challenge, chooseBestSum, comp, compare, digPow, F, findOdd, findShort, G964, incrementer, isValidWalk, laser, longest, M, meeting, multiplicationTable, nbDig, nbMonths, oper, orderWeight, parse, partsSums, rps, singleDigit, smallest, solution, solutionEndWith, sortSurname, splitAndMerge, sqInRect, sqInRectRecu } from './Codewars'
+import { add, adjacentElementsProduct, bouncingBall, calc, Challenge, chooseBestSum, comp, compare, digPow, F, findOdd, findShort, G964, incrementer, isValidWalk, laser, longest, M, meeting, multiplicationTable, nbDig, nbMonths, oper, orderWeight, parse, partsSums, rps, singleDigit, smallest, solution, solutionEndWith, sortSurname, splitAndMerge, sqInRect, sqInRectRecu } from './Codewars'
 import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatterns/MultiplePointersPattern';
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
@@ -206,6 +206,8 @@ console.log('------------- CODEWARS -------------')
 // console.log(rps('rock', 'paper'));
 
 // console.log(longest("aretheyhere", "yestheyarehere"));
+
+// console.log(calc('ABC'));
 
 console.log('------------- END CODEWARS -------------')
 //#endregion

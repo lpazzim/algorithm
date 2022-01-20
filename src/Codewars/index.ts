@@ -1417,3 +1417,32 @@ export function longest(s1: string, s2: string) {
   return result
 }
 
+// Char Code Calculation
+// https://www.codewars.com/kata/57f75cc397d62fc93d000059/train/typescript
+export const calc = (str: string): number => {
+  let arr1: string[] = str.split('');
+  let result: string[] = [];
+  let convertedCode: string = '';
+  let total1: number = 0;
+  let total2: number = 0;
+
+  for (let i = 0; i < arr1.length; i++) {
+    convertedCode += arr1[i].charCodeAt(0).toString();
+  }
+
+  result = convertedCode.split('');
+
+  for (let j = 0; j < result.length; j++) {
+    total1 += parseInt(result[j]);
+
+    if (parseInt(result[j]) === 7) {
+      total2 += 1;
+    } else {
+      total2 += parseInt(result[j]);
+    }
+
+
+  }
+
+  return total1 - total2;
+}
