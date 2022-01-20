@@ -1284,3 +1284,24 @@ export function solution(nums: number[]): number[] {
 
   return result; // your code here
 }
+
+// String ends with?
+// https://www.codewars.com/kata/51f2d1cafc9c0f745c00037d/train/typescript
+export function solutionEndWith(str: string, ending: string): boolean {
+  let arr1: string[] = str.split('');
+  let arr2: string[] = ending.split('');
+
+  let diff: number = arr1.length - arr2.length;
+  let j: number = 0;
+
+
+  for (let i = diff; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[j]) {
+      return false
+    } else {
+      j++;
+    }
+  }
+
+  return true;
+}
