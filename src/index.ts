@@ -196,7 +196,7 @@ console.log('------------- CODEWARS -------------')
 
 // console.log(compare("zz1", "" ));
 
-console.log(solution([1, 2, 10, 50, 5]));
+// console.log(solution([1, 2, 10, 50, 5]));
 
 
 console.log('------------- END CODEWARS -------------')

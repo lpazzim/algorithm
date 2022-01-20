@@ -1229,7 +1229,8 @@ export function compare(s1: string | null, s2: string | null): boolean {
 }
 
 
-
+// Sort Numbers
+// https://www.codewars.com/kata/5174a4c0f2769dd8b1000003/train/typescript
 
 function merge19(arr1: number[], arr2: number[]) {
   let i: number = 0;
@@ -1269,9 +1270,7 @@ export function mergeSort19(arr: number[]) {
   left = mergeSort19(arr.slice(0, middle));
   right = mergeSort19(arr.slice(middle));
 
-  merge19(left, right);
-
-  return arr;
+  return merge19(left, right);
 }
 
 
