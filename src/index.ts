@@ -114,8 +114,7 @@ console.log('------------- x Challenges x -------------')
 
 
 // console.log(praticeReduce())
-
-// console.log(slidingPratice([0, 1, 2, 27, 3, 0, 2], 3));
+//  console.log(slidingPratice([0, 1, 2, 27, 3, 0, 2], 3));
 
 
 console.log('------------- x Challenges x -------------')
