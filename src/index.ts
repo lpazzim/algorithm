@@ -19,6 +19,7 @@ import { Point, Student } from './DataStructures/intro';
 import { SinglyLinkedList } from './DataStructures/SinglyLinkedLists';
 import { binarySearch1701, praticeReduce, slidingPratice } from './Random';
 import { HasTable } from './DataStructures/HashTables';
+import { Stack } from './DataStructures/Data&Queues';
 
 
 //#region - FREQUENCY COUNTER PATTERN
@@ -347,6 +348,21 @@ console.log('------------- DATA STRUCTURES -------------')
 // console.log(ht.keys())
 
 
+
+//#endregion
+
+//#region - STACKs
+
+// let stack = new Stack();
+
+// stack.push('Lucas');
+// stack.push('Alves');
+// stack.push('Pazzim');
+
+// stack.pop();
+
+
+// console.log(stack);
 
 //#endregion
 

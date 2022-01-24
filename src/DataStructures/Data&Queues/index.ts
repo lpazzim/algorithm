@@ -1,4 +1,7 @@
-class classNode {
+
+//Stack = LIFO
+
+export class classNode {
   value ?: any;
   next ?: any;
   constructor(value: any){
@@ -7,7 +10,7 @@ class classNode {
   }
 }
 
-class Stack {
+export class Stack {
   first ?: any;
   last ?: any;
   size : number;
