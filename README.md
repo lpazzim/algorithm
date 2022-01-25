@@ -27,7 +27,11 @@ This project contains some of the most important and usefull algorithms and data
 
 - <a  href="https://github.com/lpazzim/algorithm/tree/main/src/DataStructures/SinglyLinkedLists/index.ts"> Singly Linked List </a>
 
+- <a  href="https://github.com/lpazzim/algorithm/blob/main/src/DataStructures/DoublyLinkedLists/index.ts"> Doubly Linked Lists </a>
+
 - <a  href="https://github.com/lpazzim/algorithm/blob/main/src/DataStructures/HashTables/index.ts"> Hash Table </a>
+
+- <a  href="https://github.com/lpazzim/algorithm/blob/main/src/DataStructures/Stacks&Queues/index.ts"> Stacks & Queues </a>
 
 
 ## Resources
