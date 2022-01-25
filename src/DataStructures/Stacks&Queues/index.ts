@@ -1,5 +1,5 @@
 
-//Stack = LIFO
+//Stacks are a LIFO data structure
 
 export class classNode {
   value ?: any;
