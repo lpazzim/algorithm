@@ -123,8 +123,41 @@ export function nonConstructibleChange(coins: number[]) {
 
 	let currentChangeCreated = 0;
 	for (const coin of coins) {
-		if (coin > currentChangeCreated + 1) return currentChangeCreated + 1;	
+		if (coin > currentChangeCreated + 1) return currentChangeCreated + 1;
 	}
 
 	return currentChangeCreated + 1;
+}
+
+
+
+export function findThreeLargestNumbers(arr: number[]) {
+
+	let result: number[] = [];
+
+	function threeLargest(arrAux: number[]) {
+		let temp = 0;
+		let tempIdx = 0;
+		if (result.length === 3 || arrAux.length <= 0) return result
+		for (let i = 0; i < arrAux.length; i++) {
+			if (!temp) {
+				temp = arrAux[i];
+			}
+
+			if (arrAux[i] > temp) {
+				temp = arrAux[i];
+				tempIdx = i
+			}
+		}
+
+		result.push(temp);
+		arrAux.splice(tempIdx, 1)
+
+		threeLargest(arrAux);
+		return result
+	}
+
+	threeLargest(arr);
+
+	return result.sort((a, b) => a - b);
 }
