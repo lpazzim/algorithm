@@ -17,7 +17,7 @@ import { binarySearchAlgo, findThreeLargestNumbers, getNthFib, mergeSortAlgo, mi
 import { radixSort } from './SortingAlgorithms/RadixSort';
 import { Point, Student } from './DataStructures/intro';
 import { SinglyLinkedList } from './DataStructures/SinglyLinkedLists';
-import { binarySearch1701, praticeReduce, slidingPratice } from './Random';
+import { ArrayChalleng, binarySearch1701, MathChallenge, praticeReduce, slidingPratice, strChallenge } from './Random';
 import { HasTable } from './DataStructures/HashTables';
 import { Queue, Stack } from './DataStructures/Stacks&Queues';
 
@@ -116,6 +116,12 @@ console.log('------------- x Challenges x -------------')
 
 // console.log(praticeReduce())
 //  console.log(slidingPratice([0, 1, 2, 27, 3, 0, 2], 3));
+
+// console.log(strChallenge('99946'));
+
+// console.log(ArrayChalleng([10,22,9,33,21,50,41, 60,22,68,90]))
+
+// console.log(MathChallenge(8))
 
 
 console.log('------------- x Challenges x -------------')

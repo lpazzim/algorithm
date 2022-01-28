@@ -3,6 +3,8 @@
 //   return Math.floor(Math.random() * (ceiling - floor + 1)) + floor;
 // }
 
+import { parse } from "../Codewars";
+
 
 // export function sumPairs(ints: number[], s: number): [number, number] | void {
 //   let a, i,
@@ -206,4 +208,49 @@ export function slidingPratice(arr: number[], n: number) {
     maxSum = Math.max(maxSum, tempSum);
   }
   return maxSum;
+}
+
+
+export function strChallenge(str: string) {
+  let arr: string[] = str.split('');
+  let result: string = '';
+  let tipo: boolean = false;
+  const challengeToken: string = 'vqy6cnz3';
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].charCodeAt(0) >= 48 && arr[i].charCodeAt(0) <= 57) {
+      if ((parseInt(arr[i]) % 2) !== 0) {
+        if (tipo === true) {
+          result += '-' + arr[i];
+        } else {
+          result += arr[i];
+        }
+        tipo = true;
+      } else {
+        result += arr[i];
+        tipo = false;
+      }
+    } else {
+      result += arr[i];
+    }
+  }
+  return `${result}:${challengeToken}`;
+}
+
+export function ArrayChalleng(arr: number[]) {
+  let result: number = 1;
+
+  arr.reduce((a: number, b: number) => {
+    if (a < b) {
+      result++;
+    }
+    return b
+  })
+  return result;
+}
+
+
+export function MathChallenge(num: number) {
+  if (Number.isInteger(Math.sqrt(num))) return true
+  return false;
 }
