@@ -254,3 +254,29 @@ export function MathChallenge(num: number) {
   if (Number.isInteger(Math.sqrt(num))) return true
   return false;
 }
+
+
+
+
+export function countLettersNow(str: string) {
+  let arr: string[] = str.split('');
+  let obj: any = {};
+
+  for (let val of arr) {
+    obj[val] = (obj[val] || 0) + 1;
+  }
+
+  return obj
+}
+
+
+export function fib(n: number) {
+  if(n === 0) return 1
+  if(n === 1) return 1
+
+  let x:number = fib(n-1) + fib(n-2)
+  
+  console.log(x)
+
+  return x;
+}
