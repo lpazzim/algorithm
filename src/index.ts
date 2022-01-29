@@ -123,6 +123,8 @@ console.log('------------- x Challenges x -------------')
 
 // console.log(MathChallenge(8))
 
+console.log(counterString('Lucas')) 
+
 
 console.log('------------- x Challenges x -------------')
 //#endregion

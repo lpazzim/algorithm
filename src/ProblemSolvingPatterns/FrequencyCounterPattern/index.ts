@@ -35,7 +35,7 @@ export function counterString(str: any) {
   for (let val of strArr) {
     objLetters[val] = (objLetters[val] || 0) + 1
   }
-  console.log(objLetters);
+  return objLetters;
 }
 
 // Frequency counter pattern:
