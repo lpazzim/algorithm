@@ -237,6 +237,8 @@ console.log('------------- Search -------------')
 
 // console.log(binarySearch1701([1, 2, 5, 7, 9, 15, 17, 25, 28, 2000], 5));
 
+// console.log(search([0, 1 , 2, 7], 7))
+
 
 console.log('------------- END Search -------------')
 //#endregion
