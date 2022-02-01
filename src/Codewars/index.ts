@@ -1446,3 +1446,27 @@ export const calc = (str: string): number => {
 
   return total1 - total2;
 }
+
+
+
+
+
+// Integer Difference
+// https://www.codewars.com/kata/57741d8f10a0a66915000001/train/typescript
+export const intDiff = (arr: number[], n: number): number => {
+  let result: number = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    let x: number = arr[i];
+    for (let j = 0 + 1; j < arr.length; j++) {
+      let y: number = arr[j];
+      if (i !== j) {
+        if ((y - x) === n) {
+          result++;
+        }
+      }
+    }
+  }
+
+  return result
+}
