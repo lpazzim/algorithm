@@ -1470,3 +1470,112 @@ export const intDiff = (arr: number[], n: number): number => {
 
   return result
 }
+
+
+
+export function twoOldestAges(ages: number[]): number[] {
+  let res: number[] = [];
+
+  function merge(arr1: number[], arr2: number[]) {
+    let result: number[] = [];
+    let i: number = 0;
+    let j: number = 0;
+
+    while (i < arr1.length && j < arr2.length) {
+      if (arr1[i] < arr2[j]) {
+        result.push(arr1[i]);
+        i++;
+      } else {
+        result.push(arr2[j]);
+        j++;
+      }
+    }
+
+    while (i < arr1.length) {
+      result.push(arr1[i]);
+      i++;
+    }
+
+    while (j < arr2.length) {
+      result.push(arr2[j]);
+      j++;
+    }
+    return result;
+  }
+
+  function mergeSort(arr: number[]) {
+    if (arr.length <= 1) return arr;
+    let middle: number = Math.floor(arr.length / 2);
+    let left: number[] = mergeSort(arr.slice(0, middle));
+    let right: number[] = mergeSort(arr.slice(middle));
+
+    return merge(left, right);
+  }
+
+  res = mergeSort(ages);
+
+
+
+  return [res[res.length - 2], res[res.length - 1]];
+}
+
+
+
+
+export function descendingOrder(n: number): number {
+  let arrStr: string[] = n.toString().split('');
+  let arr: number[] = [];
+  let res: number[] = [];
+  let finalRes: string = '';
+
+
+  for (let i = 0; i < arrStr.length; i++) {
+    arr.push(parseInt(arrStr[i]))
+  }
+
+
+  function merge(arr1: number[], arr2: number[]) {
+    let result: number[] = [];
+    let i: number = 0;
+    let j: number = 0;
+
+    while (i < arr1.length && j < arr2.length) {
+      if (arr1[i] > arr2[j]) {
+        result.push(arr1[i]);
+        i++;
+      } else {
+        result.push(arr2[j]);
+        j++;
+      }
+    }
+
+    while (i < arr1.length) {
+      result.push(arr1[i]);
+      i++;
+    }
+
+    while (j < arr2.length) {
+      result.push(arr2[j]);
+      j++;
+    }
+    return result;
+  }
+
+  function mergeSort(arr: number[]) {
+    if (arr.length <= 1) return arr;
+    let middle: number = Math.floor(arr.length / 2);
+    let left: number[] = mergeSort(arr.slice(0, middle));
+    let right: number[] = mergeSort(arr.slice(middle));
+
+    return merge(left, right);
+  }
+
+  res = mergeSort(arr);
+
+  for (let j = 0; j < res.length; j++) {
+    finalRes += res[j];
+  }
+
+
+  return parseInt(finalRes);
+}

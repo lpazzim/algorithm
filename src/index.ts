@@ -1,6 +1,6 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample } from './ProblemSolvingPatterns/FrequencyCounterPattern'
-import { add, adjacentElementsProduct, bouncingBall, calc, Challenge, chooseBestSum, comp, compare, digPow, F, findOdd, findShort, G964, incrementer, intDiff, isValidWalk, laser, longest, M, meeting, multiplicationTable, nbDig, nbMonths, oper, orderWeight, parse, partsSums, rps, singleDigit, smallest, solution, solutionEndWith, sortSurname, splitAndMerge, sqInRect, sqInRectRecu } from './Codewars'
+import { add, adjacentElementsProduct, bouncingBall, calc, Challenge, chooseBestSum, comp, compare, descendingOrder, digPow, F, findOdd, findShort, G964, incrementer, intDiff, isValidWalk, laser, longest, M, meeting, multiplicationTable, nbDig, nbMonths, oper, orderWeight, parse, partsSums, rps, singleDigit, smallest, solution, solutionEndWith, sortSurname, splitAndMerge, sqInRect, sqInRectRecu, twoOldestAges } from './Codewars'
 import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatterns/MultiplePointersPattern';
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
@@ -225,7 +225,11 @@ console.log('------------- CODEWARS -------------')
 // console.log(calc('ABC'));
 
 
-console.log(intDiff([ 1, 6, 2, 3, 7, 8, 7 ], 0));
+// console.log(intDiff([ 1, 6, 2, 3, 7, 8, 7 ], 0));
+
+// console.log(twoOldestAges([1, 5, 87, 45, 8, 8]))
+
+console.log(descendingOrder(123456789))
 
 console.log('------------- END CODEWARS -------------')
 //#endregion
