@@ -1579,3 +1579,25 @@ export function descendingOrder(n: number): number {
 
   return parseInt(finalRes);
 }
+
+
+
+// Counting Duplicates
+// https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1/train/typescript
+export function duplicateCount(text: string): number {
+  let arr: string[] = text.split('');
+  let obj: any = {};
+  let countRes: number = 0;
+
+  for (let val of arr) {
+    let str = val.toLocaleLowerCase()
+    obj[str] = (obj[str] || 0) + 1;
+  }
+
+  for (let val in obj) {
+    if(obj[val] >= 2 ) countRes++;
+  }
+
+
+  return countRes;
+}
