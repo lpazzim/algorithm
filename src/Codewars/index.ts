@@ -1635,3 +1635,73 @@ export const likes = (a: string[]): string => {
 
   return result;
 }
+
+
+
+// Find the unique number
+// https://www.codewars.com/kata/585d7d5adb20cf33cb000235/train/typescript
+export function findUniq(arr: number[]): number {
+  let arrSorted: number[] = [];
+
+
+  function merge30(arr1: number[], arr2: number[]) {
+    let result: number[] = [];
+    let i: number = 0;
+    let j: number = 0
+
+    while (i < arr1.length && j < arr2.length) {
+      if (arr1[i] < arr2[j]) {
+        result.push(arr1[i]);
+        i++;
+      } else {
+        result.push(arr2[j]);
+        j++
+      }
+    }
+
+    while (i < arr1.length) {
+
+      result.push(arr1[i]);
+      i++;
+
+    }
+
+    while (j < arr2.length) {
+      result.push(arr2[j]);
+      j++
+    }
+    return result;
+  }
+
+  function mergeSort30(arr3: number[]) {
+    if (arr3.length <= 1) return arr3
+    let mid: number = Math.floor(arr3.length / 2);
+    let left: number[] = mergeSort30(arr3.slice(0, mid));
+    let right: number[] = mergeSort30(arr3.slice(mid))
+
+    return merge30(left, right);
+  }
+
+  arrSorted = mergeSort30(arr);
+
+  let arrComp: number[] = [];
+
+  for (let x = 0; x <= 2; x++) {
+    if (x === 2) {
+      arrComp.push(arrSorted[arrSorted.length - 1]);
+    } else {
+      arrComp.push(arrSorted[x]);
+    }
+  }
+  let res: number = 0;
+
+  let first: number = arrComp[0];
+  let mid: number = arrComp[1];
+  let last: number = arrComp[2];
+
+  if (first === mid) res = last;
+  if (mid === last) res = first;
+  if (last === first) res = mid;
+
+  return res;
+}

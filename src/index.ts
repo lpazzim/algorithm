@@ -1,6 +1,6 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample } from './ProblemSolvingPatterns/FrequencyCounterPattern'
-import { add, adjacentElementsProduct, bouncingBall, calc, Challenge, chooseBestSum, comp, compare, descendingOrder, digPow, duplicateCount, F, findOdd, findShort, G964, incrementer, intDiff, isValidWalk, laser, likes, longest, M, meeting, multiplicationTable, nbDig, nbMonths, oper, orderWeight, parse, partsSums, rps, singleDigit, smallest, solution, solutionEndWith, sortSurname, splitAndMerge, sqInRect, sqInRectRecu, twoOldestAges } from './Codewars'
+import { add, adjacentElementsProduct, bouncingBall, calc, Challenge, chooseBestSum, comp, compare, descendingOrder, digPow, duplicateCount, F, findOdd, findShort, findUniq, G964, incrementer, intDiff, isValidWalk, laser, likes, longest, M, meeting, multiplicationTable, nbDig, nbMonths, oper, orderWeight, parse, partsSums, rps, singleDigit, smallest, solution, solutionEndWith, sortSurname, splitAndMerge, sqInRect, sqInRectRecu, twoOldestAges } from './Codewars'
 import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatterns/MultiplePointersPattern';
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
@@ -234,6 +234,8 @@ console.log('------------- CODEWARS -------------')
 // console.log(duplicateCount('Indivisibilities'));
 
 // console.log(likes(['Alex', 'Jacob']));
+
+console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]));
 
 console.log('------------- END CODEWARS -------------')
 //#endregion
