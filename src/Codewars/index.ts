@@ -1471,8 +1471,8 @@ export const intDiff = (arr: number[], n: number): number => {
   return result
 }
 
-
-
+// Two Oldest Ages
+// https://www.codewars.com/kata/511f11d355fe575d2c000001/train/typescript
 export function twoOldestAges(ages: number[]): number[] {
   let res: number[] = [];
 
@@ -1520,8 +1520,8 @@ export function twoOldestAges(ages: number[]): number[] {
 }
 
 
-
-
+// Descending Order
+// https://www.codewars.com/kata/5467e4d82edf8bbf40000155/train/typescript
 export function descendingOrder(n: number): number {
   let arrStr: string[] = n.toString().split('');
   let arr: number[] = [];
