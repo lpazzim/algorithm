@@ -1675,10 +1675,53 @@ export function findUniq(arr: number[]): number {
   }
 
   for (let i in obj) {
-    if (obj[i] === 1) { 
-      return parseFloat(i) 
+    if (obj[i] === 1) {
+      return parseFloat(i)
     }
   }
 
   return -1;
+}
+
+
+
+
+// Your order, please
+// https://www.codewars.com/kata/55c45be3b2079eccff00010f/train/typescript
+export function order(words: string): string {
+  let arr: any[] = words.split(" ");
+  let res: string[] = [];
+  let x: number = 0;
+  let i: number = 1;
+
+  // function recuWords(arr: any[]) {
+  //   if (arr.length === 0) return arr
+  //   let obj: any = {};
+
+  //   if (x <= arr.length) {
+  //     for (let val of arr[0]) {
+  //       obj[val] = (obj[val] || 0) + 1
+  //     }
+
+  //     for (let y in obj) {
+  //       if (y === i.toString()) {
+  //         res.push(arr[x])
+  //       }
+  //     }
+
+
+  //     i++;
+  //     recuWords(arr.slice(1))
+  //     return arr;
+  //   }
+  // }
+
+  // console.log(recuWords(arr));
+
+
+  for (let i = 0; i < arr.length; i++) {
+  }
+
+
+  return '';
 }
