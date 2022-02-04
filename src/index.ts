@@ -235,7 +235,7 @@ console.log('------------- CODEWARS -------------')
 
 // console.log(likes(['Alex', 'Jacob']));
 
-console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]));
+// console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]));
 
 console.log('------------- END CODEWARS -------------')
 //#endregion

@@ -1636,72 +1636,49 @@ export const likes = (a: string[]): string => {
   return result;
 }
 
-
-
 // Find the unique number
 // https://www.codewars.com/kata/585d7d5adb20cf33cb000235/train/typescript
 export function findUniq(arr: number[]): number {
+  let res: number = 0;
   let arrSorted: number[] = [];
 
+  function binarySearch(arr1: number[], n: number) {
+    let left: number = 0;
+    let right: number = arr1.length - 1;
+    let avg: number = Math.floor((left + right) / 2);
 
-  function merge30(arr1: number[], arr2: number[]) {
-    let result: number[] = [];
-    let i: number = 0;
-    let j: number = 0
-
-    while (i < arr1.length && j < arr2.length) {
-      if (arr1[i] < arr2[j]) {
-        result.push(arr1[i]);
-        i++;
+    while (arr1[avg] === n && left <= right) {
+      if (n < arr1[avg]) {
+        right = avg - 1;
       } else {
-        result.push(arr2[j]);
-        j++
+        left = avg + 1;
       }
+      avg = Math.floor((left + right) / 2);
     }
 
-    while (i < arr1.length) {
+    if (arr1[avg] !== n) return avg;
 
-      result.push(arr1[i]);
-      i++;
-
-    }
-
-    while (j < arr2.length) {
-      result.push(arr2[j]);
-      j++
-    }
-    return result;
+    return -1
   }
 
-  function mergeSort30(arr3: number[]) {
-    if (arr3.length <= 1) return arr3
-    let mid: number = Math.floor(arr3.length / 2);
-    let left: number[] = mergeSort30(arr3.slice(0, mid));
-    let right: number[] = mergeSort30(arr3.slice(mid))
-
-    return merge30(left, right);
-  }
-
-  arrSorted = mergeSort30(arr);
+  arrSorted = arr.sort();
 
   let arrComp: number[] = [];
 
-  for (let x = 0; x <= 2; x++) {
-    if (x === 2) {
-      arrComp.push(arrSorted[arrSorted.length - 1]);
-    } else {
-      arrComp.push(arrSorted[x]);
+  arrComp.push(arrSorted[0]);
+  arrComp.push(arrSorted[1]);
+  arrComp.push(arrSorted[arrSorted.length - 1]);
+
+  let obj: any = {};
+  for (let val of arrComp) {
+    obj[val] = (obj[val] || 0) + 1;
+  }
+
+  for (let i in obj) {
+    if (obj[i] === 1) { 
+      return parseFloat(i) 
     }
   }
-  let res: number = 0;
 
-  let first: number = arrComp[0];
-  let mid: number = arrComp[1];
-  let last: number = arrComp[2];
-
-  if (first === mid) res = last;
-  if (mid === last) res = first;
-  if (last === first) res = mid;
-
-  return res;
+  return -1;
 }
