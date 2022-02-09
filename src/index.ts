@@ -20,6 +20,7 @@ import { SinglyLinkedList } from './DataStructures/SinglyLinkedLists';
 import { ArrayChalleng, binarySearch1701, countLettersNow, fib, MathChallenge, praticeReduce, slidingPratice, strChallenge } from './Random';
 import { HasTable } from './DataStructures/HashTables';
 import { Queue, Stack } from './DataStructures/Stacks&Queues';
+import { DoublyLinkedList } from './DataStructures/DoublyLinkedLists';
 
 
 //#region - FREQUENCY COUNTER PATTERN
@@ -236,7 +237,7 @@ console.log('------------- CODEWARS -------------')
 // console.log(likes(['Alex', 'Jacob']));
 
 // console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]));
-console.log(order("4of Fo1r pe6ople g3ood th5e the2"))
+// console.log(order("4of Fo1r pe6ople g3ood th5e the2"))
 
 console.log('------------- END CODEWARS -------------')
 //#endregion
@@ -362,6 +363,24 @@ console.log('------------- DATA STRUCTURES -------------')
 
 // console.log(linkedList);
 //#endregion
+
+
+
+// #region - DOUBLY LINKED LIST
+let linkedList = new DoublyLinkedList();
+
+linkedList.push('HEY');
+linkedList.push('HOW');
+linkedList.push('ARE');
+linkedList.push('YOU!!!');
+
+// linkedList.pop();
+
+linkedList.shift();
+
+console.log(linkedList);
+// #endregion
+
 
 //#region - HASH TABLE
 
