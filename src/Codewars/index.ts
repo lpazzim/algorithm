@@ -1725,3 +1725,27 @@ export function order(words: string): string {
 
   return '';
 }
+
+
+
+// Get the Middle Character
+// https://www.codewars.com/kata/56747fd5cb988479af000028/train/typescript
+
+export class Challenger {
+  getMiddle(s: string) {
+    let arr: string[] = s.split("");
+    let mid: number = Math.floor(arr.length / 2);
+    let res: string = '';
+    if(arr.length <= 0) return '';
+    if(arr.length === 1) return arr[0];
+
+    if((arr.length % 2) === 0){
+      res = arr[mid-1];
+      res = res + arr[mid];
+    } else{
+      res = arr[mid];
+    }
+
+    return res;
+  }
+}

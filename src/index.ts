@@ -1,6 +1,6 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample } from './ProblemSolvingPatterns/FrequencyCounterPattern'
-import { add, adjacentElementsProduct, bouncingBall, calc, Challenge, chooseBestSum, comp, compare, descendingOrder, digPow, duplicateCount, F, findOdd, findShort, findUniq, G964, incrementer, intDiff, isValidWalk, laser, likes, longest, M, meeting, multiplicationTable, nbDig, nbMonths, oper, order, orderWeight, parse, partsSums, rps, singleDigit, smallest, solution, solutionEndWith, sortSurname, splitAndMerge, sqInRect, sqInRectRecu, twoOldestAges } from './Codewars'
+import { add, adjacentElementsProduct, bouncingBall, calc, Challenge, Challenger, chooseBestSum, comp, compare, descendingOrder, digPow, duplicateCount, F, findOdd, findShort, findUniq, G964, incrementer, intDiff, isValidWalk, laser, likes, longest, M, meeting, multiplicationTable, nbDig, nbMonths, oper, order, orderWeight, parse, partsSums, rps, singleDigit, smallest, solution, solutionEndWith, sortSurname, splitAndMerge, sqInRect, sqInRectRecu, twoOldestAges } from './Codewars'
 import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatterns/MultiplePointersPattern';
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
@@ -239,6 +239,12 @@ console.log('------------- CODEWARS -------------')
 // console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]));
 // console.log(order("4of Fo1r pe6ople g3ood th5e the2"))
 
+
+// let chall = new Challenger();
+
+// console.log(chall.getMiddle('middle'));
+
+
 console.log('------------- END CODEWARS -------------')
 //#endregion
 
@@ -367,18 +373,18 @@ console.log('------------- DATA STRUCTURES -------------')
 
 
 // #region - DOUBLY LINKED LIST
-let linkedList = new DoublyLinkedList();
+// let linkedList = new DoublyLinkedList();
 
-linkedList.push('HEY');
-linkedList.push('HOW');
-linkedList.push('ARE');
-linkedList.push('YOU!!!');
+// linkedList.push('HEY');
+// linkedList.push('HOW');
+// linkedList.push('ARE');
+// linkedList.push('YOU!!!');
 
-// linkedList.pop();
+// // linkedList.pop();
 
-linkedList.shift();
+// linkedList.shift();
 
-console.log(linkedList);
+// console.log(linkedList);
 // #endregion
 
 
