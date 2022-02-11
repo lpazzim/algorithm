@@ -1736,16 +1736,34 @@ export class Challenger {
     let arr: string[] = s.split("");
     let mid: number = Math.floor(arr.length / 2);
     let res: string = '';
-    if(arr.length <= 0) return '';
-    if(arr.length === 1) return arr[0];
+    if (arr.length <= 0) return '';
+    if (arr.length === 1) return arr[0];
 
-    if((arr.length % 2) === 0){
-      res = arr[mid-1];
+    if ((arr.length % 2) === 0) {
+      res = arr[mid - 1];
       res = res + arr[mid];
-    } else{
+    } else {
       res = arr[mid];
     }
 
     return res;
   }
+}
+
+
+
+
+// Vowel Count
+// https://www.codewars.com/kata/54ff3102c1bad923760001f3/train/typescript
+
+
+export function getCount(str: string): number {
+  let arr = str.split('');
+  let res: number = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+   if(arr[i].match(/[aeiou]/gi)) res++;
+  }
+
+  return res
 }
