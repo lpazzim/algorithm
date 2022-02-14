@@ -1762,8 +1762,33 @@ export function getCount(str: string): number {
   let res: number = 0;
 
   for (let i = 0; i < arr.length; i++) {
-   if(arr[i].match(/[aeiou]/gi)) res++;
+    if (arr[i].match(/[aeiou]/gi)) res++;
   }
 
   return res
+}
+
+
+// Count salutes
+// https://www.codewars.com/kata/605ae9e1d2be8a0023b494ed/train/typescript
+
+export function countSalutes(hallway: String): number {
+  let arr: string[] = hallway.split("");
+  let res: number = 0;
+
+  function countRec(arry: string[]) {
+    if (arry.length <= 1) return arry;
+
+    for (let i = 1; i < arry.length; i++) {
+      if (arry[0] === '>' && arry[i] === '<') {
+        res += 2;
+      }
+    }
+
+    countRec(arry.slice(1));
+  }
+
+  countRec(arr);
+
+  return res;
 }
