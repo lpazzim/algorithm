@@ -1792,3 +1792,58 @@ export function countSalutes(hallway: String): number {
 
   return res;
 }
+
+
+
+// Roman Numerals Decoder
+// https://www.codewars.com/kata/51b6249c4612257ac0000005/train/typescript
+
+export function solutionRoman(roman: string): number {
+  let arr: string[] = roman.split("");
+  let res: number = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    switch (arr[i]) {
+      case 'I': {
+        if (i < arr.length - 1) {
+          if (arr[i] === 'I' && arr[i + 1] === 'I') res += 1;
+          if (arr[i] === 'I' && arr[i + 1] !== 'I') res -= 1;
+        } else {
+          res += 1;
+        }
+        break;
+      }
+      case 'V': {
+        res += 5;
+        break;
+      }
+      case 'X': {
+        res += 10;
+        break;
+      }
+      case 'L': {
+        res += 50;
+        break;
+      }
+      case 'C': {
+        res += 100;
+        break;
+      }
+      case 'D': {
+        res += 500;
+        break;
+      }
+      case 'M': {
+        res += 1000;
+        break;
+      }
+      default: {
+        //statements; 
+        break;
+      }
+    }
+
+  }
+
+  return res
+}
