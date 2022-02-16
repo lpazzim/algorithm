@@ -1862,3 +1862,74 @@ export default function addTwo(x: number): any {
   }
   return sum;
 }
+
+// Human Readable Time
+// https://www.codewars.com/kata/52685f7382004e774f0001f7/train/typescript
+
+export function humanReadable(seconds: number): string {
+  let hours: number = Math.floor((seconds / 60) / 60);
+  let mins: number = Math.floor((seconds / 60) - (hours * 60));
+  let secs: number = 0
+  if (!mins && seconds - ((hours * 60) * 60) > 0) {
+    secs = Math.floor(seconds - ((hours * 60) * 60));
+  } else if(mins > 0) {
+    secs = Math.floor(seconds - (mins * 60) - ((hours * 60) * 60));
+  }
+
+  
+
+  let resHour: string = '';
+  let resMin: string = '';
+  let resSec: string = '';
+
+  if (seconds < 60) {
+    secs = seconds;
+  }
+
+  if (mins > 59) {
+    mins = 59
+  }
+
+  if (secs > 59) {
+    secs = 59
+  }
+
+  if (hours > 99) {
+    hours = 99
+  }
+
+  if (hours) {
+    if (hours <= 9) {
+      resHour = `0${hours}`
+    } else {
+      resHour = hours.toString()
+    }
+  } else {
+    resHour = '00'
+  }
+
+
+  if (mins) {
+    if (mins <= 9) {
+      resMin = `0${mins}`
+    } else {
+      resMin = mins.toString()
+    }
+  } else {
+    resMin = '00'
+  }
+
+  if (secs) {
+    if (secs <= 9) {
+      resSec = `0${secs}`
+    } else {
+      resSec = secs.toString()
+    }
+  } else {
+    resSec = '00'
+  }
+
+
+
+  return `${resHour}:${resMin}:${resSec}`
+}
