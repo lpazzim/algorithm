@@ -1847,3 +1847,18 @@ export function solutionRoman(roman: string): number {
 
   return res
 }
+
+
+// A Chain adding function
+// https://www.codewars.com/kata/539a0e4d85e3425cb0000a88/train/typescript
+
+export default function addTwo(x: number): any {
+  function sum(b: number) {
+    x = x + b;
+    return sum;
+  }
+  sum.toString = function () {
+    return x
+  }
+  return sum;
+}
