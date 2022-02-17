@@ -1,6 +1,6 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample } from './ProblemSolvingPatterns/FrequencyCounterPattern'
-import addTwo, { add, adjacentElementsProduct, bouncingBall, calc, Challenge, Challenger, chooseBestSum, comp, compare, countSalutes, descendingOrder, digPow, duplicateCount, F, findOdd, findShort, findUniq, G964, getCount, humanReadable, incrementer, intDiff, isValidWalk, laser, likes, longest, M, meeting, multiplicationTable, nbDig, nbMonths, oper, order, orderWeight, parse, partsSums, rps, singleDigit, smallest, solution, solutionEndWith, solutionRoman, sortSurname, splitAndMerge, sqInRect, sqInRectRecu, twoOldestAges } from './Codewars'
+import addTwo, { add, adjacentElementsProduct, bouncingBall, calc, Challenge, Challenger, chooseBestSum, comp, compare, countSalutes, descendingOrder, digPow, duplicateCount, F, findOdd, findShort, findUniq, findUniq2, G964, getCount, humanReadable, incrementer, intDiff, isValidWalk, laser, likes, longest, M, meeting, multiplicationTable, nbDig, nbMonths, oper, order, orderWeight, parse, partsSums, rps, singleDigit, smallest, solution, solutionEndWith, solutionRoman, sortSurname, splitAndMerge, sqInRect, sqInRectRecu, twoOldestAges } from './Codewars'
 import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatterns/MultiplePointersPattern';
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
@@ -253,6 +253,8 @@ console.log('------------- CODEWARS -------------')
 // console.log(addTwo(1)(2)(2)(5));
 
 // console.log(humanReadable(45296));
+
+console.log(findUniq2(['Tom Marvolo Riddle', 'I am Lord Voldemort', 'Harry Potter']))
 
 
 console.log('------------- END CODEWARS -------------')

@@ -1872,11 +1872,11 @@ export function humanReadable(seconds: number): string {
   let secs: number = 0
   if (!mins && seconds - ((hours * 60) * 60) > 0) {
     secs = Math.floor(seconds - ((hours * 60) * 60));
-  } else if(mins > 0) {
+  } else if (mins > 0) {
     secs = Math.floor(seconds - (mins * 60) - ((hours * 60) * 60));
   }
 
-  
+
 
   let resHour: string = '';
   let resMin: string = '';
@@ -1932,4 +1932,90 @@ export function humanReadable(seconds: number): string {
 
 
   return `${resHour}:${resMin}:${resSec}`
+}
+
+
+
+// Find the unique string
+// https://www.codewars.com/kata/585d8c8a28bc7403ea0000c3/train/typescript
+
+export function findUniq2(arr: string[]): string {
+  let finalResult: any = {};
+  let idxResult: number = 0;
+  let firstIdx: number = 0;
+  let objFinal: any = {};
+
+
+  function merge(arr1: any[], arr2: any[]) {
+    let result: any[] = [];
+    let i: any = 0;
+    let j: any = 0;
+
+    while (i < arr1.length && j < arr2.length) {
+      if (arr1[i] > arr2[j]) {
+        result.push(arr1[i]);
+        i++;
+      } else {
+        result.push(arr2[j]);
+        j++;
+      }
+    }
+
+    while (i < arr1.length) {
+      result.push(arr1[i]);
+      i++;
+    }
+
+    while (j < arr2.length) {
+      result.push(arr2[j]);
+      j++;
+    }
+    return result;
+  }
+
+  function mergeSort(arr: any[]) {
+    if (arr.length <= 1) return arr;
+    let middle: number = Math.floor(arr.length / 2);
+    let left: any[] = mergeSort(arr.slice(0, middle));
+    let right: any[] = mergeSort(arr.slice(middle));
+
+    return merge(left, right);
+  }
+
+
+  function getUniqChar(str: string) {
+    let result: string[] = str.split("");
+    let res: string[] = [];
+    let obj: any = {};
+    for (let val of result) {
+      if (val !== ' ') obj[val.toLocaleLowerCase()] = (obj[val.toLocaleLowerCase()] || 0) + 1;
+    }
+
+    for (let y in obj) {
+      res.push(y);
+    }
+
+    return mergeSort(res);
+  }
+
+  for (let i = 0; i < arr.length; i++) {
+    
+
+    if(i === 0) firstIdx = i
+
+    let x: string = getUniqChar(arr[i]).join('');
+    objFinal[x] = (objFinal[x] || 0) + 1
+
+    if(objFinal[x] === 1) {
+      idxResult = i;
+    }
+  
+  }
+
+
+  if(arr.length > 3 && (arr[1] === arr[2]) && (arr[1] !== arr[0])){
+    idxResult = 0;
+  }
+
+  return arr[idxResult];
 }
