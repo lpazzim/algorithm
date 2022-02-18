@@ -1999,23 +1999,54 @@ export function findUniq2(arr: string[]): string {
   }
 
   for (let i = 0; i < arr.length; i++) {
-    
 
-    if(i === 0) firstIdx = i
+
+    if (i === 0) firstIdx = i
 
     let x: string = getUniqChar(arr[i]).join('');
     objFinal[x] = (objFinal[x] || 0) + 1
 
-    if(objFinal[x] === 1) {
+    if (objFinal[x] === 1) {
       idxResult = i;
     }
-  
+
   }
 
 
-  if(arr.length > 3 && (arr[1] === arr[2]) && (arr[1] !== arr[0])){
+  if (arr.length > 3 && (arr[1] === arr[2]) && (arr[1] !== arr[0])) {
     idxResult = 0;
   }
 
   return arr[idxResult];
+}
+
+
+// Longest vowel chain
+// https://www.codewars.com/kata/59c5f4e9d751df43cf000035/train/typescript
+
+export function solve(s: string) {
+  let arr: string[] = s.split("");
+  let result: number = 0;
+  let resArr: string[] = [];
+
+  arr.reduce((a, b) => {
+    if (a.match(/[aeiou]/gi) && b.match(/[aeiou]/gi)) {
+      if (resArr.length <= 0) {
+        resArr.push(a);
+        resArr.push(b);
+      } else {
+        resArr.push(b);
+      }
+    } else {
+      if (resArr.length > result) {
+        result = resArr.length;
+      }
+      resArr = [];
+    }
+    return a = b
+  })
+
+  if (!result && s.match(/[aeiou]/gi)) result = 1
+
+  return result;
 }
