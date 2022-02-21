@@ -161,3 +161,46 @@ export function findThreeLargestNumbers(arr: number[]) {
 
 	return result.sort((a, b) => a - b);
 }
+
+
+// Class Photos
+
+export function classPhotos(redShirtHeights: number[], blueShirtHeights: number[]) {
+	let i: number = 0;
+	let j: number = 0;
+	let res: boolean = false;
+	let tallerRed: number = redShirtHeights.sort()[redShirtHeights.length - 1];
+	let tallerBlue: number = redShirtHeights.sort()[blueShirtHeights.length - 1];
+
+	if (tallerBlue < tallerRed) {
+		while (i < redShirtHeights.length && j < blueShirtHeights.length) {
+			if (redShirtHeights[i] < blueShirtHeights[j]) {
+				res = true;
+			} else {
+				res = false;
+				break;
+			}
+
+			i++;
+			j++;
+		}
+	}
+
+	if (tallerRed < tallerBlue) {
+		i = 0;
+		j = 0;
+		while (i < redShirtHeights.length && j < blueShirtHeights.length) {
+			if (blueShirtHeights[i] < redShirtHeights[j]) {
+				res = true;
+			} else {
+				res = false;
+				break;
+			}
+			i++;
+			j++;
+		}
+	}
+
+
+	return res;
+}

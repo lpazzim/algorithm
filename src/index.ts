@@ -13,7 +13,7 @@ import { selectionSort } from './SortingAlgorithms/SelectionSort';
 import { insertionSort } from './SortingAlgorithms/InsertionSort';
 import { merge, mergeLetters, mergeSort, mergeSortLetters } from './SortingAlgorithms/MergeSort';
 import { quickSort } from './SortingAlgorithms/QuickSort';
-import { binarySearchAlgo, findThreeLargestNumbers, getNthFib, mergeSortAlgo, minimumWaitingTime, nonConstructibleChange } from './AlgoExpert';
+import { binarySearchAlgo, classPhotos, findThreeLargestNumbers, getNthFib, mergeSortAlgo, minimumWaitingTime, nonConstructibleChange } from './AlgoExpert';
 import { radixSort } from './SortingAlgorithms/RadixSort';
 import { Point, Student } from './DataStructures/intro';
 import { SinglyLinkedList } from './DataStructures/SinglyLinkedLists';
@@ -256,7 +256,7 @@ console.log('------------- CODEWARS -------------')
 
 // console.log(findUniq2(['Tom Marvolo Riddle', 'I am Lord Voldemort', 'Harry Potter']))
 
-console.log(solve("cuboideonavicuare"));
+// console.log(solve("cuboideonavicuare"));
 
 
 console.log('------------- END CODEWARS -------------')
@@ -337,6 +337,8 @@ console.log('------------- ALGOEXPERT -------------')
 // console.log(nonConstructibleChange( [5, 7, 1, 1, 2, 3, 22]));
 
 // console.log(findThreeLargestNumbers([141, 1, 17, -7, -17, -27, 18, 541, 8, 7, 7]));
+
+// console.log(classPhotos([5, 8, 1, 3, 4],[6, 9, 2, 4, 5]));
 
 console.log('------------- END ALGOEXPERT -------------')
 //#endregion
