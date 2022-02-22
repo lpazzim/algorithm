@@ -13,7 +13,7 @@ import { selectionSort } from './SortingAlgorithms/SelectionSort';
 import { insertionSort } from './SortingAlgorithms/InsertionSort';
 import { merge, mergeLetters, mergeSort, mergeSortLetters } from './SortingAlgorithms/MergeSort';
 import { quickSort } from './SortingAlgorithms/QuickSort';
-import { binarySearchAlgo, classPhotos, findThreeLargestNumbers, getNthFib, mergeSortAlgo, minimumWaitingTime, nonConstructibleChange } from './AlgoExpert';
+import { binarySearchAlgo, classPhotos, findThreeLargestNumbers, getNthFib, LinkedListAlgo, mergeSortAlgo, minimumWaitingTime, nonConstructibleChange, removeDuplicatesFromLinkedList } from './AlgoExpert';
 import { radixSort } from './SortingAlgorithms/RadixSort';
 import { Point, Student } from './DataStructures/intro';
 import { SinglyLinkedList } from './DataStructures/SinglyLinkedLists';
@@ -339,6 +339,47 @@ console.log('------------- ALGOEXPERT -------------')
 // console.log(findThreeLargestNumbers([141, 1, 17, -7, -17, -27, 18, 541, 8, 7, 7]));
 
 // console.log(classPhotos([5, 8, 1, 3, 4],[6, 9, 2, 4, 5]));
+
+// const teste = {
+//   "head": "1",
+//   "nodes": [
+//     {"id": "1", "next": "1-2", "value": 1},
+//     {"id": "1-2", "next": "1-3", "value": 1},
+//     {"id": "1-3", "next": "2", "value": 1},
+//     {"id": "2", "next": "3", "value": 3},
+//     {"id": "3", "next": "3-2", "value": 4},
+//     {"id": "3-2", "next": "3-3", "value": 4},
+//     {"id": "3-3", "next": "4", "value": 4},
+//     {"id": "4", "next": "5", "value": 5},
+//     {"id": "5", "next": "5-2", "value": 6},
+//     {"id": "5-2", "next": null, "value": 6}
+//   ]
+// }
+
+
+function addMany(linkedList: LinkedListAlgo, values: number[]) {
+  let current = linkedList;
+  while (current.next !== null) {
+    current = current.next;
+  }
+  for (const value of values) {
+    current.next = new LinkedListAlgo(value);
+    current = current.next;
+  }
+  return linkedList;
+}
+
+let teste = new LinkedListAlgo(1);
+
+addMany(teste,[1, 3, 4, 4, 4, 5, 6, 6]);
+
+// console.log(teste);
+
+// teste.remove();
+
+
+
+console.log(removeDuplicatesFromLinkedList(teste))
 
 console.log('------------- END ALGOEXPERT -------------')
 //#endregion

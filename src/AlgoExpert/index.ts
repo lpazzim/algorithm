@@ -204,3 +204,43 @@ export function classPhotos(redShirtHeights: number[], blueShirtHeights: number[
 
 	return res;
 }
+
+
+
+// This is an input class. Do not edit.
+export class LinkedListAlgo {
+	value: number;
+	next: LinkedListAlgo | null;
+
+	constructor(value: number) {
+		this.value = value;
+		this.next = null;
+	}
+
+	removeDuplicates() {
+		let current = null;
+		let currentNext = null;
+		let dup = null;
+		current = this;
+
+		while (current !== null && current.next !== null) {
+			currentNext = current;
+			while (currentNext.next !== null) {
+				if (current.value === currentNext.next.value) {
+					dup = currentNext.next;
+					currentNext.next = currentNext.next.next;
+				} else {
+					currentNext = currentNext.next;
+				}
+			}
+			current = current.next;
+		}
+		return
+	}
+}
+
+export function removeDuplicatesFromLinkedList(linkedList: LinkedListAlgo) {
+	let current = linkedList;
+	current.removeDuplicates();
+	return linkedList;
+}
