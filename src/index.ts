@@ -1,6 +1,6 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample } from './ProblemSolvingPatterns/FrequencyCounterPattern'
-import addTwo, { add, adjacentElementsProduct, bouncingBall, calc, Challenge, Challenger, chooseBestSum, comp, compare, countSalutes, descendingOrder, digPow, duplicateCount, F, findOdd, findShort, findUniq, findUniq2, G964, getCount, humanReadable, incrementer, intDiff, isValidWalk, laser, likes, longest, M, meeting, multiplicationTable, nbDig, nbMonths, oper, order, orderWeight, parse, partsSums, rps, singleDigit, smallest, solution, solutionEndWith, solutionRoman, solve, sortSurname, splitAndMerge, sqInRect, sqInRectRecu, twoOldestAges } from './Codewars'
+import addTwo, { add, adjacentElementsProduct, bouncingBall, calc, Challenge, Challenger, chooseBestSum, comp, compare, countSalutes, descendingOrder, digPow, duplicateCount, F, findOdd, findShort, findUniq, findUniq2, G964, getCount, humanReadable, incrementer, intDiff, isValidWalk, laser, likes, longest, M, meeting, multiplicationTable, nbDig, nbMonths, oper, order, orderWeight, parse, partsSums, rps, singleDigit, smallest, solution, solutionEndWith, solutionRoman, solve, sortSurname, splitAndMerge, sqInRect, sqInRectRecu, towerBuilder, twoOldestAges } from './Codewars'
 import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatterns/MultiplePointersPattern';
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
@@ -259,6 +259,9 @@ console.log('------------- CODEWARS -------------')
 // console.log(solve("cuboideonavicuare"));
 
 
+// console.log(towerBuilder(2));
+
+
 console.log('------------- END CODEWARS -------------')
 //#endregion
 
@@ -357,29 +360,29 @@ console.log('------------- ALGOEXPERT -------------')
 // }
 
 
-function addMany(linkedList: LinkedListAlgo, values: number[]) {
-  let current = linkedList;
-  while (current.next !== null) {
-    current = current.next;
-  }
-  for (const value of values) {
-    current.next = new LinkedListAlgo(value);
-    current = current.next;
-  }
-  return linkedList;
-}
+// function addMany(linkedList: LinkedListAlgo, values: number[]) {
+//   let current = linkedList;
+//   while (current.next !== null) {
+//     current = current.next;
+//   }
+//   for (const value of values) {
+//     current.next = new LinkedListAlgo(value);
+//     current = current.next;
+//   }
+//   return linkedList;
+// }
 
-let teste = new LinkedListAlgo(1);
+// let teste = new LinkedListAlgo(1);
 
-addMany(teste,[1, 3, 4, 4, 4, 5, 6, 6]);
+// addMany(teste,[1, 3, 4, 4, 4, 5, 6, 6]);
 
-// console.log(teste);
+// // console.log(teste);
 
-// teste.remove();
+// // teste.remove();
 
 
 
-console.log(removeDuplicatesFromLinkedList(teste))
+// console.log(removeDuplicatesFromLinkedList(teste))
 
 console.log('------------- END ALGOEXPERT -------------')
 //#endregion

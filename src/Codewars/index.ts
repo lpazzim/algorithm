@@ -2050,3 +2050,39 @@ export function solve(s: string) {
 
   return result;
 }
+
+
+// Build Tower
+// https://www.codewars.com/kata/576757b1df89ecf5bd00073b/train/typescript
+
+export const towerBuilder = (nFloors: number): string[] => {
+  let result: string[] = [];
+  let auxArr: string[] = [];
+  let str: string = '*';
+  let len: number = 0;
+
+  for (let i = 0; i < nFloors; i++) {
+    if (i > 0) str += '**'
+    if (i === 0) str = '*'
+
+    if (str.length > len) len = str.length;
+    auxArr.push(str);
+  }
+
+  for (let i = 0; i < auxArr.length; i++) {
+    let auxStr: string = auxArr[i];
+    let space: number = 0;
+    let strSize: number = auxStr.length;
+    if(len > strSize) space = Math.floor((len -  strSize) / 2);
+    let spaceStr: string = '';
+
+    for(let j = 0; j < space; j++){
+      spaceStr += ' '
+    }
+    auxStr = spaceStr + auxStr + spaceStr;
+    result.push(auxStr)
+  }
+
+
+  return result;
+}
