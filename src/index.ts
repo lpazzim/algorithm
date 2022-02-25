@@ -1,6 +1,6 @@
 
 import { counterString, same, validAnagram, validAnagramCourseExample } from './ProblemSolvingPatterns/FrequencyCounterPattern'
-import addTwo, { add, adjacentElementsProduct, bouncingBall, calc, Challenge, Challenger, chooseBestSum, comp, compare, countSalutes, descendingOrder, digPow, duplicateCount, F, findOdd, findShort, findUniq, findUniq2, G964, getCount, humanReadable, incrementer, intDiff, isValidWalk, laser, likes, longest, M, meeting, multiplicationTable, nbDig, nbMonths, oper, order, orderWeight, parse, partsSums, rps, singleDigit, smallest, solution, solutionEndWith, solutionRoman, solve, sortSurname, splitAndMerge, sqInRect, sqInRectRecu, towerBuilder, twoOldestAges } from './Codewars'
+import addTwo, { add, adjacentElementsProduct, bouncingBall, calc, Challenge, Challenger, chooseBestSum, comp, compare, countSalutes, descendingOrder, digPow, duplicateCount, F, findOdd, findShort, findUniq, findUniq2, G964, getCount, humanReadable, incrementer, intDiff, isSquare, isValidWalk, laser, likes, longest, M, meeting, multiplicationTable, nbDig, nbMonths, oper, order, orderWeight, parse, partsSums, rps, singleDigit, smallest, solution, solutionEndWith, solutionRoman, solve, sortSurname, splitAndMerge, sqInRect, sqInRectRecu, towerBuilder, twoOldestAges } from './Codewars'
 import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatterns/MultiplePointersPattern';
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
@@ -261,9 +261,11 @@ console.log('------------- CODEWARS -------------')
 
 // console.log(towerBuilder(2));
 
-console.log(teste32(5));
+// console.log(teste32(5));
 
-console.log(teste33(2, 'three'));
+// console.log(teste33(2, 'three'));
+
+// console.log(isSquare(0));
 
 
 console.log('------------- END CODEWARS -------------')

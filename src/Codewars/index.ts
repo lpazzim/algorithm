@@ -2073,10 +2073,10 @@ export const towerBuilder = (nFloors: number): string[] => {
     let auxStr: string = auxArr[i];
     let space: number = 0;
     let strSize: number = auxStr.length;
-    if(len > strSize) space = Math.floor((len -  strSize) / 2);
+    if (len > strSize) space = Math.floor((len - strSize) / 2);
     let spaceStr: string = '';
 
-    for(let j = 0; j < space; j++){
+    for (let j = 0; j < space; j++) {
       spaceStr += ' '
     }
     auxStr = spaceStr + auxStr + spaceStr;
@@ -2094,3 +2094,15 @@ export const towerBuilder = (nFloors: number): string[] => {
 export function numberToString(num: number): string {
   return num.toString();
 }
+
+
+
+
+// You're a square!
+// https://www.codewars.com/kata/54c27a33fb7da0db0100040e/train/typescript
+
+export function isSquare(n: number): boolean {
+  let result: number = Math.sqrt(n);
+  if (!n) return false;
+  return Number.isInteger(result) ? true : false;
+};
