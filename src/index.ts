@@ -5,7 +5,7 @@ import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatter
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
 import { collectOddValues, collectOddValuesPureRecursion, countDown, factorial, sumRange } from './Recursion';
-import { areThereDuplicates, areThereDuplicatesSolution, areThereDuplicatesSolution2, averagePair, isValidSubsequence, neighborhood, sameFrequencyChallenge, twoNumberSum } from './Challenges';
+import { areThereDuplicates, areThereDuplicatesSolution, areThereDuplicatesSolution2, averagePair, isValidSubsequence, neighborhood, sameFrequencyChallenge, teste32, teste33, twoNumberSum } from './Challenges';
 import { linearSearch } from './SearchingAlgorithms/LinearSearch';
 import { binarySearch, binarySearchLetters, binarySearchNew } from './SearchingAlgorithms/BinarySearch';
 import { bubbleSort, bubbleSortES2015Version, bubbleSortES2015VersionNoSwaps, bubbleSortNoSwaps } from './SortingAlgorithms/BubbleSort';
@@ -260,6 +260,10 @@ console.log('------------- CODEWARS -------------')
 
 
 // console.log(towerBuilder(2));
+
+console.log(teste32(5));
+
+console.log(teste33(2, 'three'));
 
 
 console.log('------------- END CODEWARS -------------')

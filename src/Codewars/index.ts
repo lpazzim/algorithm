@@ -2086,3 +2086,11 @@ export const towerBuilder = (nFloors: number): string[] => {
 
   return result;
 }
+
+
+// Convert a Number to a String!
+// https://www.codewars.com/kata/5265326f5fda8eb1160004c8/train/python
+
+export function numberToString(num: number): string {
+  return num.toString();
+}

@@ -130,10 +130,64 @@ export function isValidSubsequence(array: any, sequence: any) {
   let lastIdx = 0;
 
   for (let i = 0; i < sequence.length; i++) {
-    if(array.indexOf(sequence[i]) < lastIdx){
+    if (array.indexOf(sequence[i]) < lastIdx) {
       res = false;
     }
   }
 
   return res;
+}
+
+
+
+
+
+export function teste32(n: number) {
+  let result: string[] = [];
+  let str: string = '';
+
+
+  for (let i = 0; i < n; i++) {
+    if (i === (n - 1)) {
+      str += 'L';
+      console.log(str)
+    } else {
+      console.log('L')
+      str += 'L';
+    }
+  }
+
+}
+
+
+
+export function teste33(N: number, S: string) {
+
+
+  
+  let result: number = 0;
+  switch (S) {
+    case 'one':
+      result = N * 1;
+      break;
+    case 'two':
+      result = N * 2;
+      break;
+    case 'three':
+      result = N * 3;
+      break;
+    case 'four':
+      result = N * 4;
+      break;
+    case 'five':
+      result = N * 5;
+      break;
+    default:
+  }
+
+  return result;
+
+
+
+
 }
