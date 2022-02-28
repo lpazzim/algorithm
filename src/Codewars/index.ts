@@ -2106,3 +2106,79 @@ export function isSquare(n: number): boolean {
   if (!n) return false;
   return Number.isInteger(result) ? true : false;
 };
+
+
+// Valid Braces
+// https://www.codewars.com/kata/5277c8a221e209d3f6000b56/train/typescript
+
+export function validBraces(braces: string): boolean {
+  let arr: string[] = braces.split('');
+  let validParentheses: boolean = true;
+  let validSquareBrackets: boolean = true;
+  let validCurlyBrackets: boolean = true;
+  let result: boolean = false;
+
+  let obj: any = {};
+
+  for (let val of arr) {
+    obj[val] = (obj[val] || 0) + 1;
+  }
+
+  if (obj['['] || obj[']']) {
+    if (obj['['] === obj[']']) {
+      validSquareBrackets = true;
+    } else {
+      validSquareBrackets = false;
+    }
+  }
+  if (obj['('] || obj[')']) {
+    if (obj['('] === obj[')']) {
+      validParentheses = true;
+    } else {
+      validParentheses = false;
+    }
+  }
+  if (obj['{'] || obj['}']) {
+    if (obj['{'] === obj['}']) {
+      validCurlyBrackets = true;
+    } else {
+      validCurlyBrackets = false;
+    }
+  }
+
+  if (validParentheses && validParentheses && validCurlyBrackets) {
+    result = true;
+    let findArr: string[] = arr;
+    for (let e in obj) {
+      if (e === '(') {
+        if ((findArr.indexOf(')') < findArr.indexOf(']') || findArr.indexOf(')') < findArr.indexOf('}')) && (findArr.indexOf(')') - findArr.indexOf('(')) !== 1) {
+          result = false;
+          return false;
+        } else {
+          result = true;
+        }
+      }
+      if (e === '[') {
+        if ((findArr.indexOf(']') < findArr.indexOf(')') || findArr.indexOf(']') < findArr.indexOf('}') ) && ((findArr.indexOf(']') - findArr.indexOf('[')) !== 1)) {
+          result = false;
+          return false;
+        } else {
+          result = true;
+        }
+      }
+      if (e === '{') {
+        if ((findArr.indexOf('}') < findArr.indexOf(')') || findArr.indexOf('}') < findArr.indexOf(']')) && ((findArr.indexOf('}') - findArr.indexOf('{')) !== 1) ) {
+          result = false;
+          return false;
+        } else {
+          result = true;
+        }
+      }
+      findArr = findArr.slice(1);
+    }
+  } else {
+    return false;
+  }
+
+  return result;
+}
