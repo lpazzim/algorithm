@@ -100,4 +100,14 @@ export class DoublyLinkedList {
     return current;
   }
 
+  set(idx: number, val: any) {
+    let foundNode: any = this.get(idx);
+    if(foundNode != null){
+      foundNode.val = val;
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 }
