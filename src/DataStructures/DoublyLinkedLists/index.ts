@@ -102,12 +102,30 @@ export class DoublyLinkedList {
 
   set(idx: number, val: any) {
     let foundNode: any = this.get(idx);
-    if(foundNode != null){
+    if (foundNode != null) {
       foundNode.val = val;
       return true;
     } else {
       return false;
     }
+  }
+
+  insert(idx: number, val: any) {
+    if (idx < 0 || idx > this.length) return false;
+    if (idx === 0) return this.unshift(val);
+    if (idx === this.length) return !!this.push(val);
+
+    let newNode: NodeClass = new NodeClass(val)
+    let beforeNode: any = this.get(idx - 1);
+    let afterNode: any = beforeNode.next;
+
+    beforeNode.next = newNode;
+    newNode.prev = beforeNode;
+    newNode.next = afterNode;
+    afterNode.prev = newNode;
+    
+    this.length++;
+    return true;
   }
 
 }
