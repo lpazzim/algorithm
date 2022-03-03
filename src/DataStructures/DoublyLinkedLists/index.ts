@@ -123,9 +123,27 @@ export class DoublyLinkedList {
     newNode.prev = beforeNode;
     newNode.next = afterNode;
     afterNode.prev = newNode;
-    
+
     this.length++;
     return true;
+  }
+
+  remove(idx: number) {
+    if (idx < 0 || idx >= this.length) return false;
+    if (idx === 0) return this.shift();
+    if (idx === this.length - 1) return !!this.pop();
+
+    let removedNode: any = this.get(idx);
+    let beforeNode: any = removedNode.prev;
+    let afterNode: any = removedNode.next;
+
+    beforeNode.next = afterNode;
+    afterNode.prev = beforeNode;
+    removedNode.prev = null;
+    removedNode.next = null;
+    
+    this.length--;
+    return removedNode;
   }
 
 }
