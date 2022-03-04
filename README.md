@@ -33,6 +33,8 @@ This project contains some of the most important and usefull algorithms and data
 
 - <a  href="https://github.com/lpazzim/algorithm/blob/main/src/DataStructures/Stacks&Queues/index.ts"> Stacks & Queues </a>
 
+- <a  href="https://github.com/lpazzim/algorithm/blob/main/src/DataStructures/BinarySearchTree/index.ts"> Binary Search Tree </a>
+
 
 ## Resources
 
