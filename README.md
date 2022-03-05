@@ -38,7 +38,6 @@ This project contains some of the most important and usefull algorithms and data
 
 ## Resources
 
-  
 
 List of some usefull references for this project:
 
