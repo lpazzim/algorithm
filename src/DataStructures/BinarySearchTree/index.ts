@@ -9,7 +9,7 @@ class NodeClass {
   }
 }
 
-class BinarySearchTree {
+export class BinarySearchTree {
   root: any
   constructor() {
     this.root = null;
@@ -48,17 +48,32 @@ class BinarySearchTree {
     let current: NodeClass = this.root;
     let found: boolean = false;
 
-    while(current && !found){
-      if(val < current.value){
+    while (current && !found) {
+      if (val < current.value) {
         current = current.left;
-      } else if(val > current.value) {
+      } else if (val > current.value) {
         current = current.right;
       } else {
         found = true;
       }
     }
-    if(!found) return undefined;
+    if (!found) return undefined;
     return current;
+  }
+
+  BFS() {
+    let data: any[] = [];
+    let queue: any[] = [];
+    let node: NodeClass = this.root;
+    queue.push(node);
+
+    while (queue.length) {
+      node = queue.shift();
+      data.push(node.value);
+      if(node.left) queue.push(node.left);
+      if(node.right) queue.push(node.right);
+    }
+    return data;
   }
 
 }

@@ -21,6 +21,7 @@ import { ArrayChalleng, binarySearch1701, countLettersNow, fib, MathChallenge, p
 import { HasTable } from './DataStructures/HashTables';
 import { Queue, Stack } from './DataStructures/Stacks&Queues';
 import { DoublyLinkedList } from './DataStructures/DoublyLinkedLists';
+import { BinarySearchTree } from './DataStructures/BinarySearchTree';
 
 
 //#region - FREQUENCY COUNTER PATTERN
@@ -268,7 +269,7 @@ console.log('------------- CODEWARS -------------')
 // console.log(isSquare(0));
 
 
-console.log(validBraces('(){}[]'));
+// console.log(validBraces('(){}[]'));
 
 
 console.log('------------- END CODEWARS -------------')
@@ -437,11 +438,9 @@ console.log('------------- DATA STRUCTURES -------------')
 // linkedList.reverse();
 
 // console.log(linkedList);
-//#endregion
+// #endregion
 
-
-
-// #region - DOUBLY LINKED LIST
+//#region - DOUBLY LINKED LIST
 // let linkedList = new DoublyLinkedList();
 
 // linkedList.push('HEY');
@@ -454,8 +453,7 @@ console.log('------------- DATA STRUCTURES -------------')
 // linkedList.shift();
 
 // console.log(linkedList);
-// #endregion
-
+//#endregion
 
 //#region - HASH TABLE
 
@@ -504,6 +502,24 @@ console.log('------------- DATA STRUCTURES -------------')
 // console.log(stack);
 
 //#endregion
+
+//#region - Binary Search Tree
+
+// let tree = new BinarySearchTree();
+
+// tree.insert(10);
+// tree.insert(6);
+// tree.insert(15);
+// tree.insert(3);
+// tree.insert(8);
+// tree.insert(20);
+
+// console.log(tree);
+
+// console.log(tree.BFS());
+
+//#endregion
+
 
 console.log('------------- END DATA STRUCTURES -------------')
 //#endregion
