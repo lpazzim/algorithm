@@ -505,18 +505,18 @@ console.log('------------- DATA STRUCTURES -------------')
 
 //#region - Binary Search Tree
 
-// let tree = new BinarySearchTree();
+let tree = new BinarySearchTree();
 
-// tree.insert(10);
-// tree.insert(6);
-// tree.insert(15);
-// tree.insert(3);
-// tree.insert(8);
-// tree.insert(20);
+tree.insert(10);
+tree.insert(6);
+tree.insert(15);
+tree.insert(3);
+tree.insert(8);
+tree.insert(20);
 
-// console.log(tree);
+console.log(tree);
 
-// console.log(tree.BFS());
+console.log(tree.BFS());
 
 //#endregion
 
