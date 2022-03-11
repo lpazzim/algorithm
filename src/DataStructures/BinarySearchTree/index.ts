@@ -98,4 +98,16 @@ export class BinarySearchTree {
     return data;
   }
 
+  DFSInOrder() {
+    let data: any[] = [];
+    function traverse(node: NodeClass) {
+      if (node.left) traverse(node.left);
+      data.push(node.value);
+      if (node.right) traverse(node.right);
+    }
+    traverse(this.root);
+    return data;
+  }
+
+
 }
