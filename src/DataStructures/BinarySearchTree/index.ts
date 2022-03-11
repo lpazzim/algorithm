@@ -70,9 +70,20 @@ export class BinarySearchTree {
     while (queue.length) {
       node = queue.shift();
       data.push(node.value);
-      if(node.left) queue.push(node.left);
-      if(node.right) queue.push(node.right);
+      if (node.left) queue.push(node.left);
+      if (node.right) queue.push(node.right);
     }
+    return data;
+  }
+
+  DFSPreOrder() {
+    let data: any[] = [];
+    function traverse(node: NodeClass) {
+      data.push(node.value);
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+    }
+    traverse(this.root);
     return data;
   }
 

@@ -517,6 +517,7 @@ tree.insert(20);
 console.log(tree);
 
 console.log(tree.BFS());
+console.log(tree.DFSPreOrder());
 
 //#endregion
 
