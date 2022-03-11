@@ -518,6 +518,7 @@ console.log(tree);
 
 console.log(tree.BFS());
 console.log(tree.DFSPreOrder());
+console.log(tree.DFSPostOrder());
 
 //#endregion
 
