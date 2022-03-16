@@ -164,7 +164,7 @@ export function teste32(n: number) {
 export function teste33(N: number, S: string) {
 
 
-  
+
   let result: number = 0;
   switch (S) {
     case 'one':
@@ -190,4 +190,22 @@ export function teste33(N: number, S: string) {
 
 
 
+}
+
+
+export function testNow() {
+  let a: number = 0;
+  let b: number = 1;
+  let c: number = 0;
+  let i: number = 0;
+
+  while(i < 10){
+    c = b;
+    b = b + a;
+    a = c;
+
+    i++;
+  }
+
+  return b;
 }
