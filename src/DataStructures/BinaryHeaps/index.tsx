@@ -15,6 +15,8 @@ export class BinaryHeap {
     while (idx > 0) {
       //Formula to find the parent element index "Math.floor((idx - 1) / 2)";
       let parentIdx = Math.floor((idx - 1) / 2);
+      console.log('children', idx);
+      console.log('children', parentIdx);
       let parent = this.values[parentIdx];
       if (element <= parent) break;
       this.values[parentIdx] = element;
