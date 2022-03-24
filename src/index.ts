@@ -131,7 +131,7 @@ console.log('------------- x Challenges x -------------')
 
 // console.log(fib(3))
 
-console.log(testNow())
+// console.log(testNow())
 
 
 
