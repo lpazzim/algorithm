@@ -5,7 +5,7 @@ import { countUniqueValues, sumZero, uniqueValues } from './ProblemSolvingPatter
 import { maxSubarraySum } from './ProblemSolvingPatterns/SlidingWindowPattern';
 import { search } from './ProblemSolvingPatterns/DivideAndConquerPattern';
 import { collectOddValues, collectOddValuesPureRecursion, countDown, factorial, sumRange } from './Recursion';
-import { areThereDuplicates, areThereDuplicatesSolution, areThereDuplicatesSolution2, averagePair, isValidSubsequence, neighborhood, sameFrequencyChallenge, teste32, teste33, testNow, twoNumberSum } from './Challenges';
+import { areThereDuplicates, areThereDuplicatesSolution, areThereDuplicatesSolution2, averagePair, isValidSubsequence, mergeSort2503, neighborhood, sameFrequencyChallenge, teste32, teste33, testNow, twoNumberSum } from './Challenges';
 import { linearSearch } from './SearchingAlgorithms/LinearSearch';
 import { binarySearch, binarySearchLetters, binarySearchNew } from './SearchingAlgorithms/BinarySearch';
 import { bubbleSort, bubbleSortES2015Version, bubbleSortES2015VersionNoSwaps, bubbleSortNoSwaps } from './SortingAlgorithms/BubbleSort';
@@ -132,6 +132,8 @@ console.log('------------- x Challenges x -------------')
 // console.log(fib(3))
 
 // console.log(testNow())
+
+console.log(mergeSort2503([5,3,1,7,8,9,15,17,12,2,1000]));
 
 
 
@@ -507,21 +509,21 @@ console.log('------------- DATA STRUCTURES -------------')
 
 //#region - Binary Search Tree
 
-let tree = new BinarySearchTree();
+// let tree = new BinarySearchTree();
 
-tree.insert(10);
-tree.insert(6);
-tree.insert(15);
-tree.insert(3);
-tree.insert(8);
-tree.insert(20);
+// tree.insert(10);
+// tree.insert(6);
+// tree.insert(15);
+// tree.insert(3);
+// tree.insert(8);
+// tree.insert(20);
 
-console.log(tree);
+// console.log(tree);
 
-console.log(tree.BFS());
-console.log(tree.DFSPreOrder());
-console.log(tree.DFSPostOrder());
-console.log(tree.DFSInOrder());
+// console.log(tree.BFS());
+// console.log(tree.DFSPreOrder());
+// console.log(tree.DFSPostOrder());
+// console.log(tree.DFSInOrder());
 
 //#endregion
 

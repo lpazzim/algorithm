@@ -1,3 +1,5 @@
+import { merge } from "../SortingAlgorithms/MergeSort";
+
 export function sameFrequencyChallenge(num1: number, num2: number) {
   let obj1: any = {};
   let covertNum1 = num1.toString();
@@ -186,10 +188,6 @@ export function teste33(N: number, S: string) {
   }
 
   return result;
-
-
-
-
 }
 
 
@@ -199,7 +197,7 @@ export function testNow() {
   let c: number = 0;
   let i: number = 0;
 
-  while(i < 10){
+  while (i < 10) {
     c = b;
     b = b + a;
     a = c;
@@ -208,4 +206,50 @@ export function testNow() {
   }
 
   return b;
+}
+
+
+
+
+export function mergeSort2503(arr: any[]) {
+
+  if (arr.length <= 1) return arr
+
+  let mid: number = Math.floor(arr.length / 2);
+  let left: any = mergeSort2503(arr.slice(0, mid));
+  let right: any = mergeSort2503(arr.slice(mid));
+
+  return merge2503(left, right);
+
+}
+
+
+export function merge2503(arr1: any[], arr2: any[]) {
+  let result: any[] = [];
+  let i: number = 0;
+  let j: number = 0;
+
+
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] < arr2[j]) {
+      result.push(arr1[i]);
+      i++;
+    } else {
+      result.push(arr2[j]);
+      j++;
+    }
+  }
+
+
+  while (i < arr1.length) {
+    result.push(arr1[i]);
+    i++;
+  }
+
+  while (j < arr2.length) {
+    result.push(arr2[j]);
+    j++;
+  }
+
+  return result;
 }
