@@ -22,6 +22,7 @@ import { HasTable } from './DataStructures/HashTables';
 import { Queue, Stack } from './DataStructures/Stacks&Queues';
 import { DoublyLinkedList } from './DataStructures/DoublyLinkedLists';
 import { BinarySearchTree } from './DataStructures/BinarySearchTree';
+import { Graph } from './DataStructures/Graphs';
 
 
 //#region - FREQUENCY COUNTER PATTERN
@@ -133,7 +134,7 @@ console.log('------------- x Challenges x -------------')
 
 // console.log(testNow())
 
-console.log(mergeSort2503([5,3,1,7,8,9,15,17,12,2,1000]));
+// console.log(mergeSort2503([5,3,1,7,8,9,15,17,12,2,1000]));
 
 
 
@@ -527,6 +528,19 @@ console.log('------------- DATA STRUCTURES -------------')
 
 //#endregion
 
+//#region - Graphs
+
+let g = new Graph();
+ 
+g.addVertex('Tokyo');
+g.addVertex('San Francisco');
+
+g.adjacencyList["Tokyo"].push("SOMETHING");
+
+console.log(g);
+
+
+//#endregion
 
 console.log('------------- END DATA STRUCTURES -------------')
 //#endregion
