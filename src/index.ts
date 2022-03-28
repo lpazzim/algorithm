@@ -537,8 +537,9 @@ g.addVertex('San Francisco');
 g.addVertex('Dallas');
 
 g.addEdge('Dallas','Tokyo');
-
 g.addEdge('Dallas','San Francisco');
+
+g.removeEdge('Dallas','Tokyo');
 
 console.log(g);
 

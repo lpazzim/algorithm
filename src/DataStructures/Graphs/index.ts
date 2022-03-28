@@ -13,4 +13,14 @@ export class Graph {
     this.adjacencyList[v2].push(v1);
   }
 
+  removeEdge(vertex1: any, vertex2: any){
+    this.adjacencyList[vertex1] = this.adjacencyList[vertex1].filter(
+      (v:any) => v !== vertex2
+    );
+
+    this.adjacencyList[vertex2] = this.adjacencyList[vertex2].filter(
+      (v:any) => v !== vertex1
+    );
+  }
+
 }
