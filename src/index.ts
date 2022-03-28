@@ -534,8 +534,11 @@ let g = new Graph();
  
 g.addVertex('Tokyo');
 g.addVertex('San Francisco');
+g.addVertex('Dallas');
 
-g.adjacencyList["Tokyo"].push("SOMETHING");
+g.addEdge('Dallas','Tokyo');
+
+g.addEdge('Dallas','San Francisco');
 
 console.log(g);
 
