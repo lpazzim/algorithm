@@ -35,6 +35,8 @@ This project contains some of the most important and usefull algorithms and data
 
 - <a  href="https://github.com/lpazzim/algorithm/blob/main/src/DataStructures/BinarySearchTree/index.ts"> Binary Search Tree </a>
 
+- <a  href="https://github.com/lpazzim/algorithm/blob/main/src/DataStructures/Graphs/index.ts"> Graphs </a>
+
 
 ## Resources
 

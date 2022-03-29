@@ -31,4 +31,8 @@ export class Graph {
     delete this.adjacencyList[vertex]
   }
 
+  DFS(vertex:any){
+    
+  }
+
 }
