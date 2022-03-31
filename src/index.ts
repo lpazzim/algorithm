@@ -530,18 +530,18 @@ console.log('------------- DATA STRUCTURES -------------')
 
 //#region - Graphs
 
-let g = new Graph();
+// let g = new Graph();
  
-g.addVertex('Tokyo');
-g.addVertex('San Francisco');
-g.addVertex('Dallas');
+// g.addVertex('Tokyo');
+// g.addVertex('San Francisco');
+// g.addVertex('Dallas');
 
-g.addEdge('Dallas','Tokyo');
-g.addEdge('Dallas','San Francisco');
+// g.addEdge('Dallas','Tokyo');
+// g.addEdge('Dallas','San Francisco');
 
-g.removeEdge('Dallas','Tokyo');
+// g.removeEdge('Dallas','Tokyo');
 
-console.log(g);
+// console.log(g);
 
 
 //#endregion
