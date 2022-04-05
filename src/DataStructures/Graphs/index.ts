@@ -49,4 +49,25 @@ export class Graph {
     return result
   }
 
+  depthFirstIterative(start: any) {
+    const stack: any = [start];
+    const result: any = [];
+    const visited: any = {};
+    let currentVertex: any;
+
+    visited[start] = true;
+    while (stack.length) {
+      currentVertex = stack.pop();
+      result.push(currentVertex);
+
+      this.adjacencyList[currentVertex].forEach((neighbor: any) => {
+        if (!visited[neighbor]) {
+          visited[neighbor] = true;
+          stack.push(neighbor);
+        }
+      })
+
+    }
+    return result;
+  }
 }

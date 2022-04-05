@@ -548,7 +548,9 @@ g.addEdge("D","E")
 g.addEdge("D","F")
 g.addEdge("E","F")
 
+
 console.log(g.depthFirstRecursive("A"))
+console.log(g.depthFirstIterative("A"))
 
 
 //#endregion
